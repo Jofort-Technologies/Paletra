@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,16 +14,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet">
 
+
     <style>
+
         /* =========================================================
            PALETRA
            LANDING PAGE
            ========================================================= */
 
         :root {
+
             --green: #0c6b45;
             --green-dark: #06452f;
             --green-light: #e9f6ef;
@@ -47,6 +53,11 @@
 
             --container: 1180px;
         }
+
+
+        /* =========================================================
+           RESET
+           ========================================================= */
 
         * {
             margin: 0;
@@ -87,24 +98,33 @@
             margin: auto;
         }
 
+
         /* =========================================================
            PRELOADER
            ========================================================= */
 
         #preloader {
+
             position: fixed;
             inset: 0;
+
             z-index: 9999;
+
             background: var(--white);
+
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: opacity .6s ease, visibility .6s ease;
+
+            transition:
+                opacity .6s ease,
+                visibility .6s ease;
         }
 
         #preloader.hide {
             opacity: 0;
             visibility: hidden;
+            pointer-events: none;
         }
 
         .loader-content {
@@ -112,36 +132,54 @@
         }
 
         .loader-logo {
+
             font-family: "Playfair Display", serif;
+
             font-size: 48px;
+
             color: var(--green);
+
             letter-spacing: -2px;
         }
 
         .loader-tagline {
+
             color: var(--gray);
+
             margin-top: 5px;
+
             font-size: 14px;
         }
 
         .loader-line {
+
             width: 160px;
             height: 3px;
+
             background: var(--gray-light);
+
             margin: 25px auto 0;
+
             overflow: hidden;
+
             border-radius: 10px;
         }
 
         .loader-line span {
+
             display: block;
+
             width: 45%;
             height: 100%;
+
             background: var(--gold);
-            animation: loading 1.2s infinite ease-in-out;
+
+            animation:
+                loading 1.2s infinite ease-in-out;
         }
 
         @keyframes loading {
+
             0% {
                 transform: translateX(-120%);
             }
@@ -149,35 +187,57 @@
             100% {
                 transform: translateX(350%);
             }
+
         }
+
 
         /* =========================================================
            NAVBAR
            ========================================================= */
 
         header {
+
             position: fixed;
+
             top: 0;
             left: 0;
+
             width: 100%;
+
             z-index: 1000;
+
             background: rgba(255, 255, 255, .92);
+
             backdrop-filter: blur(15px);
-            border-bottom: 1px solid rgba(12, 107, 69, .08);
+
+            border-bottom:
+                1px solid rgba(12, 107, 69, .08);
+
+            transition:
+                box-shadow .3s ease;
         }
 
         nav {
+
             min-height: 78px;
+
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
         }
 
         .logo {
+
             font-family: "Playfair Display", serif;
+
             font-size: 30px;
+
             font-weight: 700;
+
             color: var(--green);
+
             letter-spacing: -1px;
         }
 
@@ -186,27 +246,62 @@
         }
 
         .nav-links {
+
             display: flex;
+
             align-items: center;
+
             gap: 30px;
+
             list-style: none;
         }
 
         .nav-links a {
+
             color: var(--gray-dark);
+
             font-size: 14px;
+
             font-weight: 600;
+
             transition: .25s;
         }
 
-        .nav-links a:hover {
+        .nav-links a:hover,
+        .nav-links a.active-link {
             color: var(--green);
         }
 
+        .nav-links a.active-link {
+            position: relative;
+        }
+
+        .nav-links a.active-link:not(.nav-cta)::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            right: 0;
+
+            bottom: -7px;
+
+            height: 2px;
+
+            background: var(--gold);
+
+            border-radius: 10px;
+        }
+
         .nav-cta {
+
             padding: 11px 20px;
+
             border-radius: 50px;
+
             background: var(--green);
+
             color: white !important;
         }
 
@@ -215,30 +310,50 @@
         }
 
         .menu-btn {
+
             display: none;
+
             border: 0;
+
             background: transparent;
+
             font-size: 27px;
+
             color: var(--green);
+
             cursor: pointer;
         }
+
 
         /* =========================================================
            BUTTONS
            ========================================================= */
 
         .btn {
+
             display: inline-flex;
+
             align-items: center;
             justify-content: center;
+
             gap: 9px;
+
             padding: 14px 23px;
+
             border-radius: 50px;
+
             border: 1px solid transparent;
+
             font-weight: 700;
+
             font-size: 14px;
+
             cursor: pointer;
-            transition: transform .25s, box-shadow .25s, background .25s;
+
+            transition:
+                transform .25s,
+                box-shadow .25s,
+                background .25s;
         }
 
         .btn:hover {
@@ -246,9 +361,13 @@
         }
 
         .btn-primary {
+
             background: var(--green);
+
             color: white;
-            box-shadow: 0 12px 28px rgba(12, 107, 69, .18);
+
+            box-shadow:
+                0 12px 28px rgba(12, 107, 69, .18);
         }
 
         .btn-primary:hover {
@@ -256,8 +375,12 @@
         }
 
         .btn-secondary {
-            border-color: rgba(12, 107, 69, .2);
+
+            border-color:
+                rgba(12, 107, 69, .2);
+
             color: var(--green);
+
             background: white;
         }
 
@@ -265,53 +388,94 @@
             background: var(--green-soft);
         }
 
+
         /* =========================================================
            HERO
            ========================================================= */
 
         .hero {
+
             padding: 170px 0 100px;
+
             background:
-                radial-gradient(circle at 85% 20%, rgba(217, 164, 65, .13), transparent 28%),
-                radial-gradient(circle at 10% 80%, rgba(12, 107, 69, .08), transparent 32%),
+
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(217, 164, 65, .13),
+                    transparent 28%
+                ),
+
+                radial-gradient(
+                    circle at 10% 80%,
+                    rgba(12, 107, 69, .08),
+                    transparent 32%
+                ),
+
                 var(--off-white);
+
             position: relative;
+
             overflow: hidden;
         }
 
         .hero-grid {
+
             display: grid;
-            grid-template-columns: 1.05fr .95fr;
+
+            grid-template-columns:
+                1.05fr .95fr;
+
             gap: 70px;
+
             align-items: center;
         }
 
         .eyebrow {
+
             display: inline-flex;
+
             align-items: center;
+
             gap: 8px;
+
             background: var(--green-light);
+
             color: var(--green);
+
             padding: 8px 13px;
+
             border-radius: 50px;
+
             font-size: 12px;
+
             font-weight: 700;
+
             margin-bottom: 22px;
         }
 
         .eyebrow-dot {
+
             width: 7px;
             height: 7px;
+
             border-radius: 50%;
+
             background: var(--gold);
         }
 
         .hero h1 {
+
             font-family: "Playfair Display", serif;
-            font-size: clamp(48px, 6vw, 78px);
+
+            font-size:
+                clamp(48px, 6vw, 78px);
+
             line-height: 1.02;
+
             letter-spacing: -3px;
+
             color: var(--green-dark);
+
             max-width: 700px;
         }
 
@@ -320,156 +484,170 @@
         }
 
         .hero-text {
+
             max-width: 610px;
+
             margin-top: 25px;
+
             color: var(--gray-dark);
+
             font-size: 18px;
         }
 
         .hero-buttons {
+
             display: flex;
+
             gap: 12px;
+
             flex-wrap: wrap;
+
             margin-top: 32px;
         }
 
         .hero-note {
+
             margin-top: 22px;
+
             font-size: 13px;
+
             color: var(--gray);
         }
 
-        /* Hero visual */
+
+        /* =========================================================
+           HERO IMAGE
+           ========================================================= */
 
         .hero-visual {
+
             position: relative;
-            min-height: 470px;
+
+            min-height: 500px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
         }
 
-        .phone {
-            width: 290px;
+        .hero-image {
+
+            width: 100%;
+
+            max-width: 520px;
+
             height: 500px;
-            margin: auto;
-            background: #fff;
-            border: 8px solid #15241e;
-            border-radius: 38px;
-            box-shadow: var(--shadow-lg);
-            position: relative;
+
+            border-radius: 35px;
+
             overflow: hidden;
-            transform: rotate(3deg);
-        }
 
-        .phone-top {
-            height: 30px;
-            background: #15241e;
             position: relative;
+
+            box-shadow: var(--shadow-lg);
+
+            background: var(--green-light);
         }
 
-        .phone-notch {
-            width: 90px;
-            height: 18px;
-            background: #15241e;
+        .hero-image::after {
+
+            content: "";
+
             position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 0 0 15px 15px;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    rgba(6, 69, 47, .02),
+                    rgba(6, 69, 47, .25)
+                );
+
+            pointer-events: none;
         }
 
-        .phone-body {
-            padding: 22px 16px;
-        }
+        .hero-image img {
 
-        .mini-brand {
-            font-family: "Playfair Display", serif;
-            font-size: 22px;
-            color: var(--green);
-        }
+            width: 100%;
+            height: 100%;
 
-        .phone-greeting {
-            margin-top: 22px;
-            font-weight: 700;
-            font-size: 18px;
-        }
+            object-fit: cover;
 
-        .budget-card {
-            margin-top: 17px;
-            padding: 17px;
-            background: var(--green);
-            color: white;
-            border-radius: 18px;
-        }
-
-        .budget-card small {
-            opacity: .75;
-        }
-
-        .budget-card strong {
             display: block;
-            font-size: 28px;
-            margin-top: 5px;
+
+            transition:
+                transform .6s ease;
         }
 
-        .meal-card {
-            margin-top: 14px;
-            padding: 15px;
-            border: 1px solid var(--gray-light);
-            border-radius: 17px;
+        .hero-image:hover img {
+            transform: scale(1.04);
         }
 
-        .meal-title {
-            font-weight: 700;
-        }
 
-        .meal-meta {
-            margin-top: 5px;
-            color: var(--gray);
-            font-size: 12px;
-        }
-
-        .juri-mini {
-            margin-top: 14px;
-            padding: 14px;
-            background: var(--gold-light);
-            border-radius: 17px;
-            font-size: 12px;
-        }
-
-        .juri-mini strong {
-            color: var(--green);
-        }
+        /* =========================================================
+           HERO FLOATING CARDS
+           ========================================================= */
 
         .floating-card {
+
             position: absolute;
+
             background: white;
+
             border-radius: 18px;
+
             padding: 15px 18px;
+
             box-shadow: var(--shadow-lg);
-            border: 1px solid rgba(12, 107, 69, .08);
+
+            border:
+                1px solid rgba(12, 107, 69, .08);
+
             font-size: 13px;
+
             font-weight: 600;
+
+            z-index: 2;
         }
 
         .float-one {
-            top: 60px;
-            left: 5%;
+
+            top: 55px;
+
+            left: 0;
         }
 
         .float-two {
-            bottom: 65px;
+
+            bottom: 55px;
+
             right: 0;
         }
 
         .float-icon {
+
             display: inline-flex;
+
             width: 30px;
             height: 30px;
+
             border-radius: 10px;
+
             align-items: center;
             justify-content: center;
+
             background: var(--green-light);
+
+            color: var(--green);
+
             margin-right: 7px;
+
+            font-weight: 800;
         }
+
 
         /* =========================================================
            GENERAL SECTION
@@ -480,32 +658,50 @@
         }
 
         .section-head {
+
             max-width: 720px;
+
             margin-bottom: 55px;
         }
 
         .section-label {
+
             color: var(--gold);
+
             text-transform: uppercase;
+
             letter-spacing: 2px;
+
             font-size: 12px;
+
             font-weight: 800;
+
             margin-bottom: 12px;
         }
 
         .section-head h2 {
+
             font-family: "Playfair Display", serif;
-            font-size: clamp(34px, 4vw, 53px);
+
+            font-size:
+                clamp(34px, 4vw, 53px);
+
             line-height: 1.1;
+
             color: var(--green-dark);
+
             letter-spacing: -1.5px;
         }
 
         .section-head p {
+
             margin-top: 15px;
+
             color: var(--gray);
+
             font-size: 16px;
         }
+
 
         /* =========================================================
            OPPORTUNITY
@@ -516,68 +712,109 @@
         }
 
         .opportunity-grid {
+
             display: grid;
-            grid-template-columns: .85fr 1.15fr;
+
+            grid-template-columns:
+                .85fr 1.15fr;
+
             gap: 65px;
+
             align-items: start;
         }
 
         .stats {
+
             display: grid;
+
             gap: 15px;
         }
 
         .stat {
+
             padding: 23px;
+
             background: var(--green-soft);
+
             border-radius: 20px;
-            border: 1px solid rgba(12, 107, 69, .08);
+
+            border:
+                1px solid rgba(12, 107, 69, .08);
         }
 
         .stat strong {
+
             display: block;
+
             color: var(--green);
+
             font-size: 30px;
         }
 
         .stat span {
+
             color: var(--gray);
+
             font-size: 13px;
         }
 
         .questions {
+
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
             gap: 12px;
         }
 
         .question {
+
             padding: 20px;
-            border: 1px solid var(--gray-light);
+
+            border:
+                1px solid var(--gray-light);
+
             border-radius: 16px;
+
             background: white;
+
             font-weight: 600;
         }
 
         .question::before {
+
             content: "✓";
+
             display: inline-flex;
+
             align-items: center;
             justify-content: center;
+
             width: 23px;
             height: 23px;
+
             border-radius: 50%;
+
             background: var(--gold-light);
+
             color: var(--gold);
+
             margin-right: 9px;
+
             font-size: 12px;
         }
 
         .insight {
+
             margin-top: 25px;
+
             padding: 25px;
+
             background: var(--green);
+
             color: white;
+
             border-radius: 22px;
         }
 
@@ -585,131 +822,149 @@
             color: var(--gold);
         }
 
-        /* =========================================================
-           FOOD LOOP
-           ========================================================= */
-
-        .food-loop-section {
-            background: var(--off-white);
-        }
-
-        .food-loop {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .loop-item {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: white;
-            border: 2px solid var(--green-light);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            box-shadow: var(--shadow-sm);
-            font-weight: 700;
-            color: var(--green-dark);
-            transition: .3s;
-        }
-
-        .loop-item:hover {
-            transform: translateY(-7px);
-            border-color: var(--gold);
-        }
-
-        .loop-number {
-            font-size: 12px;
-            color: var(--gold);
-            margin-bottom: 4px;
-        }
-
-        .loop-arrow {
-            color: var(--gold);
-            font-size: 22px;
-            font-weight: 700;
-        }
-
-        .loop-message {
-            text-align: center;
-            max-width: 650px;
-            margin: 45px auto 0;
-            font-family: "Playfair Display", serif;
-            font-size: 26px;
-            color: var(--green-dark);
-        }
 
         /* =========================================================
            HOW IT WORKS
            ========================================================= */
 
         .steps {
+
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
             gap: 18px;
         }
 
         .step-card {
+
             padding: 30px 25px;
-            border: 1px solid var(--gray-light);
+
+            border:
+                1px solid var(--gray-light);
+
             border-radius: 24px;
+
             background: white;
+
             transition: .3s;
         }
 
         .step-card:hover {
+
             transform: translateY(-7px);
+
             box-shadow: var(--shadow-sm);
-            border-color: rgba(12, 107, 69, .2);
+
+            border-color:
+                rgba(12, 107, 69, .2);
         }
 
         .step-number {
+
             width: 43px;
             height: 43px;
+
             border-radius: 14px;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
+
             background: var(--green);
+
             color: white;
+
             font-weight: 800;
         }
 
         .step-card h3 {
+
             margin-top: 25px;
+
             color: var(--green-dark);
+
             font-size: 20px;
         }
 
         .step-card p {
+
             margin-top: 10px;
+
             color: var(--gray);
+
             font-size: 14px;
         }
+
+
+        /* =========================================================
+           STEP IMAGES
+           ========================================================= */
+
+        .step-image {
+
+            width: 100%;
+
+            height: 190px;
+
+            margin-top: 22px;
+
+            border-radius: 16px;
+
+            overflow: hidden;
+
+            background: var(--green-light);
+        }
+
+        .step-image img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition:
+                transform .5s ease;
+        }
+
+        .step-card:hover
+        .step-image img {
+
+            transform: scale(1.06);
+        }
+
 
         /* =========================================================
            JURI
            ========================================================= */
 
         .juri-section {
+
             background: var(--green-dark);
+
             color: white;
+
             overflow: hidden;
         }
 
         .juri-grid {
+
             display: grid;
-            grid-template-columns: .85fr 1.15fr;
+
+            grid-template-columns:
+                .85fr 1.15fr;
+
             gap: 70px;
+
             align-items: center;
         }
 
-        .juri-section .section-label {
+        .juri-section
+        .section-label {
             color: var(--gold);
         }
 
@@ -718,82 +973,106 @@
         }
 
         .juri-intro {
-            color: rgba(255,255,255,.72);
+
+            color:
+                rgba(255,255,255,.72);
+
             margin-top: 18px;
         }
 
         .juri-bubble {
+
             margin-top: 25px;
+
             padding: 22px;
-            border-left: 3px solid var(--gold);
-            background: rgba(255,255,255,.05);
-            border-radius: 0 18px 18px 0;
+
+            border-left:
+                3px solid var(--gold);
+
+            background:
+                rgba(255,255,255,.05);
+
+            border-radius:
+                0 18px 18px 0;
         }
 
         .juri-bubble strong {
+
             display: block;
+
             color: var(--gold);
+
             margin-bottom: 5px;
         }
 
         .juri-visual {
+
             position: relative;
+
             min-height: 450px;
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
         }
 
-        .juri-orb {
-            width: 280px;
-            height: 280px;
-            border-radius: 50%;
-            background:
-                radial-gradient(circle at 30% 25%, #ffffff, #dff3e8 18%, #62ae87 48%, var(--green) 70%);
-            box-shadow:
-                0 0 0 25px rgba(217,164,65,.08),
-                0 0 100px rgba(217,164,65,.16);
+        .juri-image {
+
+            width: 100%;
+
+            max-width: 500px;
+
+            height: 450px;
+
+            border-radius: 30px;
+
+            overflow: hidden;
+
             position: relative;
+
+            box-shadow:
+                0 30px 80px rgba(0, 0, 0, .25);
+
+            background: var(--green);
         }
 
-        .juri-orb::after {
-            content: "J";
+        .juri-image::after {
+
+            content: "";
+
             position: absolute;
+
             inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: "Playfair Display", serif;
-            font-size: 120px;
-            color: white;
-            opacity: .9;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(6, 69, 47, .45),
+                    transparent 55%
+                );
+
+            pointer-events: none;
         }
 
-        .juri-function {
-            position: absolute;
-            background: white;
-            color: var(--black);
-            padding: 14px 18px;
-            border-radius: 15px;
-            box-shadow: var(--shadow-lg);
-            font-size: 13px;
-            font-weight: 700;
+        .juri-image img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition:
+                transform .6s ease;
         }
 
-        .juri-function.one {
-            top: 30px;
-            left: 0;
+        .juri-image:hover img {
+            transform: scale(1.05);
         }
 
-        .juri-function.two {
-            right: 0;
-            top: 150px;
-        }
-
-        .juri-function.three {
-            bottom: 35px;
-            left: 15%;
-        }
 
         /* =========================================================
            LEARNING LOOP
@@ -804,65 +1083,103 @@
         }
 
         .learning-loop {
+
             max-width: 900px;
+
             margin: auto;
+
             display: flex;
+
             justify-content: center;
             align-items: center;
+
             flex-wrap: wrap;
+
             gap: 14px;
         }
 
         .learn-item {
+
             padding: 16px 22px;
+
             background: white;
+
             border-radius: 50px;
-            border: 1px solid var(--gray-light);
+
+            border:
+                1px solid var(--gray-light);
+
             color: var(--green-dark);
+
             font-weight: 700;
+
             box-shadow: var(--shadow-sm);
         }
 
         .learn-arrow {
+
             color: var(--gold);
+
             font-weight: 900;
         }
 
         .learning-text {
+
             text-align: center;
+
             max-width: 680px;
+
             margin: 35px auto 0;
+
             color: var(--gray);
         }
+
 
         /* =========================================================
            DIFFERENCE
            ========================================================= */
 
         .difference-grid {
+
             display: grid;
-            grid-template-columns: 1fr 1fr;
+
+            grid-template-columns:
+                1fr 1fr;
+
             gap: 30px;
+
             align-items: stretch;
         }
 
         .difference-card {
+
             padding: 35px;
-            border: 1px solid var(--gray-light);
+
+            border:
+                1px solid var(--gray-light);
+
             border-radius: 25px;
         }
 
         .difference-card h3 {
+
             color: var(--gray-dark);
+
             margin-bottom: 20px;
         }
 
         .fragment {
+
             display: flex;
+
             justify-content: space-between;
             align-items: center;
+
             padding: 14px 0;
-            border-bottom: 1px solid var(--gray-light);
+
+            border-bottom:
+                1px solid var(--gray-light);
+
             font-size: 14px;
         }
 
@@ -871,229 +1188,445 @@
         }
 
         .paletra-difference {
+
             padding: 40px;
+
             background: var(--green);
+
             color: white;
+
             border-radius: 25px;
+
             display: flex;
+
             flex-direction: column;
+
             justify-content: center;
         }
 
         .paletra-difference h3 {
-            font-family: "Playfair Display", serif;
+
+            font-family:
+                "Playfair Display", serif;
+
             color: white;
+
             font-size: 38px;
+
             line-height: 1.1;
         }
 
         .paletra-difference p {
+
             margin-top: 18px;
-            color: rgba(255,255,255,.75);
+
+            color:
+                rgba(255,255,255,.75);
         }
 
         .difference-tag {
+
             display: inline-block;
+
             margin-top: 25px;
+
             padding: 9px 14px;
+
             border-radius: 50px;
-            background: rgba(217,164,65,.15);
+
+            background:
+                rgba(217,164,65,.15);
+
             color: var(--gold);
+
             width: fit-content;
+
             font-size: 12px;
+
             font-weight: 800;
         }
 
-       /* =========================================================
-   TARGET AUDIENCE
-   ========================================================= */
 
-.target {
-    background: var(--green-soft);
-}
+        /* =========================================================
+           FOOD LOOP
+           ========================================================= */
 
-.audience-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-}
+        .food-loop-section {
+            background: var(--off-white);
+        }
 
-.audience {
-    background: white;
-    padding: 10px 10px 24px;
-    border-radius: 22px;
-    text-align: left;
-    border: 1px solid rgba(12, 107, 69, .08);
-    overflow: hidden;
-    transition: .3s ease;
-}
+        .food-loop {
 
-.audience:hover {
-    transform: translateY(-7px);
-    box-shadow: var(--shadow-lg);
-    border-color: rgba(12, 107, 69, .18);
-}
+            width: 100%;
+
+            display: flex;
+
+            justify-content: center;
+
+            margin-top: 20px;
+        }
+
+        .food-loop-image {
+
+            width: 100%;
+
+            max-width: 1050px;
+
+            height: 420px;
+
+            border-radius: 30px;
+
+            overflow: hidden;
+
+            position: relative;
+
+            box-shadow: var(--shadow-lg);
+
+            background: var(--green-light);
+        }
+
+        .food-loop-image::after {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    rgba(6, 69, 47, .05),
+                    rgba(6, 69, 47, .35)
+                );
+
+            pointer-events: none;
+        }
+
+        .food-loop-image img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition:
+                transform .6s ease;
+        }
+
+        .food-loop-image:hover img {
+            transform: scale(1.04);
+        }
+
+        .loop-message {
+
+            text-align: center;
+
+            max-width: 650px;
+
+            margin: 45px auto 0;
+
+            font-family:
+                "Playfair Display", serif;
+
+            font-size: 26px;
+
+            color: var(--green-dark);
+        }
 
 
-/* IMAGE */
+        /* =========================================================
+           TARGET AUDIENCE
+           ========================================================= */
 
-.audience-image {
-    width: 100%;
-    height: 210px;
-    overflow: hidden;
-    border-radius: 16px;
-    margin-bottom: 20px;
-    background: var(--green-light);
-}
+        .target {
+            background: var(--green-soft);
+        }
 
-.audience-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform .5s ease;
-}
+        .audience-grid {
 
-.audience:hover .audience-image img {
-    transform: scale(1.06);
-}
+            display: grid;
 
+            grid-template-columns:
+                repeat(4, 1fr);
 
-/* TEXT */
+            gap: 18px;
+        }
 
-.audience strong {
-    display: block;
-    color: var(--green-dark);
-    font-size: 17px;
-    padding: 0 10px;
-}
+        .audience {
 
-.audience span {
-    display: block;
-    font-size: 13px;
-    color: var(--gray);
-    margin-top: 5px;
-    padding: 0 10px;
-}
+            background: white;
+
+            padding:
+                10px 10px 24px;
+
+            border-radius: 22px;
+
+            text-align: left;
+
+            border:
+                1px solid rgba(12, 107, 69, .08);
+
+            overflow: hidden;
+
+            transition: .3s ease;
+        }
+
+        .audience:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow: var(--shadow-lg);
+
+            border-color:
+                rgba(12, 107, 69, .18);
+        }
+
+        .audience-image {
+
+            width: 100%;
+
+            height: 210px;
+
+            overflow: hidden;
+
+            border-radius: 16px;
+
+            margin-bottom: 20px;
+
+            background: var(--green-light);
+        }
+
+        .audience-image img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition:
+                transform .5s ease;
+        }
+
+        .audience:hover
+        .audience-image img {
+            transform: scale(1.06);
+        }
+
+        .audience strong {
+
+            display: block;
+
+            color: var(--green-dark);
+
+            font-size: 17px;
+
+            padding: 0 10px;
+        }
+
+        .audience span {
+
+            display: block;
+
+            font-size: 13px;
+
+            color: var(--gray);
+
+            margin-top: 5px;
+
+            padding: 0 10px;
+        }
+
 
         /* =========================================================
            BUSINESS MODEL
            ========================================================= */
 
         .business-model {
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 18px;
         }
 
         .business-card {
+
             padding: 30px;
+
             border-radius: 23px;
-            border: 1px solid var(--gray-light);
+
+            border:
+                1px solid var(--gray-light);
+
             background: white;
         }
 
         .business-card.featured {
-            border: 2px solid var(--gold);
+
+            border:
+                2px solid var(--gold);
+
             box-shadow: var(--shadow-sm);
         }
 
         .business-card .plan {
+
             color: var(--gold);
+
             font-weight: 800;
+
             text-transform: uppercase;
+
             letter-spacing: 1px;
+
             font-size: 12px;
         }
 
         .business-card h3 {
+
             margin-top: 12px;
+
             color: var(--green-dark);
+
             font-size: 25px;
         }
 
         .price {
+
             margin-top: 12px;
+
             font-size: 28px;
+
             font-weight: 800;
+
             color: var(--green);
         }
 
         .business-card p {
+
             color: var(--gray);
+
             margin-top: 15px;
+
             font-size: 14px;
         }
 
         .business-card ul {
+
             list-style: none;
+
             margin-top: 18px;
         }
 
         .business-card li {
+
             font-size: 13px;
+
             margin: 9px 0;
+
             color: var(--gray-dark);
         }
 
         .business-card li::before {
+
             content: "✓";
+
             color: var(--green);
+
             font-weight: 800;
+
             margin-right: 8px;
         }
 
         .hypothesis-note {
+
             margin-top: 22px;
+
             color: var(--gray);
+
             font-size: 12px;
+
             text-align: center;
         }
+
 
         /* =========================================================
            NIGERIA
            ========================================================= */
 
         .local-section {
+
             background:
-                linear-gradient(rgba(6,69,47,.94), rgba(6,69,47,.94)),
+                linear-gradient(
+                    rgba(6,69,47,.94),
+                    rgba(6,69,47,.94)
+                ),
                 var(--green-dark);
+
             color: white;
         }
 
         .local-grid {
+
             display: grid;
-            grid-template-columns: 1fr 1fr;
+
+            grid-template-columns:
+                1fr 1fr;
+
             gap: 60px;
+
             align-items: center;
         }
 
         .local-section h2 {
-            font-family: "Playfair Display", serif;
+
+            font-family:
+                "Playfair Display", serif;
+
             font-size: 50px;
+
             line-height: 1.05;
         }
 
         .local-section p {
+
             margin-top: 18px;
-            color: rgba(255,255,255,.72);
+
+            color:
+                rgba(255,255,255,.72);
         }
 
         .local-list {
+
             display: grid;
+
             gap: 12px;
         }
 
         .local-item {
+
             padding: 18px;
-            background: rgba(255,255,255,.06);
-            border: 1px solid rgba(255,255,255,.1);
+
+            background:
+                rgba(255,255,255,.06);
+
+            border:
+                1px solid rgba(255,255,255,.1);
+
             border-radius: 16px;
         }
 
         .local-item strong {
             color: var(--gold);
         }
+
 
         /* =========================================================
            EARLY ACCESS
@@ -1104,100 +1637,159 @@
         }
 
         .early-box {
+
             background: var(--green);
+
             color: white;
+
             padding: 65px;
+
             border-radius: 35px;
+
             text-align: center;
+
             position: relative;
+
             overflow: hidden;
         }
 
         .early-box::before {
+
             content: "";
+
             width: 300px;
             height: 300px;
-            border: 1px solid rgba(255,255,255,.12);
+
+            border:
+                1px solid rgba(255,255,255,.12);
+
             border-radius: 50%;
+
             position: absolute;
+
             left: -120px;
             top: -120px;
         }
 
         .early-box h2 {
+
             position: relative;
-            font-family: "Playfair Display", serif;
-            font-size: clamp(35px, 4vw, 55px);
+
+            font-family:
+                "Playfair Display", serif;
+
+            font-size:
+                clamp(35px, 4vw, 55px);
+
             line-height: 1.1;
         }
 
         .early-box p {
+
             position: relative;
+
             max-width: 620px;
+
             margin: 18px auto 28px;
-            color: rgba(255,255,255,.75);
+
+            color:
+                rgba(255,255,255,.75);
         }
 
         .early-box .btn {
+
             position: relative;
+
             background: var(--gold);
+
             color: var(--green-dark);
         }
+
 
         /* =========================================================
            TEAM
            ========================================================= */
 
         .team-grid {
+
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
             gap: 18px;
         }
 
         .team-card {
+
             padding: 30px;
-            border: 1px solid var(--gray-light);
+
+            border:
+                1px solid var(--gray-light);
+
             border-radius: 22px;
         }
 
         .team-role {
+
             color: var(--gold);
+
             font-size: 12px;
+
             font-weight: 800;
+
             text-transform: uppercase;
+
             letter-spacing: 1px;
         }
 
         .team-card h3 {
+
             margin-top: 8px;
+
             color: var(--green-dark);
         }
 
         .team-card p {
+
             margin-top: 8px;
+
             color: var(--gray);
+
             font-size: 13px;
         }
+
 
         /* =========================================================
            FOOTER
            ========================================================= */
 
         footer {
+
             background: #052d20;
+
             color: white;
+
             padding: 65px 0 25px;
         }
 
         .footer-grid {
+
             display: grid;
-            grid-template-columns: 1.3fr .7fr .7fr;
+
+            grid-template-columns:
+                1.3fr .7fr .7fr;
+
             gap: 50px;
         }
 
         .footer-logo {
-            font-family: "Playfair Display", serif;
+
+            font-family:
+                "Playfair Display", serif;
+
             font-size: 34px;
+
             color: white;
         }
 
@@ -1206,22 +1798,35 @@
         }
 
         .footer-about {
+
             margin-top: 13px;
-            color: rgba(255,255,255,.55);
+
+            color:
+                rgba(255,255,255,.55);
+
             max-width: 400px;
+
             font-size: 14px;
         }
 
         .footer-column h4 {
+
             color: var(--gold);
+
             font-size: 13px;
+
             margin-bottom: 15px;
         }
 
         .footer-column a {
+
             display: block;
-            color: rgba(255,255,255,.65);
+
+            color:
+                rgba(255,255,255,.65);
+
             font-size: 13px;
+
             margin: 9px 0;
         }
 
@@ -1230,28 +1835,47 @@
         }
 
         .copyright {
-            border-top: 1px solid rgba(255,255,255,.08);
+
+            border-top:
+                1px solid rgba(255,255,255,.08);
+
             margin-top: 45px;
+
             padding-top: 22px;
-            color: rgba(255,255,255,.4);
+
+            color:
+                rgba(255,255,255,.4);
+
             font-size: 12px;
+
             text-align: center;
         }
+
 
         /* =========================================================
            SCROLL ANIMATION
            ========================================================= */
 
         .reveal {
+
             opacity: 0;
-            transform: translateY(25px);
-            transition: opacity .7s ease, transform .7s ease;
+
+            transform:
+                translateY(25px);
+
+            transition:
+                opacity .7s ease,
+                transform .7s ease;
         }
 
         .reveal.show {
+
             opacity: 1;
-            transform: translateY(0);
+
+            transform:
+                translateY(0);
         }
+
 
         /* =========================================================
            RESPONSIVE
@@ -1263,6 +1887,7 @@
             .opportunity-grid,
             .juri-grid,
             .local-grid {
+
                 grid-template-columns: 1fr;
             }
 
@@ -1275,7 +1900,9 @@
             }
 
             .hero-text {
+
                 margin-left: auto;
+
                 margin-right: auto;
             }
 
@@ -1284,17 +1911,24 @@
             }
 
             .hero-visual {
+
                 max-width: 500px;
+
                 width: 100%;
+
                 margin: auto;
             }
 
             .steps {
-                grid-template-columns: repeat(2, 1fr);
+
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
             .audience-grid {
-                grid-template-columns: repeat(2, 1fr);
+
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
             .business-model {
@@ -1310,9 +1944,13 @@
             }
 
             .footer-grid {
-                grid-template-columns: 1fr 1fr;
+
+                grid-template-columns:
+                    1fr 1fr;
             }
+
         }
+
 
         @media (max-width: 700px) {
 
@@ -1321,32 +1959,56 @@
             }
 
             .nav-links {
+
                 position: absolute;
+
                 top: 78px;
+
                 left: 0;
                 right: 0;
+
                 background: white;
+
                 padding: 20px;
+
                 flex-direction: column;
+
                 align-items: stretch;
+
                 gap: 5px;
-                box-shadow: 0 15px 30px rgba(0,0,0,.08);
+
+                box-shadow:
+                    0 15px 30px rgba(0,0,0,.08);
 
                 opacity: 0;
+
                 visibility: hidden;
-                transform: translateY(-10px);
+
+                transform:
+                    translateY(-10px);
+
                 transition: .25s;
             }
 
             .nav-links.active {
+
                 opacity: 1;
+
                 visibility: visible;
-                transform: translateY(0);
+
+                transform:
+                    translateY(0);
             }
 
             .nav-links a {
+
                 display: block;
+
                 padding: 12px;
+            }
+
+            .nav-links a.active-link:not(.nav-cta)::after {
+                display: none;
             }
 
             .menu-btn {
@@ -1354,7 +2016,9 @@
             }
 
             .hero h1 {
+
                 font-size: 48px;
+
                 letter-spacing: -2px;
             }
 
@@ -1362,21 +2026,31 @@
                 font-size: 16px;
             }
 
-            .phone {
-                width: 255px;
-                height: 450px;
+            .hero-visual {
+                min-height: 400px;
             }
 
-            .hero-visual {
-                min-height: 430px;
+            .hero-image {
+
+                height: 400px;
+
+                max-width: 100%;
+
+                border-radius: 25px;
             }
 
             .float-one {
-                left: 0;
+
+                top: 25px;
+
+                left: -5px;
             }
 
             .float-two {
-                right: 0;
+
+                bottom: 25px;
+
+                right: -5px;
             }
 
             .questions {
@@ -1392,7 +2066,9 @@
             }
 
             .audience-grid {
-                grid-template-columns: 1fr 1fr;
+
+                grid-template-columns:
+                    1fr 1fr;
             }
 
             .local-grid {
@@ -1416,16 +2092,26 @@
                 gap: 30px;
             }
 
-            .loop-item {
-                width: 100px;
-                height: 100px;
-                font-size: 13px;
+            .step-image {
+                height: 210px;
             }
 
-            .loop-arrow {
-                font-size: 16px;
+            .juri-image {
+
+                height: 350px;
+
+                max-width: 100%;
             }
+
+            .food-loop-image {
+
+                height: 280px;
+
+                border-radius: 22px;
+            }
+
         }
+
 
         @media (max-width: 430px) {
 
@@ -1442,8 +2128,12 @@
             }
 
             .hero-visual {
-                transform: scale(.92);
+
+                transform:
+                    scale(.92);
+
                 margin-left: -3%;
+
                 width: 106%;
             }
 
@@ -1455,16 +2145,6 @@
                 gap: 8px;
             }
 
-            .loop-item {
-                width: 85px;
-                height: 85px;
-                font-size: 11px;
-            }
-
-            .loop-arrow {
-                display: none;
-            }
-
             .learning-loop {
                 gap: 8px;
             }
@@ -1472,278 +2152,39 @@
             .learn-arrow {
                 display: none;
             }
+
         }
 
-        /* =========================================================
-   STEP IMAGES
-   ========================================================= */
-
-.step-image {
-    width: 100%;
-    height: 190px;
-    margin-top: 22px;
-    border-radius: 16px;
-    overflow: hidden;
-    background: var(--green-light);
-}
-
-.step-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform .5s ease;
-}
-
-.step-card:hover .step-image img {
-    transform: scale(1.06);
-}
-
-        @media (max-width: 700px) {
-
-    .step-image {
-        height: 210px;
-    }
-
-}
-        /* =========================================================
-   JURI IMAGE
-   ========================================================= */
-
-.juri-visual {
-    position: relative;
-    min-height: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.juri-image {
-    width: 100%;
-    max-width: 500px;
-    height: 450px;
-    border-radius: 30px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, .25);
-}
-
-.juri-image::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(
-            to top,
-            rgba(6, 69, 47, .45),
-            transparent 55%
-        );
-    pointer-events: none;
-}
-
-.juri-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform .6s ease;
-}
-
-.juri-image:hover img {
-    transform: scale(1.05);
-}
-
-        @media (max-width: 700px) {
-
-    .juri-image {
-        height: 350px;
-        max-width: 100%;
-    }
-
-}
-
-        /* =========================================================
-   FOOD LOOP IMAGE
-   ========================================================= */
-
-.food-loop {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.food-loop-image {
-    width: 100%;
-    max-width: 1050px;
-    height: 420px;
-    border-radius: 30px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: var(--shadow-lg);
-}
-
-.food-loop-image::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(6, 69, 47, .05),
-        rgba(6, 69, 47, .35)
-    );
-    pointer-events: none;
-}
-
-.food-loop-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform .6s ease;
-}
-
-.food-loop-image:hover img {
-    transform: scale(1.04);
-}
-
-        @media (max-width: 700px) {
-
-    .food-loop-image {
-        height: 280px;
-        border-radius: 22px;
-    }
-
-}
-
-  /* =========================================================
-   HERO IMAGE
-   ========================================================= */
-
-.hero-visual {
-    position: relative;
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-image {
-    width: 100%;
-    max-width: 520px;
-    height: 500px;
-    border-radius: 35px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: var(--shadow-lg);
-}
-
-.hero-image::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(6, 69, 47, .02),
-        rgba(6, 69, 47, .25)
-    );
-    pointer-events: none;
-}
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform .6s ease;
-}
-
-.hero-image:hover img {
-    transform: scale(1.04);
-}
-
-
-/* =========================================================
-   HERO FLOATING CARDS
-   ========================================================= */
-
-.floating-card {
-    position: absolute;
-    background: white;
-    border-radius: 18px;
-    padding: 15px 18px;
-    box-shadow: var(--shadow-lg);
-    border: 1px solid rgba(12, 107, 69, .08);
-    font-size: 13px;
-    font-weight: 600;
-    z-index: 2;
-}
-
-.float-one {
-    top: 55px;
-    left: 0;
-}
-
-.float-two {
-    bottom: 55px;
-    right: 0;
-}
-
-.float-icon {
-    display: inline-flex;
-    width: 30px;
-    height: 30px;
-    border-radius: 10px;
-    align-items: center;
-    justify-content: center;
-    background: var(--green-light);
-    color: var(--green);
-    margin-right: 7px;
-    font-weight: 800;
-}
-
-        @media (max-width: 700px) {
-
-    .hero-visual {
-        min-height: 400px;
-    }
-
-    .hero-image {
-        height: 400px;
-        max-width: 100%;
-        border-radius: 25px;
-    }
-
-    .float-one {
-        top: 25px;
-        left: -5px;
-    }
-
-    .float-two {
-        bottom: 25px;
-        right: -5px;
-    }
-
-}
-        
     </style>
+
 </head>
 
+
 <body>
+
 
     <!-- =========================================================
          PRELOADER
          ========================================================= -->
 
     <div id="preloader">
+
         <div class="loader-content">
-            <div class="loader-logo">Paletra</div>
-            <div class="loader-tagline">Make your food money go further.</div>
+
+            <div class="loader-logo">
+                Paletra
+            </div>
+
+            <div class="loader-tagline">
+                Make your food money go further.
+            </div>
 
             <div class="loader-line">
                 <span></span>
             </div>
+
         </div>
+
     </div>
 
 
@@ -1761,29 +2202,44 @@
                     Paletra<span>.</span>
                 </a>
 
-                <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                <button
+                    class="menu-btn"
+                    id="menuBtn"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                    type="button">
+
                     ☰
+
                 </button>
 
                 <ul class="nav-links" id="navLinks">
 
                     <li>
-                        <a href="#how">How It Works</a>
+                        <a href="#how">
+                            How It Works
+                        </a>
                     </li>
 
                     <li>
-                        <a href="#juri">Juri</a>
+                        <a href="#juri">
+                            Juri
+                        </a>
                     </li>
 
                     <li>
-                        <a href="#difference">Why Paletra</a>
+                        <a href="#difference">
+                            Why Paletra
+                        </a>
                     </li>
 
-                    
-
                     <li>
-                        <a href="#early-access" class="nav-cta">
+                        <a
+                            href="#early-access"
+                            class="nav-cta">
+
                             Join Early Access
+
                         </a>
                     </li>
 
@@ -1797,70 +2253,136 @@
 
 
     <!-- =========================================================
-         HERO
+         MAIN
          ========================================================= -->
 
     <main>
 
-        <section class="hero" id="home">
+
+        <!-- =====================================================
+             HERO
+             ===================================================== -->
+
+        <section
+            class="hero"
+            id="home">
 
             <div class="container">
 
                 <div class="hero-grid">
 
+
+                    <!-- HERO CONTENT -->
+
                     <div class="hero-content reveal">
 
                         <div class="eyebrow">
+
                             <span class="eyebrow-dot"></span>
+
                             Household Food Management
+
                         </div>
 
+
                         <h1>
+
                             Make your food money
                             <span>go further.</span>
+
                         </h1>
 
+
                         <p class="hero-text">
-                            Your budget. Your pantry. Your meals. One smarter food plan.
-Tell Paletra what you have, what you can spend, and who you're feeding. Paletra helps you decide what to cook, what to buy, and how to use what you already have.
+
+                            Your budget. Your pantry. Your meals.
+                            One smarter food plan.
+
+                            Tell Paletra what you have,
+                            what you can spend, and who you're feeding.
+
+                            Paletra helps you decide what to cook,
+                            what to buy, and how to use what you already have.
+
                         </p>
+
 
                         <div class="hero-buttons">
 
-                            <a href="#early-access" class="btn btn-primary">
+                            <a
+                                href="#early-access"
+                                class="btn btn-primary">
+
                                 Join Early Access →
+
                             </a>
 
-                            <a href="#how" class="btn btn-secondary">
+
+                            <a
+                                href="#how"
+                                class="btn btn-secondary">
+
                                 See How It Works
+
                             </a>
 
                         </div>
 
+
                         <p class="hero-note">
+
                             Built for budget-conscious Nigerian households.
+
                         </p>
 
                     </div>
 
 
-                    <!-- Product visual -->
+                    <!-- HERO IMAGE -->
 
                     <div class="hero-visual reveal">
 
-    <div class="hero-image">
 
-        <img
-            src="e.png"
-            alt="Fresh food ingredients prepared for a meal"
-        >
+                        <div class="hero-image">
 
-    </div>
+                            <img
+                                src="e.png"
+                                alt="Fresh food ingredients prepared for a meal"
+                                fetchpriority="high"
+                            >
 
-    
+                        </div>
 
-</div>
-                   
+
+                        <!-- FLOATING CARD -->
+
+                        <div class="floating-card float-one">
+
+                            <span class="float-icon">
+                                ₦
+                            </span>
+
+                            Budget first
+
+                        </div>
+
+
+                        <!-- FLOATING CARD -->
+
+                        <div class="floating-card float-two">
+
+                            <span class="float-icon">
+                                ✓
+                            </span>
+
+                            Cook what you already have
+
+                        </div>
+
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -1875,6 +2397,7 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
 
             <div class="container">
 
+
                 <div class="section-head reveal">
 
                     <div class="section-label">
@@ -1882,75 +2405,73 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
                     </div>
 
                     <h2>
+
                         Food is expensive.
                         Making the most of it is harder than it should be.
-                    </h2>
 
-                 <!--   <p>
-                        Paletra focuses on the decisions households make
-                        around the food they can actually afford, already
-                        have and know how to use.
-                    </p>
-                    -->
+                    </h2>
 
                 </div>
 
 
                 <div class="opportunity-grid">
 
+
                     <div class="stats reveal">
 
+
                         <div class="stat">
-                            <strong>17.52%</strong>
+
+                            <strong>
+                                17.52%
+                            </strong>
+
                             <span>
                                 Nigeria food inflation — June 2026
                             </span>
+
                         </div>
 
+
                         <div class="stat">
-                            <strong>Up to 70%</strong>
+
+                            <strong>
+                                Up to 70%
+                            </strong>
+
                             <span>
                                 Food share of consumption for the
                                 bottom 10% of Nigerian households
                             </span>
+
                         </div>
 
+
                     </div>
-           
 
 
                     <div class="reveal">
 
                         <div class="questions">
 
+
                             <div class="question">
                                 What can we afford?
                             </div>
+
 
                             <div class="question">
                                 What do we already have?
                             </div>
 
+
                             <div class="question">
                                 What should we cook?
                             </div>
 
-                            
 
                         </div>
 
-                        <!--
-                        <div class="insight">
-                            <strong>The insight:</strong>
-                            These are not separate questions.
-                            A budget changes the shopping list;
-                            the shopping list changes the pantry;
-                            the pantry changes the meal;
-                            and the meal changes what gets used.
-                        </div>
-                        -->
-
-                        
                     </div>
 
                 </div>
@@ -1960,7 +2481,6 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
         </section>
 
 
-
         <!-- =====================================================
              HOW IT WORKS
              ===================================================== -->
@@ -1968,6 +2488,7 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
         <section id="how">
 
             <div class="container">
+
 
                 <div class="section-head reveal">
 
@@ -1980,7 +2501,8 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
                     </h2>
 
                     <p>
-                        From what your household has to what it should buy, cook and learn.
+                        From what your household has to what it should
+                        buy, cook and learn.
                     </p>
 
                 </div>
@@ -1988,106 +2510,131 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
 
                 <div class="steps">
 
-    <!-- STEP 01 -->
-    <div class="step-card reveal">
 
-        <div class="step-number">
-            01
-        </div>
+                    <!-- STEP 01 -->
 
-        <h3>
-            Tell Paletra About Your Household
-        </h3>
+                    <div class="step-card reveal">
 
-        <p>
-            Set your budget, household size, preferences and what you already have at home.
-        </p>
+                        <div class="step-number">
+                            01
+                        </div>
 
-        <div class="step-image">
-            <img
-                src="a.jpg"
-                alt="People discussing and planning together"
-            >
-        </div>
+                        <h3>
+                            Tell Paletra About Your Household
+                        </h3>
 
-    </div>
+                        <p>
+                            Set your budget, household size, preferences
+                            and what you already have at home.
+                        </p>
 
+                        <div class="step-image">
 
-    <!-- STEP 02 -->
-    <div class="step-card reveal">
+                            <img
+                                src="a.jpg"
+                                alt="People discussing and planning together"
+                                loading="lazy"
+                            >
 
-        <div class="step-number">
-            02
-        </div>
+                        </div>
 
-        <h3>
-            Know What You Actually Need
-        </h3>
-
-        <p>
-            Paletra combines your budget and pantry to help you decide what to buy—and what you can use first.
-        </p>
-
-        <div class="step-image">
-            <img
-                src="b.jpg"
-                alt="Fresh groceries and food items"
-            >
-        </div>
-
-    </div>
+                    </div>
 
 
-    <!-- STEP 03 -->
-    <div class="step-card reveal">
+                    <!-- STEP 02 -->
 
-        <div class="step-number">
-            03
-        </div>
+                    <div class="step-card reveal">
 
-        <h3>
-            Get Your Food Plan
-        </h3>
+                        <div class="step-number">
+                            02
+                        </div>
 
-        <p>
-            Turn your ingredients and budget into meals, a shopping list and a practical plan for the week.
-        </p>
+                        <h3>
+                            Know What You Actually Need
+                        </h3>
 
-        <div class="step-image">
-            <img
-                src="c.jpg"
-                alt="Healthy meal prepared for a food plan"
-            >
-        </div>
+                        <p>
+                            Paletra combines your budget and pantry
+                            to help you decide what to buy—and what
+                            you can use first.
+                        </p>
 
-    </div>
+                        <div class="step-image">
+
+                            <img
+                                src="b.jpg"
+                                alt="Fresh groceries and food items"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                    </div>
 
 
-    <!-- STEP 04 -->
-    <div class="step-card reveal">
+                    <!-- STEP 03 -->
 
-        <div class="step-number">
-            04
-        </div>
+                    <div class="step-card reveal">
 
-        <h3>
-            Cook With Juri
-        </h3>
+                        <div class="step-number">
+                            03
+                        </div>
 
-        <p>
-            Juri guides you through cooking, answers questions along the way and learns what works for your household.
-        </p>
+                        <h3>
+                            Get Your Food Plan
+                        </h3>
 
-        <div class="step-image">
-            <img
-                src="d.jpg"
-                alt="Person cooking in a kitchen"
-            >
-        </div>
+                        <p>
+                            Turn your ingredients and budget into meals,
+                            a shopping list and a practical plan for the week.
+                        </p>
 
-    </div>
+                        <div class="step-image">
 
-</div>
+                            <img
+                                src="c.jpg"
+                                alt="Healthy meal prepared for a food plan"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STEP 04 -->
+
+                    <div class="step-card reveal">
+
+                        <div class="step-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Cook With Juri
+                        </h3>
+
+                        <p>
+                            Juri guides you through cooking, answers
+                            questions along the way and learns what works
+                            for your household.
+                        </p>
+
+                        <div class="step-image">
+
+                            <img
+                                src="d.jpg"
+                                alt="Person cooking in a kitchen"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </section>
 
@@ -2096,11 +2643,14 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
              JURI
              ===================================================== -->
 
-        <section class="juri-section" id="juri">
+        <section
+            class="juri-section"
+            id="juri">
 
             <div class="container">
 
                 <div class="juri-grid">
+
 
                     <div class="juri-content reveal">
 
@@ -2108,18 +2658,28 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
                             Juri Inside Paletra
                         </div>
 
-                        <div class="section-head" style="margin-bottom:0;">
+
+                        <div
+                            class="section-head"
+                            style="margin-bottom:0;">
 
                             <h2>
                                 The assistant that helps
                                 the household act on the plan.
                             </h2>
 
+
                             <p class="juri-intro">
+
                                 Paletra is the product.
-                                <strong style="color:white;">Juri</strong>
-                                is the conversational intelligence users
-                                interact with.
+
+                                <strong style="color:white;">
+                                    Juri
+                                </strong>
+
+                                is the conversational intelligence
+                                users interact with.
+
                             </p>
 
                         </div>
@@ -2163,16 +2723,21 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
                     </div>
 
 
+                    <!-- JURI IMAGE -->
+
                     <div class="juri-visual reveal">
 
-    <div class="juri-image">
-        <img
-            src="j.jpg"
-            alt="AI assistant and technology"
-        >
-    </div>
+                        <div class="juri-image">
 
-</div>
+                            <img
+                                src="j.jpg"
+                                alt="AI assistant and technology"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -2180,77 +2745,6 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
 
         </section>
 
-
-        <!-- =====================================================
-             LEARNING LOOP
-             ===================================================== -->
-<!--
-        <section class="learning">
-
-            <div class="container">
-
-                <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;">
-
-                    <div class="section-label">
-                        The Learning Loop
-                    </div>
-
-                    <h2>
-                        Plan better every time.
-                    </h2>
-
-                </div>
-
-
-                <div class="learning-loop reveal">
-
-                    <div class="learn-item">
-                        Plan
-                    </div>
-
-                    <span class="learn-arrow">→</span>
-
-                    <div class="learn-item">
-                        Buy
-                    </div>
-
-                    <span class="learn-arrow">→</span>
-
-                    <div class="learn-item">
-                        Cook
-                    </div>
-
-                    <span class="learn-arrow">→</span>
-
-                    <div class="learn-item">
-                        Eat
-                    </div>
-
-                    <span class="learn-arrow">→</span>
-
-                    <div class="learn-item">
-                        Learn
-                    </div>
-
-                    <span class="learn-arrow">→</span>
-
-                    <div class="learn-item">
-                        Plan Better
-                    </div>
-
-                </div>
-
-
-                <p class="learning-text reveal">
-                    The product becomes more useful as it builds context
-                    about household preferences, purchasing habits,
-                    repeat meals and unused food.
-                </p>
-
-            </div>
-
-        </section>
--->
 
         <!-- =====================================================
              WHY PALETRA
@@ -2260,6 +2754,7 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
 
             <div class="container">
 
+
                 <div class="section-head reveal">
 
                     <div class="section-label">
@@ -2267,92 +2762,39 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
                     </div>
 
                     <h2>
+
                         Today's tools solve pieces.
                         Paletra connects the decisions.
+
                     </h2>
 
                 </div>
 
+
                 <div class="reveal">
 
-                        <div class="questions">
+                    <div class="questions">
 
-                            <div class="question">
-                                Recipes tell you what to cook
-                            </div>
 
-                            <div class="question">
-                                Budgeting apps tell you what you spent
-                            </div>
-
-                            <div class="question">
-                                Grocery apps tell you what to buy
-                            </div>
-
-                            <div class="question">
-                                Paletra connects the decisions
-                            </div>
-
-                     </div>    
-                  </div>
-
-<!--
-                <div class="difference-grid">
-
-                    <div class="difference-card reveal">
-
-                        <h3>
-                            What exists today
-                        </h3>
-
-                        <div class="fragment">
-                            <strong>YouTube / TikTok</strong>
-                            <span>Learn recipes</span>
+                        <div class="question">
+                            Recipes tell you what to cook
                         </div>
 
-                        <div class="fragment">
-                            <strong>Recipe platforms</strong>
-                            <span>Find meals</span>
+
+                        <div class="question">
+                            Budgeting apps tell you what you spent
                         </div>
 
-                        <div class="fragment">
-                            <strong>Grocery platforms</strong>
-                            <span>Buy food</span>
+
+                        <div class="question">
+                            Grocery apps tell you what to buy
                         </div>
 
-                        <div class="fragment">
-                            <strong>Budgeting tools</strong>
-                            <span>Track money</span>
+
+                        <div class="question">
+                            Paletra connects the decisions
                         </div>
 
-                        <div class="fragment">
-                            <strong>Personal experience</strong>
-                            <span>Make decisions</span>
-                        </div>
-
-                    </div>
-                    
-
-
-                    <div class="paletra-difference reveal">
-
-                        <div class="section-label">
-                            The Opening
-                        </div>
-
-                        <h3>
-                            Paletra connects the decisions.
-                        </h3>
-
-                        <p>
-                            Instead of asking households to move between
-                            different tools, Paletra connects their money,
-                            pantry, meals, cooking and learning in one workflow.
-                        </p>
-
-                        <span class="difference-tag">
-                            ONE HOUSEHOLD FOOD JOURNEY
-                        </span>
 
                     </div>
 
@@ -2362,9 +2804,7 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
 
         </section>
 
--->
 
-       
         <!-- =====================================================
              FOOD LOOP
              ===================================================== -->
@@ -2372,6 +2812,7 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
         <section class="food-loop-section">
 
             <div class="container">
+
 
                 <div class="section-head reveal">
 
@@ -2384,265 +2825,186 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
                     </h2>
 
                     <p>
+
                         Paletra treats the household's food decisions
                         as one connected problem instead of separate tasks.
+
                     </p>
 
                 </div>
 
 
+                <!-- FOOD LOOP IMAGE -->
+
                 <div class="food-loop reveal">
 
-    <div class="food-loop-image">
-        <img
-            src="ChatGPT Image Aug 20, 2026, 08_39_58 AM.png"
-            alt="Food ingredients and meal preparation"
-        >
-    </div>
+                    <div class="food-loop-image">
 
-</div>
+                        <img
+                            src="ChatGPT Image Aug 20, 2026, 08_39_58 AM.png"
+                            alt="Food ingredients and meal preparation"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+                </div>
 
 
                 <div class="loop-message reveal">
-                    Better decisions at one stage lead to better decisions
-                    at the next.
+
+                    Better decisions at one stage lead to
+                    better decisions at the next.
+
                 </div>
 
             </div>
 
         </section>
-             
-        
-
-       <!-- =====================================================
-     TARGET AUDIENCE
-     ===================================================== -->
-
-<section class="target">
-
-    <div class="container">
-
-        <div class="section-head reveal">
-
-            <div class="section-label">
-                Who We Start With
-            </div>
-
-            <h2>
-                Built for households that
-                want to make their food money count.
-            </h2>
-
-            <p>
-                Our initial focus is budget-conscious Nigerian
-                households that regularly buy and prepare their own food.
-            </p>
-
-        </div>
-
-
-        <div class="audience-grid">
-
-            <!-- STUDENTS -->
-            <div class="audience reveal">
-
-                <div class="audience-image">
-                    <img
-                        src="https://images.pexels.com/photos/5940840/pexels-photo-5940840.jpeg?auto=compress&cs=tinysrgb&w=800"
-                        alt="African university student studying"
-                    >
-                </div>
-
-                <strong>Students</strong>
-
-                <span>
-                    Managing limited food budgets
-                </span>
-
-            </div>
-
-
-            <!-- YOUNG PROFESSIONALS -->
-            <div class="audience reveal">
-
-                <div class="audience-image">
-                    <img
-                        src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=800"
-                        alt="Young professional preparing food"
-                    >
-                </div>
-
-                <strong>Young Professionals</strong>
-
-                <span>
-                    Planning meals around busy lives
-                </span>
-
-            </div>
-
-
-            <!-- YOUNG COUPLES -->
-            <div class="audience reveal">
-
-                <div class="audience-image">
-                    <img
-                        src="https://images.pexels.com/photos/4252136/pexels-photo-4252136.jpeg?auto=compress&cs=tinysrgb&w=800"
-                        alt="Young couple cooking together"
-                    >
-                </div>
-
-                <strong>Young Couples</strong>
-
-                <span>
-                    Managing a shared household
-                </span>
-
-            </div>
-
-
-            <!-- FAMILIES -->
-            <div class="audience reveal">
-
-                <div class="audience-image">
-                    <img
-                        src="https://media.easy-peasy.ai/d334f8fd-7eae-4187-af12-9977913b75ef/948e9552-f45d-46e7-b45f-ec525737d3ef_thumb.webp"
-                        alt="African family cooking together"
-                    >
-                </div>
-
-                <strong>Families</strong>
-
-                <span>
-                    Planning food for the household
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
 
 
         <!-- =====================================================
-             BUSINESS MODEL
+             TARGET AUDIENCE
              ===================================================== -->
 
-   <!--     <section id="business">
+        <section class="target">
 
             <div class="container">
+
 
                 <div class="section-head reveal">
 
                     <div class="section-label">
-                        Business Opportunity
+                        Who We Start With
                     </div>
 
                     <h2>
-                        Useful first.
-                        Valuable enough to pay for.
+
+                        Built for households that
+                        want to make their food money count.
+
                     </h2>
 
                     <p>
-                        Paletra's commercial model and pricing are hypotheses
-                        to test with real households.
+
+                        Our initial focus is budget-conscious Nigerian
+                        households that regularly buy and prepare
+                        their own food.
+
                     </p>
 
                 </div>
 
 
-                <div class="business-model">
+                <div class="audience-grid">
 
-                    <div class="business-card reveal">
 
-                        <div class="plan">
-                            Free
+                    <!-- STUDENTS -->
+
+                    <div class="audience reveal">
+
+                        <div class="audience-image">
+
+                            <img
+                                src="https://images.pexels.com/photos/5940840/pexels-photo-5940840.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="African university student studying"
+                                loading="lazy"
+                            >
+
                         </div>
 
-                        <h3>
-                            Basic
-                        </h3>
+                        <strong>
+                            Students
+                        </strong>
 
-                        <p>
-                            Get users started with the core Paletra experience.
-                        </p>
-
-                        <ul>
-                            <li>Basic meal planning</li>
-                            <li>Pantry tools</li>
-                            <li>Cooking guidance</li>
-                        </ul>
+                        <span>
+                            Managing limited food budgets
+                        </span>
 
                     </div>
 
 
-                    <div class="business-card featured reveal">
+                    <!-- YOUNG PROFESSIONALS -->
 
-                        <div class="plan">
-                            Paletra+
+                    <div class="audience reveal">
+
+                        <div class="audience-image">
+
+                            <img
+                                src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Young professional preparing food"
+                                loading="lazy"
+                            >
+
                         </div>
 
-                        <h3>
-                            Premium
-                        </h3>
+                        <strong>
+                            Young Professionals
+                        </strong>
 
-                        <div class="price">
-                            ₦1,000<span style="font-size:13px;">/month</span>
-                        </div>
-
-                        <p>
-                            Proposed pricing to test with real users.
-                        </p>
-
-                        <ul>
-                            <li>Ad-free experience</li>
-                            <li>Deeper planning</li>
-                            <li>Pantry tracking</li>
-                            <li>Household memory</li>
-                            <li>Personalisation</li>
-                            <li>Advanced Juri assistance</li>
-                            <li>Food insights</li>
-                        </ul>
+                        <span>
+                            Planning meals around busy lives
+                        </span>
 
                     </div>
 
 
-                    <div class="business-card reveal">
+                    <!-- YOUNG COUPLES -->
 
-                        <div class="plan">
-                            Partnerships
+                    <div class="audience reveal">
+
+                        <div class="audience-image">
+
+                            <img
+                                src="https://images.pexels.com/photos/4252136/pexels-photo-4252136.jpeg?auto=compress&cs=tinysrgb&w=800"
+                                alt="Young couple cooking together"
+                                loading="lazy"
+                            >
+
                         </div>
 
-                        <h3>
-                            Integrations
-                        </h3>
+                        <strong>
+                            Young Couples
+                        </strong>
 
-                        <p>
-                            Relevant grocery, shopping and food-service
-                            integrations.
-                        </p>
-
-                        <ul>
-                            <li>Referral economics</li>
-                            <li>Transaction opportunities</li>
-                            <li>Food-service partnerships</li>
-                        </ul>
+                        <span>
+                            Managing a shared household
+                        </span>
 
                     </div>
+
+
+                    <!-- FAMILIES -->
+
+                    <div class="audience reveal">
+
+                        <div class="audience-image">
+
+                            <img
+                                src="https://media.easy-peasy.ai/d334f8fd-7eae-4187-af12-9977913b75ef/948e9552-f45d-46e7-b45f-ec525737d3ef_thumb.webp"
+                                alt="African family cooking together"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+                        <strong>
+                            Families
+                        </strong>
+
+                        <span>
+                            Planning food for the household
+                        </span>
+
+                    </div>
+
 
                 </div>
-
-
-                <p class="hypothesis-note">
-                    * Pricing and commercial models shown are hypotheses
-                    to be tested and validated with real households.
-                </p>
 
             </div>
 
         </section>
--->
+
 
         <!-- =====================================================
              NIGERIAN LOCALIZATION
@@ -2654,6 +3016,7 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
 
                 <div class="local-grid">
 
+
                     <div class="reveal">
 
                         <div class="section-label">
@@ -2661,14 +3024,18 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
                         </div>
 
                         <h2>
+
                             Not just a food app.
                             A local food experience.
+
                         </h2>
 
                         <p>
-                            Paletra is designed to understand the realities
-                            of Nigerian households and the decisions they
-                            make around food.
+
+                            Paletra is designed to understand
+                            the realities of Nigerian households
+                            and the decisions they make around food.
+
                         </p>
 
                     </div>
@@ -2676,30 +3043,71 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
 
                     <div class="local-list reveal">
 
+
                         <div class="local-item">
-                            <strong>Nigerian Food</strong><br>
+
+                            <strong>
+                                Nigerian Food
+                            </strong>
+
+                            <br>
+
                             Food people actually eat.
+
                         </div>
 
+
                         <div class="local-item">
-                            <strong>Local Ingredients</strong><br>
+
+                            <strong>
+                                Local Ingredients
+                            </strong>
+
+                            <br>
+
                             Ingredients available in the Nigerian market.
+
                         </div>
 
+
                         <div class="local-item">
-                            <strong>Portions</strong><br>
+
+                            <strong>
+                                Portions
+                            </strong>
+
+                            <br>
+
                             Planning around realistic household portions.
+
                         </div>
 
+
                         <div class="local-item">
-                            <strong>Cooking Context</strong><br>
+
+                            <strong>
+                                Cooking Context
+                            </strong>
+
+                            <br>
+
                             Designed around local cooking realities.
+
                         </div>
 
+
                         <div class="local-item">
-                            <strong>Local Prices</strong><br>
+
+                            <strong>
+                                Local Prices
+                            </strong>
+
+                            <br>
+
                             Working toward useful local price information.
+
                         </div>
+
 
                     </div>
 
@@ -2714,23 +3122,40 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
              EARLY ACCESS
              ===================================================== -->
 
-        <section class="early-access" id="early-access">
+        <section
+            class="early-access"
+            id="early-access">
 
             <div class="container">
 
                 <div class="early-box reveal">
 
+
                     <h2>
-                        Be one of the first 100 Paletra households.
+
+                        Be one of the first
+                        100 Paletra households.
+
                     </h2>
 
+
                     <p>
-                        We're testing Paletra with Nigerian households and using their feedback to build the product.
+
+                        We're testing Paletra with Nigerian households
+                        and using their feedback to build the product.
+
                     </p>
 
-                    <a href="#" class="btn" id="joinBtn">
+
+                    <a
+                        href="#"
+                        class="btn"
+                        id="joinBtn">
+
                         Join the Pilot →
+
                     </a>
+
 
                 </div>
 
@@ -2747,6 +3172,7 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
 
             <div class="container">
 
+
                 <div class="section-head reveal">
 
                     <div class="section-label">
@@ -2754,13 +3180,17 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
                     </div>
 
                     <h2>
-                        Built by a Nigerian student-led product team.
+
+                        Built by a Nigerian
+                        student-led product team.
+
                     </h2>
 
                 </div>
 
 
                 <div class="team-grid">
+
 
                     <div class="team-card reveal">
 
@@ -2771,8 +3201,6 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
                         <h3>
                             Akinde Fiyinfoluwa Joseph
                         </h3>
-
-                        
 
                     </div>
 
@@ -2787,15 +3215,15 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
                             Ihesiulo Akunna
                         </h3>
 
-                        
-
                     </div>
+
 
                 </div>
 
             </div>
 
         </section>
+
 
     </main>
 
@@ -2808,7 +3236,9 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
 
         <div class="container">
 
+
             <div class="footer-grid">
+
 
                 <div>
 
@@ -2817,9 +3247,12 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
                     </div>
 
                     <p class="footer-about">
+
                         Make your food money go further.
-                        A smarter way to plan, buy, cook and manage
-                        food at home.
+
+                        A smarter way to plan, buy, cook
+                        and manage food at home.
+
                     </p>
 
                 </div>
@@ -2843,8 +3276,6 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
                         Why Paletra
                     </a>
 
-                    
-
                 </div>
 
 
@@ -2864,12 +3295,18 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
 
                 </div>
 
+
             </div>
 
 
             <div class="copyright">
-                © <span id="year"></span> Paletra. All rights reserved.
+
+                ©
+                <span id="year"></span>
+                Paletra. All rights reserved.
+
             </div>
+
 
         </div>
 
@@ -2882,16 +3319,22 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
 
     <script>
 
+
         /* =========================================================
            PRELOADER
            ========================================================= */
 
         window.addEventListener("load", function () {
 
-            const preloader = document.getElementById("preloader");
+            const preloader =
+                document.getElementById("preloader");
 
-            setTimeout(() => {
+            if (!preloader) return;
+
+            setTimeout(function () {
+
                 preloader.classList.add("hide");
+
             }, 600);
 
         });
@@ -2901,119 +3344,211 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
            MOBILE NAVIGATION
            ========================================================= */
 
-        const menuBtn = document.getElementById("menuBtn");
-        const navLinks = document.getElementById("navLinks");
+        const menuBtn =
+            document.getElementById("menuBtn");
 
-        menuBtn.addEventListener("click", function () {
-
-            navLinks.classList.toggle("active");
-
-            if (navLinks.classList.contains("active")) {
-                menuBtn.innerHTML = "✕";
-            } else {
-                menuBtn.innerHTML = "☰";
-            }
-
-        });
+        const navLinks =
+            document.getElementById("navLinks");
 
 
-        /* Close menu when a navigation link is clicked */
+        if (menuBtn && navLinks) {
 
-        document.querySelectorAll(".nav-links a").forEach(link => {
+            menuBtn.addEventListener(
+                "click",
+                function () {
 
-            link.addEventListener("click", () => {
+                    const isActive =
+                        navLinks.classList.toggle("active");
 
-                navLinks.classList.remove("active");
-                menuBtn.innerHTML = "☰";
+                    menuBtn.setAttribute(
+                        "aria-expanded",
+                        isActive ? "true" : "false"
+                    );
 
-            });
+                    menuBtn.setAttribute(
+                        "aria-label",
+                        isActive
+                            ? "Close menu"
+                            : "Open menu"
+                    );
 
-        });
+                    menuBtn.innerHTML =
+                        isActive ? "✕" : "☰";
+
+                }
+            );
+
+
+            /* Close menu after clicking a link */
+
+            document
+                .querySelectorAll(".nav-links a")
+                .forEach(function (link) {
+
+                    link.addEventListener(
+                        "click",
+                        function () {
+
+                            navLinks
+                                .classList
+                                .remove("active");
+
+                            menuBtn.innerHTML = "☰";
+
+                            menuBtn.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
+
+                            menuBtn.setAttribute(
+                                "aria-label",
+                                "Open menu"
+                            );
+
+                        }
+                    );
+
+                });
+
+        }
 
 
         /* =========================================================
            SCROLL REVEAL
            ========================================================= */
 
-        const revealElements = document.querySelectorAll(".reveal");
+        const revealElements =
+            document.querySelectorAll(".reveal");
 
-        const revealObserver = new IntersectionObserver(
 
-            entries => {
+        if ("IntersectionObserver" in window) {
 
-                entries.forEach(entry => {
+            const revealObserver =
+                new IntersectionObserver(
 
-                    if (entry.isIntersecting) {
+                    function (entries) {
 
-                        entry.target.classList.add("show");
+                        entries.forEach(
+                            function (entry) {
 
-                        revealObserver.unobserve(entry.target);
+                                if (
+                                    entry.isIntersecting
+                                ) {
 
+                                    entry.target
+                                        .classList
+                                        .add("show");
+
+                                    revealObserver
+                                        .unobserve(
+                                            entry.target
+                                        );
+
+                                }
+
+                            }
+                        );
+
+                    },
+
+                    {
+                        threshold: 0.12
                     }
 
-                });
-
-            },
-
-            {
-                threshold: 0.12
-            }
-
-        );
+                );
 
 
-        revealElements.forEach(element => {
+            revealElements.forEach(
+                function (element) {
 
-            revealObserver.observe(element);
+                    revealObserver.observe(element);
 
-        });
+                }
+            );
+
+        } else {
+
+            /* Fallback for older browsers */
+
+            revealElements.forEach(
+                function (element) {
+
+                    element.classList.add("show");
+
+                }
+            );
+
+        }
 
 
         /* =========================================================
            CURRENT YEAR
            ========================================================= */
 
-        document.getElementById("year").textContent =
-            new Date().getFullYear();
+        const yearElement =
+            document.getElementById("year");
+
+        if (yearElement) {
+
+            yearElement.textContent =
+                new Date().getFullYear();
+
+        }
 
 
         /* =========================================================
            EARLY ACCESS BUTTON
-           =========================================================
+           ========================================================= */
 
-           Replace the URL below with your Google Form when ready.
-        */
+        const joinBtn =
+            document.getElementById("joinBtn");
 
-        const joinBtn = document.getElementById("joinBtn");
 
-        joinBtn.addEventListener("click", function (event) {
+        if (joinBtn) {
 
-            event.preventDefault();
+            joinBtn.addEventListener(
+                "click",
+                function (event) {
 
-            /*
-                REPLACE THIS WITH YOUR GOOGLE FORM URL.
+                    event.preventDefault();
 
-                Example:
 
-                window.location.href =
-                    "https://forms.gle/YOUR_FORM_ID";
-            */
+                    /*
+                     =================================================
+                     REPLACE THIS WITH YOUR GOOGLE FORM URL
+                     =================================================
 
-            alert(
-                "Paletra Early Access is opening soon. " +
-                "Replace this button with your Google Form link."
+                     Example:
+
+                     window.location.href =
+                     "https://forms.gle/YOUR_FORM_ID";
+
+                     =================================================
+                    */
+
+
+                    alert(
+                        "Paletra Early Access is opening soon. " +
+                        "Replace this button with your Google Form link."
+                    );
+
+                }
             );
 
-        });
+        }
 
 
         /* =========================================================
            NAVBAR SHADOW ON SCROLL
            ========================================================= */
 
-        const header = document.querySelector("header");
+        const header =
+            document.querySelector("header");
 
-        window.addEventListener("scroll", function () {
+
+        function updateHeaderShadow() {
+
+            if (!header) return;
 
             if (window.scrollY > 20) {
 
@@ -3022,51 +3557,114 @@ Tell Paletra what you have, what you can spend, and who you're feeding. Paletra 
 
             } else {
 
-                header.style.boxShadow = "none";
+                header.style.boxShadow =
+                    "none";
 
             }
 
-        });
+        }
+
+
+        window.addEventListener(
+            "scroll",
+            updateHeaderShadow,
+            {
+                passive: true
+            }
+        );
+
+
+        updateHeaderShadow();
 
 
         /* =========================================================
            ACTIVE NAVIGATION
            ========================================================= */
 
-        const sections = document.querySelectorAll("section[id]");
-        const links = document.querySelectorAll(".nav-links a");
+        const sections =
+            document.querySelectorAll(
+                "main section[id]"
+            );
 
-        window.addEventListener("scroll", function () {
+        const navItems =
+            document.querySelectorAll(
+                ".nav-links a"
+            );
+
+
+        function updateActiveNavigation() {
 
             let current = "";
 
-            sections.forEach(section => {
 
-                const sectionTop = section.offsetTop - 130;
+            sections.forEach(
+                function (section) {
 
-                if (window.scrollY >= sectionTop) {
-                    current = section.getAttribute("id");
+                    const sectionTop =
+                        section.offsetTop - 150;
+
+                    const sectionBottom =
+                        sectionTop +
+                        section.offsetHeight;
+
+
+                    if (
+                        window.scrollY >= sectionTop &&
+                        window.scrollY < sectionBottom
+                    ) {
+
+                        current =
+                            section.getAttribute("id");
+
+                    }
+
                 }
+            );
 
-            });
 
-            links.forEach(link => {
+            navItems.forEach(
+                function (link) {
 
-                link.classList.remove("active-link");
+                    link.classList.remove(
+                        "active-link"
+                    );
 
-                const href = link.getAttribute("href");
 
-                if (href === "#" + current) {
-                    link.classList.add("active-link");
+                    const href =
+                        link.getAttribute("href");
+
+
+                    if (
+                        href === "#" + current
+                    ) {
+
+                        link.classList.add(
+                            "active-link"
+                        );
+
+                    }
+
                 }
+            );
 
-            });
+        }
 
-        });
 
+        window.addEventListener(
+            "scroll",
+            updateActiveNavigation,
+            {
+                passive: true
+            }
+        );
+
+
+        updateActiveNavigation();
 
 
     </script>
 
+
 </body>
+
 </html>
