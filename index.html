@@ -516,7 +516,8 @@
 
 
         /* =========================================================
-           HERO IMAGE
+           IMPROVED HERO IMAGE
+           FULL IMAGE VISIBLE
            ========================================================= */
 
         .hero-visual {
@@ -538,7 +539,7 @@
 
             max-width: 520px;
 
-            height: 500px;
+            min-height: 500px;
 
             border-radius: 35px;
 
@@ -549,6 +550,12 @@
             box-shadow: var(--shadow-lg);
 
             background: var(--green-light);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
         }
 
         .hero-image::after {
@@ -562,8 +569,8 @@
             background:
                 linear-gradient(
                     to bottom,
-                    rgba(6, 69, 47, .02),
-                    rgba(6, 69, 47, .25)
+                    rgba(6, 69, 47, .01),
+                    rgba(6, 69, 47, .08)
                 );
 
             pointer-events: none;
@@ -572,18 +579,16 @@
         .hero-image img {
 
             width: 100%;
+
             height: 100%;
 
-            object-fit: cover;
+            object-fit: contain;
+
+            object-position: center;
 
             display: block;
 
-            transition:
-                transform .6s ease;
-        }
-
-        .hero-image:hover img {
-            transform: scale(1.04);
+            transition: none;
         }
 
 
@@ -849,6 +854,8 @@
             background: white;
 
             transition: .3s;
+
+            overflow: hidden;
         }
 
         .step-card:hover {
@@ -900,14 +907,15 @@
 
 
         /* =========================================================
-           STEP IMAGES
+           IMPROVED STEP IMAGES
+           FULL IMAGE VISIBLE
            ========================================================= */
 
         .step-image {
 
             width: 100%;
 
-            height: 190px;
+            height: 220px;
 
             margin-top: 22px;
 
@@ -915,26 +923,28 @@
 
             overflow: hidden;
 
-            background: var(--green-light);
+            background: var(--green-soft);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
         }
 
         .step-image img {
 
             width: 100%;
+
             height: 100%;
 
-            object-fit: cover;
+            object-fit: contain;
+
+            object-position: center;
 
             display: block;
 
-            transition:
-                transform .5s ease;
-        }
-
-        .step-card:hover
-        .step-image img {
-
-            transform: scale(1.06);
+            transition: none;
         }
 
 
@@ -1018,6 +1028,12 @@
             justify-content: center;
         }
 
+
+        /* =========================================================
+           IMPROVED JURI IMAGE
+           FULL IMAGE VISIBLE
+           ========================================================= */
+
         .juri-image {
 
             width: 100%;
@@ -1035,7 +1051,13 @@
             box-shadow:
                 0 30px 80px rgba(0, 0, 0, .25);
 
-            background: var(--green);
+            background: rgba(255,255,255,.05);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
         }
 
         .juri-image::after {
@@ -1049,7 +1071,7 @@
             background:
                 linear-gradient(
                     to top,
-                    rgba(6, 69, 47, .45),
+                    rgba(6, 69, 47, .18),
                     transparent 55%
                 );
 
@@ -1059,18 +1081,16 @@
         .juri-image img {
 
             width: 100%;
+
             height: 100%;
 
-            object-fit: cover;
+            object-fit: contain;
+
+            object-position: center;
 
             display: block;
 
-            transition:
-                transform .6s ease;
-        }
-
-        .juri-image:hover img {
-            transform: scale(1.05);
+            transition: none;
         }
 
 
@@ -1266,13 +1286,19 @@
             margin-top: 20px;
         }
 
+
+        /* =========================================================
+           IMPROVED FOOD LOOP IMAGE
+           FULL IMAGE VISIBLE
+           ========================================================= */
+
         .food-loop-image {
 
             width: 100%;
 
             max-width: 1050px;
 
-            height: 420px;
+            min-height: 420px;
 
             border-radius: 30px;
 
@@ -1282,7 +1308,13 @@
 
             box-shadow: var(--shadow-lg);
 
-            background: var(--green-light);
+            background: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
         }
 
         .food-loop-image::after {
@@ -1296,8 +1328,8 @@
             background:
                 linear-gradient(
                     to bottom,
-                    rgba(6, 69, 47, .05),
-                    rgba(6, 69, 47, .35)
+                    rgba(6, 69, 47, .01),
+                    rgba(6, 69, 47, .08)
                 );
 
             pointer-events: none;
@@ -1306,18 +1338,16 @@
         .food-loop-image img {
 
             width: 100%;
+
             height: 100%;
 
-            object-fit: cover;
+            object-fit: contain;
+
+            object-position: center;
 
             display: block;
 
-            transition:
-                transform .6s ease;
-        }
-
-        .food-loop-image:hover img {
-            transform: scale(1.04);
+            transition: none;
         }
 
         .loop-message {
@@ -1384,11 +1414,17 @@
                 rgba(12, 107, 69, .18);
         }
 
+
+        /* =========================================================
+           IMPROVED AUDIENCE IMAGES
+           FULL IMAGE VISIBLE
+           ========================================================= */
+
         .audience-image {
 
             width: 100%;
 
-            height: 210px;
+            height: 230px;
 
             overflow: hidden;
 
@@ -1397,24 +1433,27 @@
             margin-bottom: 20px;
 
             background: var(--green-light);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
         }
 
         .audience-image img {
 
             width: 100%;
+
             height: 100%;
 
-            object-fit: cover;
+            object-fit: contain;
+
+            object-position: center;
 
             display: block;
 
-            transition:
-                transform .5s ease;
-        }
-
-        .audience:hover
-        .audience-image img {
-            transform: scale(1.06);
+            transition: none;
         }
 
         .audience strong {
@@ -2034,6 +2073,8 @@
 
                 height: 400px;
 
+                min-height: 400px;
+
                 max-width: 100%;
 
                 border-radius: 25px;
@@ -2093,7 +2134,7 @@
             }
 
             .step-image {
-                height: 210px;
+                height: 220px;
             }
 
             .juri-image {
@@ -2105,9 +2146,15 @@
 
             .food-loop-image {
 
+                min-height: 280px;
+
                 height: 280px;
 
                 border-radius: 22px;
+            }
+
+            .audience-image {
+                height: 220px;
             }
 
         }
@@ -2151,6 +2198,19 @@
 
             .learn-arrow {
                 display: none;
+            }
+
+            .hero-image {
+                height: 350px;
+                min-height: 350px;
+            }
+
+            .step-image {
+                height: 230px;
+            }
+
+            .audience-image {
+                height: 240px;
             }
 
         }
@@ -2272,8 +2332,6 @@
                 <div class="hero-grid">
 
 
-                    <!-- HERO CONTENT -->
-
                     <div class="hero-content reveal">
 
                         <div class="eyebrow">
@@ -2342,7 +2400,6 @@
 
                     <div class="hero-visual reveal">
 
-
                         <div class="hero-image">
 
                             <img
@@ -2354,8 +2411,6 @@
                         </div>
 
 
-                        <!-- FLOATING CARD -->
-
                         <div class="floating-card float-one">
 
                             <span class="float-icon">
@@ -2366,8 +2421,6 @@
 
                         </div>
 
-
-                        <!-- FLOATING CARD -->
 
                         <div class="floating-card float-two">
 
@@ -2397,7 +2450,6 @@
 
             <div class="container">
 
-
                 <div class="section-head reveal">
 
                     <div class="section-label">
@@ -2416,9 +2468,7 @@
 
                 <div class="opportunity-grid">
 
-
                     <div class="stats reveal">
-
 
                         <div class="stat">
 
@@ -2446,7 +2496,6 @@
 
                         </div>
 
-
                     </div>
 
 
@@ -2454,21 +2503,17 @@
 
                         <div class="questions">
 
-
                             <div class="question">
                                 What can we afford?
                             </div>
-
 
                             <div class="question">
                                 What do we already have?
                             </div>
 
-
                             <div class="question">
                                 What should we cook?
                             </div>
-
 
                         </div>
 
@@ -2488,7 +2533,6 @@
         <section id="how">
 
             <div class="container">
-
 
                 <div class="section-head reveal">
 
@@ -2723,8 +2767,6 @@
                     </div>
 
 
-                    <!-- JURI IMAGE -->
-
                     <div class="juri-visual reveal">
 
                         <div class="juri-image">
@@ -2754,7 +2796,6 @@
 
             <div class="container">
 
-
                 <div class="section-head reveal">
 
                     <div class="section-label">
@@ -2775,26 +2816,21 @@
 
                     <div class="questions">
 
-
                         <div class="question">
                             Recipes tell you what to cook
                         </div>
-
 
                         <div class="question">
                             Budgeting apps tell you what you spent
                         </div>
 
-
                         <div class="question">
                             Grocery apps tell you what to buy
                         </div>
 
-
                         <div class="question">
                             Paletra connects the decisions
                         </div>
-
 
                     </div>
 
@@ -2812,7 +2848,6 @@
         <section class="food-loop-section">
 
             <div class="container">
-
 
                 <div class="section-head reveal">
 
@@ -2833,8 +2868,6 @@
 
                 </div>
 
-
-                <!-- FOOD LOOP IMAGE -->
 
                 <div class="food-loop reveal">
 
@@ -2870,7 +2903,6 @@
         <section class="target">
 
             <div class="container">
-
 
                 <div class="section-head reveal">
 
@@ -3016,7 +3048,6 @@
 
                 <div class="local-grid">
 
-
                     <div class="reveal">
 
                         <div class="section-label">
@@ -3042,7 +3073,6 @@
 
 
                     <div class="local-list reveal">
-
 
                         <div class="local-item">
 
@@ -3108,7 +3138,6 @@
 
                         </div>
 
-
                     </div>
 
                 </div>
@@ -3129,7 +3158,6 @@
             <div class="container">
 
                 <div class="early-box reveal">
-
 
                     <h2>
 
@@ -3156,7 +3184,6 @@
 
                     </a>
 
-
                 </div>
 
             </div>
@@ -3171,7 +3198,6 @@
         <section>
 
             <div class="container">
-
 
                 <div class="section-head reveal">
 
@@ -3190,7 +3216,6 @@
 
 
                 <div class="team-grid">
-
 
                     <div class="team-card reveal">
 
@@ -3217,7 +3242,6 @@
 
                     </div>
 
-
                 </div>
 
             </div>
@@ -3236,9 +3260,7 @@
 
         <div class="container">
 
-
             <div class="footer-grid">
-
 
                 <div>
 
@@ -3295,7 +3317,6 @@
 
                 </div>
 
-
             </div>
 
 
@@ -3306,7 +3327,6 @@
                 Paletra. All rights reserved.
 
             </div>
-
 
         </div>
 
@@ -3319,10 +3339,7 @@
 
     <script>
 
-
-        /* =========================================================
-           PRELOADER
-           ========================================================= */
+        /* PRELOADER */
 
         window.addEventListener("load", function () {
 
@@ -3340,9 +3357,7 @@
         });
 
 
-        /* =========================================================
-           MOBILE NAVIGATION
-           ========================================================= */
+        /* MOBILE NAVIGATION */
 
         const menuBtn =
             document.getElementById("menuBtn");
@@ -3379,8 +3394,6 @@
             );
 
 
-            /* Close menu after clicking a link */
-
             document
                 .querySelectorAll(".nav-links a")
                 .forEach(function (link) {
@@ -3413,9 +3426,7 @@
         }
 
 
-        /* =========================================================
-           SCROLL REVEAL
-           ========================================================= */
+        /* SCROLL REVEAL */
 
         const revealElements =
             document.querySelectorAll(".reveal");
@@ -3468,8 +3479,6 @@
 
         } else {
 
-            /* Fallback for older browsers */
-
             revealElements.forEach(
                 function (element) {
 
@@ -3481,9 +3490,7 @@
         }
 
 
-        /* =========================================================
-           CURRENT YEAR
-           ========================================================= */
+        /* CURRENT YEAR */
 
         const yearElement =
             document.getElementById("year");
@@ -3496,9 +3503,7 @@
         }
 
 
-        /* =========================================================
-           EARLY ACCESS BUTTON
-           ========================================================= */
+        /* EARLY ACCESS BUTTON */
 
         const joinBtn =
             document.getElementById("joinBtn");
@@ -3512,21 +3517,6 @@
 
                     event.preventDefault();
 
-
-                    /*
-                     =================================================
-                     REPLACE THIS WITH YOUR GOOGLE FORM URL
-                     =================================================
-
-                     Example:
-
-                     window.location.href =
-                     "https://forms.gle/YOUR_FORM_ID";
-
-                     =================================================
-                    */
-
-
                     alert(
                         "Paletra Early Access is opening soon. " +
                         "Replace this button with your Google Form link."
@@ -3538,9 +3528,7 @@
         }
 
 
-        /* =========================================================
-           NAVBAR SHADOW ON SCROLL
-           ========================================================= */
+        /* NAVBAR SHADOW */
 
         const header =
             document.querySelector("header");
@@ -3577,9 +3565,7 @@
         updateHeaderShadow();
 
 
-        /* =========================================================
-           ACTIVE NAVIGATION
-           ========================================================= */
+        /* ACTIVE NAVIGATION */
 
         const sections =
             document.querySelectorAll(
@@ -3660,7 +3646,6 @@
 
 
         updateActiveNavigation();
-
 
     </script>
 
