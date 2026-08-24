@@ -21,13 +21,9 @@ rel="stylesheet">
 
 <style>
 
-/* =========================================================
-   PALETRA
-   ========================================================= */
-
    /* =========================================================
    PALETRA
-   LANDING PAGE
+   FULL LANDING PAGE CSS
    ========================================================= */
 
 :root {
@@ -108,7 +104,6 @@ img {
    ========================================================= */
 
 #preloader {
-
     position: fixed;
     inset: 0;
 
@@ -136,27 +131,19 @@ img {
 }
 
 .loader-logo {
-
     font-family: "Playfair Display", serif;
-
     font-size: 48px;
-
     color: var(--green);
-
     letter-spacing: -2px;
 }
 
 .loader-tagline {
-
     color: var(--gray);
-
     margin-top: 5px;
-
     font-size: 14px;
 }
 
 .loader-line {
-
     width: 160px;
     height: 3px;
 
@@ -165,12 +152,10 @@ img {
     margin: 25px auto 0;
 
     overflow: hidden;
-
     border-radius: 10px;
 }
 
 .loader-line span {
-
     display: block;
 
     width: 45%;
@@ -178,8 +163,7 @@ img {
 
     background: var(--gold);
 
-    animation:
-        loading 1.2s infinite ease-in-out;
+    animation: loading 1.2s infinite ease-in-out;
 }
 
 @keyframes loading {
@@ -200,7 +184,6 @@ img {
    ========================================================= */
 
 header {
-
     position: fixed;
 
     top: 0;
@@ -214,26 +197,21 @@ header {
 
     backdrop-filter: blur(15px);
 
-    border-bottom:
-        1px solid rgba(12, 107, 69, .08);
+    border-bottom: 1px solid rgba(12, 107, 69, .08);
 
-    transition:
-        box-shadow .3s ease;
+    transition: box-shadow .3s ease;
 }
 
 nav {
-
     min-height: 78px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: space-between;
 }
 
 .logo {
-
     font-family: "Playfair Display", serif;
 
     font-size: 30px;
@@ -250,7 +228,6 @@ nav {
 }
 
 .nav-links {
-
     display: flex;
 
     align-items: center;
@@ -261,7 +238,6 @@ nav {
 }
 
 .nav-links a {
-
     color: var(--gray-dark);
 
     font-size: 14px;
@@ -520,7 +496,8 @@ nav {
 
 
 /* =========================================================
-   HERO IMAGE - BIGGER AND BOLDER
+   HERO IMAGE
+   Bigger and balanced
    ========================================================= */
 
 .hero-visual {
@@ -532,7 +509,6 @@ nav {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 }
 
@@ -556,6 +532,8 @@ nav {
         0 25px 65px rgba(6, 69, 47, .18);
 }
 
+/* Overlay fits exactly inside image */
+
 .hero-image::after {
 
     content: "";
@@ -567,7 +545,6 @@ nav {
     border-radius: inherit;
 
     background:
-
         linear-gradient(
             to bottom,
             rgba(6, 69, 47, .02),
@@ -582,14 +559,11 @@ nav {
 .hero-image img {
 
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
 
     object-position: center;
-
-    display: block;
 
     transition:
         transform .6s ease;
@@ -898,7 +872,8 @@ section {
 
 
 /* =========================================================
-   STEP IMAGES - BIGGER AND CONSISTENT
+   STEP IMAGES
+   Bigger and same proportion
    ========================================================= */
 
 .step-image {
@@ -929,7 +904,6 @@ section {
     border-radius: inherit;
 
     background:
-
         linear-gradient(
             to bottom,
             rgba(6, 69, 47, 0),
@@ -944,14 +918,11 @@ section {
 .step-image img {
 
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
 
     object-position: center;
-
-    display: block;
 
     transition:
         transform .5s ease;
@@ -1033,7 +1004,8 @@ section {
 
 
 /* =========================================================
-   JURI IMAGE - BIGGER
+   JURI IMAGE
+   Bigger and bold
    ========================================================= */
 
 .juri-visual {
@@ -1045,7 +1017,6 @@ section {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 }
 
@@ -1080,7 +1051,6 @@ section {
     border-radius: inherit;
 
     background:
-
         linear-gradient(
             to top,
             rgba(6, 69, 47, .38),
@@ -1095,14 +1065,11 @@ section {
 .juri-image img {
 
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
 
     object-position: center;
-
-    display: block;
 
     transition:
         transform .6s ease;
@@ -1110,33 +1077,6 @@ section {
 
 .juri-image:hover img {
     transform: scale(1.03);
-}
-
-
-/* =========================================================
-   DIFFERENCE
-   ========================================================= */
-
-.difference-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 30px;
-
-    align-items: stretch;
-}
-
-.difference-card {
-
-    padding: 35px;
-
-    border:
-        1px solid var(--gray-light);
-
-    border-radius: 25px;
 }
 
 
@@ -1190,7 +1130,6 @@ section {
     border-radius: inherit;
 
     background:
-
         linear-gradient(
             to bottom,
             rgba(6, 69, 47, .02),
@@ -1205,14 +1144,11 @@ section {
 .food-loop-image img {
 
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
 
     object-position: center;
-
-    display: block;
 
     transition:
         transform .6s ease;
@@ -1288,7 +1224,8 @@ section {
 
 
 /* =========================================================
-   AUDIENCE IMAGES - BIGGER
+   AUDIENCE IMAGES
+   Bigger and equal
    ========================================================= */
 
 .audience-image {
@@ -1319,7 +1256,6 @@ section {
     border-radius: inherit;
 
     background:
-
         linear-gradient(
             to bottom,
             rgba(6, 69, 47, 0),
@@ -1334,14 +1270,11 @@ section {
 .audience-image img {
 
     width: 100%;
-
     height: 100%;
 
     object-fit: cover;
 
     object-position: center;
-
-    display: block;
 
     transition:
         transform .5s ease;
@@ -1452,6 +1385,44 @@ section {
     margin-top: 15px;
 
     font-size: 14px;
+}
+
+.business-card ul {
+
+    list-style: none;
+
+    margin-top: 18px;
+}
+
+.business-card li {
+
+    font-size: 13px;
+
+    margin: 9px 0;
+
+    color: var(--gray-dark);
+}
+
+.business-card li::before {
+
+    content: "✓";
+
+    color: var(--green);
+
+    font-weight: 800;
+
+    margin-right: 8px;
+}
+
+.hypothesis-note {
+
+    margin-top: 22px;
+
+    color: var(--gray);
+
+    font-size: 12px;
+
+    text-align: center;
 }
 
 
@@ -1776,7 +1747,7 @@ footer {
 
 
 /* =========================================================
-   RESPONSIVE - TABLET
+   TABLET RESPONSIVE
    ========================================================= */
 
 @media (max-width: 1000px) {
@@ -1800,7 +1771,6 @@ footer {
     .hero-text {
 
         margin-left: auto;
-
         margin-right: auto;
     }
 
@@ -1814,15 +1784,12 @@ footer {
 
         width: 100%;
 
-        margin: auto;
-
         min-height: 500px;
+
+        margin: auto;
     }
 
     .hero-image {
-
-        max-width: 560px;
-
         height: 500px;
     }
 
@@ -1855,9 +1822,7 @@ footer {
     }
 
     .juri-image {
-
         max-width: 560px;
-
         height: 480px;
     }
 
@@ -1875,7 +1840,7 @@ footer {
 
 
 /* =========================================================
-   RESPONSIVE - MOBILE
+   MOBILE RESPONSIVE
    ========================================================= */
 
 @media (max-width: 700px) {
@@ -1952,11 +1917,9 @@ footer {
         font-size: 16px;
     }
 
-
     /* HERO IMAGE */
 
     .hero-visual {
-
         min-height: 440px;
     }
 
@@ -1970,7 +1933,6 @@ footer {
 
         border-radius: 26px;
     }
-
 
     .float-one {
 
@@ -1994,6 +1956,12 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    /* Bigger step images */
+
+    .step-image {
+        height: 240px;
+    }
+
     .difference-grid {
         grid-template-columns: 1fr;
     }
@@ -2002,6 +1970,12 @@ footer {
 
         grid-template-columns:
             1fr 1fr;
+    }
+
+    /* Bigger audience images */
+
+    .audience-image {
+        height: 230px;
     }
 
     .local-grid {
@@ -2027,15 +2001,7 @@ footer {
         gap: 30px;
     }
 
-
-    /* STEP IMAGES */
-
-    .step-image {
-        height: 240px;
-    }
-
-
-    /* JURI IMAGE */
+    /* Juri */
 
     .juri-visual {
         min-height: 400px;
@@ -2052,8 +2018,7 @@ footer {
         border-radius: 26px;
     }
 
-
-    /* FOOD LOOP */
+    /* Food loop */
 
     .food-loop-image {
 
@@ -2064,18 +2029,11 @@ footer {
         border-radius: 24px;
     }
 
-
-    /* AUDIENCE */
-
-    .audience-image {
-        height: 230px;
-    }
-
 }
 
 
 /* =========================================================
-   RESPONSIVE - SMALL MOBILE
+   SMALL MOBILE
    ========================================================= */
 
 @media (max-width: 430px) {
@@ -2091,6 +2049,8 @@ footer {
     .hero-buttons .btn {
         width: 100%;
     }
+
+    /* Prevent the old scaling from making images look awkward */
 
     .hero-visual {
 
@@ -2114,6 +2074,10 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .audience-image {
+        height: 220px;
+    }
+
     .step-image {
         height: 230px;
     }
@@ -2129,10 +2093,6 @@ footer {
         border-radius: 20px;
     }
 
-    .audience-image {
-        height: 220px;
-    }
-
     .food-loop {
         gap: 8px;
     }
@@ -2146,7 +2106,7 @@ footer {
     }
 
 }
-
+   
 </style>
 
 </head>
