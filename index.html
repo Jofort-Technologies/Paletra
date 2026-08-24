@@ -25,6 +25,11 @@ rel="stylesheet">
    PALETRA
    ========================================================= */
 
+   /* =========================================================
+   PALETRA
+   LANDING PAGE
+   ========================================================= */
+
 :root {
 
     --green: #0c6b45;
@@ -43,8 +48,8 @@ rel="stylesheet">
     --white: #ffffff;
     --off-white: #f8faf8;
 
-    --shadow-sm: 0 8px 25px rgba(6,69,47,.07);
-    --shadow-lg: 0 25px 70px rgba(6,69,47,.13);
+    --shadow-sm: 0 8px 25px rgba(6, 69, 47, .07);
+    --shadow-lg: 0 25px 70px rgba(6, 69, 47, .13);
 
     --radius-sm: 12px;
     --radius: 20px;
@@ -186,6 +191,7 @@ img {
     100% {
         transform: translateX(350%);
     }
+
 }
 
 
@@ -204,12 +210,12 @@ header {
 
     z-index: 1000;
 
-    background: rgba(255,255,255,.92);
+    background: rgba(255, 255, 255, .92);
 
     backdrop-filter: blur(15px);
 
     border-bottom:
-        1px solid rgba(12,107,69,.08);
+        1px solid rgba(12, 107, 69, .08);
 
     transition:
         box-shadow .3s ease;
@@ -365,7 +371,7 @@ nav {
     color: white;
 
     box-shadow:
-        0 12px 28px rgba(12,107,69,.18);
+        0 12px 28px rgba(12, 107, 69, .18);
 }
 
 .btn-primary:hover {
@@ -375,7 +381,7 @@ nav {
 .btn-secondary {
 
     border-color:
-        rgba(12,107,69,.2);
+        rgba(12, 107, 69, .2);
 
     color: var(--green);
 
@@ -399,13 +405,13 @@ nav {
 
         radial-gradient(
             circle at 85% 20%,
-            rgba(217,164,65,.13),
+            rgba(217, 164, 65, .13),
             transparent 28%
         ),
 
         radial-gradient(
             circle at 10% 80%,
-            rgba(12,107,69,.08),
+            rgba(12, 107, 69, .08),
             transparent 32%
         ),
 
@@ -466,7 +472,7 @@ nav {
     font-family: "Playfair Display", serif;
 
     font-size:
-        clamp(48px,6vw,78px);
+        clamp(48px, 6vw, 78px);
 
     line-height: 1.02;
 
@@ -514,47 +520,14 @@ nav {
 
 
 /* =========================================================
-   UNIVERSAL IMAGE SYSTEM
-   IMPORTANT:
-   ALL WEBSITE IMAGES USE THIS SYSTEM
+   HERO IMAGE - BIGGER AND BOLDER
    ========================================================= */
-
-.hero-image,
-.step-image,
-.juri-image,
-.food-loop-image,
-.audience-image {
-
-    background:
-        linear-gradient(
-            135deg,
-            #f3faf6,
-            #eef5f0
-        );
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    overflow: hidden;
-
-    position: relative;
-}
-
-
-/*
----------------------------------------------------------
-HERO IMAGE
----------------------------------------------------------
-*/
 
 .hero-visual {
 
     position: relative;
 
-    min-height: 500px;
+    min-height: 540px;
 
     display: flex;
 
@@ -567,20 +540,44 @@ HERO IMAGE
 
     width: 100%;
 
-    max-width: 520px;
+    max-width: 560px;
 
-    height: 500px;
+    height: 540px;
 
-    border-radius: 35px;
+    border-radius: 32px;
 
-    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+
+    position: relative;
+
+    background: var(--green-light);
+
+    box-shadow:
+        0 25px 65px rgba(6, 69, 47, .18);
 }
 
+.hero-image::after {
 
-/*
-IMPORTANT:
-contain = FULL IMAGE IS VISIBLE
-*/
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            rgba(6, 69, 47, .02),
+            rgba(6, 69, 47, .20)
+        );
+
+    pointer-events: none;
+
+    z-index: 1;
+}
 
 .hero-image img {
 
@@ -588,11 +585,9 @@ contain = FULL IMAGE IS VISIBLE
 
     height: 100%;
 
-    object-fit: contain;
+    object-fit: cover;
 
     object-position: center;
-
-    padding: 12px;
 
     display: block;
 
@@ -601,12 +596,12 @@ contain = FULL IMAGE IS VISIBLE
 }
 
 .hero-image:hover img {
-    transform: scale(1.025);
+    transform: scale(1.03);
 }
 
 
 /* =========================================================
-   FLOATING CARDS
+   HERO FLOATING CARDS
    ========================================================= */
 
 .floating-card {
@@ -622,13 +617,13 @@ contain = FULL IMAGE IS VISIBLE
     box-shadow: var(--shadow-lg);
 
     border:
-        1px solid rgba(12,107,69,.08);
+        1px solid rgba(12, 107, 69, .08);
 
     font-size: 13px;
 
     font-weight: 600;
 
-    z-index: 2;
+    z-index: 3;
 }
 
 .float-one {
@@ -702,7 +697,7 @@ section {
     font-family: "Playfair Display", serif;
 
     font-size:
-        clamp(34px,4vw,53px);
+        clamp(34px, 4vw, 53px);
 
     line-height: 1.1;
 
@@ -757,7 +752,7 @@ section {
     border-radius: 20px;
 
     border:
-        1px solid rgba(12,107,69,.08);
+        1px solid rgba(12, 107, 69, .08);
 }
 
 .stat strong {
@@ -781,7 +776,7 @@ section {
     display: grid;
 
     grid-template-columns:
-        repeat(2,1fr);
+        repeat(2, 1fr);
 
     gap: 12px;
 }
@@ -833,14 +828,14 @@ section {
     display: grid;
 
     grid-template-columns:
-        repeat(4,1fr);
+        repeat(4, 1fr);
 
     gap: 18px;
 }
 
 .step-card {
 
-    padding: 30px 25px;
+    padding: 30px 25px 25px;
 
     border:
         1px solid var(--gray-light);
@@ -848,6 +843,8 @@ section {
     border-radius: 24px;
 
     background: white;
+
+    overflow: hidden;
 
     transition: .3s;
 }
@@ -859,7 +856,7 @@ section {
     box-shadow: var(--shadow-sm);
 
     border-color:
-        rgba(12,107,69,.2);
+        rgba(12, 107, 69, .2);
 }
 
 .step-number {
@@ -901,32 +898,48 @@ section {
 
 
 /* =========================================================
-   STEP IMAGES
+   STEP IMAGES - BIGGER AND CONSISTENT
    ========================================================= */
-
-/*
-All four step images now have EXACTLY
-the same visual frame.
-*/
 
 .step-image {
 
     width: 100%;
 
-    height: 190px;
+    height: 230px;
 
-    margin-top: 22px;
+    margin-top: 25px;
 
-    border-radius: 16px;
+    border-radius: 18px;
 
-    border: 1px solid rgba(12,107,69,.06);
+    overflow: hidden;
+
+    position: relative;
+
+    background: var(--green-light);
 }
 
+.step-image::after {
 
-/*
-Full image visible.
-No ugly cropping.
-*/
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            rgba(6, 69, 47, 0),
+            rgba(6, 69, 47, .12)
+        );
+
+    pointer-events: none;
+
+    z-index: 1;
+}
 
 .step-image img {
 
@@ -934,11 +947,9 @@ No ugly cropping.
 
     height: 100%;
 
-    object-fit: contain;
+    object-fit: cover;
 
     object-position: center;
-
-    padding: 8px;
 
     display: block;
 
@@ -946,9 +957,10 @@ No ugly cropping.
         transform .5s ease;
 }
 
-.step-card:hover .step-image img {
+.step-card:hover
+.step-image img {
 
-    transform: scale(1.025);
+    transform: scale(1.04);
 }
 
 
@@ -977,7 +989,8 @@ No ugly cropping.
     align-items: center;
 }
 
-.juri-section .section-label {
+.juri-section
+.section-label {
     color: var(--gold);
 }
 
@@ -1018,11 +1031,16 @@ No ugly cropping.
     margin-bottom: 5px;
 }
 
+
+/* =========================================================
+   JURI IMAGE - BIGGER
+   ========================================================= */
+
 .juri-visual {
 
     position: relative;
 
-    min-height: 450px;
+    min-height: 500px;
 
     display: flex;
 
@@ -1035,14 +1053,20 @@ No ugly cropping.
 
     width: 100%;
 
-    max-width: 500px;
+    max-width: 550px;
 
-    height: 450px;
+    height: 500px;
 
     border-radius: 30px;
 
+    overflow: hidden;
+
+    position: relative;
+
+    background: var(--green);
+
     box-shadow:
-        0 30px 80px rgba(0,0,0,.25);
+        0 30px 80px rgba(0, 0, 0, .25);
 }
 
 .juri-image::after {
@@ -1053,14 +1077,19 @@ No ugly cropping.
 
     inset: 0;
 
+    border-radius: inherit;
+
     background:
+
         linear-gradient(
             to top,
-            rgba(6,69,47,.20),
-            transparent 55%
+            rgba(6, 69, 47, .38),
+            rgba(6, 69, 47, 0) 60%
         );
 
     pointer-events: none;
+
+    z-index: 1;
 }
 
 .juri-image img {
@@ -1069,11 +1098,9 @@ No ugly cropping.
 
     height: 100%;
 
-    object-fit: contain;
+    object-fit: cover;
 
     object-position: center;
-
-    padding: 14px;
 
     display: block;
 
@@ -1082,69 +1109,7 @@ No ugly cropping.
 }
 
 .juri-image:hover img {
-    transform: scale(1.025);
-}
-
-
-/* =========================================================
-   LEARNING LOOP
-   ========================================================= */
-
-.learning {
-    background: var(--off-white);
-}
-
-.learning-loop {
-
-    max-width: 900px;
-
-    margin: auto;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    flex-wrap: wrap;
-
-    gap: 14px;
-}
-
-.learn-item {
-
-    padding: 16px 22px;
-
-    background: white;
-
-    border-radius: 50px;
-
-    border:
-        1px solid var(--gray-light);
-
-    color: var(--green-dark);
-
-    font-weight: 700;
-
-    box-shadow: var(--shadow-sm);
-}
-
-.learn-arrow {
-
-    color: var(--gold);
-
-    font-weight: 900;
-}
-
-.learning-text {
-
-    text-align: center;
-
-    max-width: 680px;
-
-    margin: 35px auto 0;
-
-    color: var(--gray);
+    transform: scale(1.03);
 }
 
 
@@ -1174,92 +1139,6 @@ No ugly cropping.
     border-radius: 25px;
 }
 
-.difference-card h3 {
-
-    color: var(--gray-dark);
-
-    margin-bottom: 20px;
-}
-
-.fragment {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    padding: 14px 0;
-
-    border-bottom:
-        1px solid var(--gray-light);
-
-    font-size: 14px;
-}
-
-.fragment span {
-    color: var(--gray);
-}
-
-.paletra-difference {
-
-    padding: 40px;
-
-    background: var(--green);
-
-    color: white;
-
-    border-radius: 25px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-}
-
-.paletra-difference h3 {
-
-    font-family:
-        "Playfair Display", serif;
-
-    color: white;
-
-    font-size: 38px;
-
-    line-height: 1.1;
-}
-
-.paletra-difference p {
-
-    margin-top: 18px;
-
-    color:
-        rgba(255,255,255,.75);
-}
-
-.difference-tag {
-
-    display: inline-block;
-
-    margin-top: 25px;
-
-    padding: 9px 14px;
-
-    border-radius: 50px;
-
-    background:
-        rgba(217,164,65,.15);
-
-    color: var(--gold);
-
-    width: fit-content;
-
-    font-size: 12px;
-
-    font-weight: 800;
-}
-
 
 /* =========================================================
    FOOD LOOP
@@ -1277,24 +1156,50 @@ No ugly cropping.
 
     justify-content: center;
 
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .food-loop-image {
 
     width: 100%;
 
-    max-width: 1050px;
+    max-width: 1100px;
 
-    /*
-    Controlled height so it doesn't become enormous.
-    */
-
-    height: 420px;
+    height: 460px;
 
     border-radius: 30px;
 
-    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+
+    position: relative;
+
+    background: var(--green-light);
+
+    box-shadow:
+        0 25px 70px rgba(6, 69, 47, .16);
+}
+
+.food-loop-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            rgba(6, 69, 47, .02),
+            rgba(6, 69, 47, .28)
+        );
+
+    pointer-events: none;
+
+    z-index: 1;
 }
 
 .food-loop-image img {
@@ -1303,11 +1208,9 @@ No ugly cropping.
 
     height: 100%;
 
-    object-fit: contain;
+    object-fit: cover;
 
     object-position: center;
-
-    padding: 15px;
 
     display: block;
 
@@ -1316,7 +1219,7 @@ No ugly cropping.
 }
 
 .food-loop-image:hover img {
-    transform: scale(1.02);
+    transform: scale(1.03);
 }
 
 .loop-message {
@@ -1349,7 +1252,7 @@ No ugly cropping.
     display: grid;
 
     grid-template-columns:
-        repeat(4,1fr);
+        repeat(4, 1fr);
 
     gap: 18px;
 }
@@ -1359,14 +1262,14 @@ No ugly cropping.
     background: white;
 
     padding:
-        10px 10px 24px;
+        10px 10px 26px;
 
     border-radius: 22px;
 
     text-align: left;
 
     border:
-        1px solid rgba(12,107,69,.08);
+        1px solid rgba(12, 107, 69, .08);
 
     overflow: hidden;
 
@@ -1380,26 +1283,52 @@ No ugly cropping.
     box-shadow: var(--shadow-lg);
 
     border-color:
-        rgba(12,107,69,.18);
+        rgba(12, 107, 69, .18);
 }
 
 
-/*
-All audience images now have
-the exact same frame.
-*/
+/* =========================================================
+   AUDIENCE IMAGES - BIGGER
+   ========================================================= */
 
 .audience-image {
 
     width: 100%;
 
-    height: 210px;
+    height: 240px;
 
-    border-radius: 16px;
+    overflow: hidden;
+
+    border-radius: 18px;
 
     margin-bottom: 20px;
 
-    border: 1px solid rgba(12,107,69,.06);
+    position: relative;
+
+    background: var(--green-light);
+}
+
+.audience-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            rgba(6, 69, 47, 0),
+            rgba(6, 69, 47, .14)
+        );
+
+    pointer-events: none;
+
+    z-index: 1;
 }
 
 .audience-image img {
@@ -1408,11 +1337,9 @@ the exact same frame.
 
     height: 100%;
 
-    object-fit: contain;
+    object-fit: cover;
 
     object-position: center;
-
-    padding: 8px;
 
     display: block;
 
@@ -1420,8 +1347,10 @@ the exact same frame.
         transform .5s ease;
 }
 
-.audience:hover .audience-image img {
-    transform: scale(1.025);
+.audience:hover
+.audience-image img {
+
+    transform: scale(1.04);
 }
 
 .audience strong {
@@ -1458,7 +1387,7 @@ the exact same frame.
     display: grid;
 
     grid-template-columns:
-        repeat(3,1fr);
+        repeat(3, 1fr);
 
     gap: 18px;
 }
@@ -1523,44 +1452,6 @@ the exact same frame.
     margin-top: 15px;
 
     font-size: 14px;
-}
-
-.business-card ul {
-
-    list-style: none;
-
-    margin-top: 18px;
-}
-
-.business-card li {
-
-    font-size: 13px;
-
-    margin: 9px 0;
-
-    color: var(--gray-dark);
-}
-
-.business-card li::before {
-
-    content: "✓";
-
-    color: var(--green);
-
-    font-weight: 800;
-
-    margin-right: 8px;
-}
-
-.hypothesis-note {
-
-    margin-top: 22px;
-
-    color: var(--gray);
-
-    font-size: 12px;
-
-    text-align: center;
 }
 
 
@@ -1686,7 +1577,7 @@ the exact same frame.
         "Playfair Display", serif;
 
     font-size:
-        clamp(35px,4vw,55px);
+        clamp(35px, 4vw, 55px);
 
     line-height: 1.1;
 }
@@ -1722,7 +1613,7 @@ the exact same frame.
     display: grid;
 
     grid-template-columns:
-        repeat(2,1fr);
+        repeat(2, 1fr);
 
     gap: 18px;
 }
@@ -1885,69 +1776,93 @@ footer {
 
 
 /* =========================================================
-   RESPONSIVE
+   RESPONSIVE - TABLET
    ========================================================= */
 
-@media (max-width:1000px) {
+@media (max-width: 1000px) {
 
     .hero-grid,
     .opportunity-grid,
     .juri-grid,
     .local-grid {
 
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
 
     .hero {
-        padding-top:140px;
+        padding-top: 140px;
     }
 
     .hero-content {
-        text-align:center;
+        text-align: center;
     }
 
     .hero-text {
 
-        margin-left:auto;
+        margin-left: auto;
 
-        margin-right:auto;
+        margin-right: auto;
     }
 
     .hero-buttons {
-        justify-content:center;
+        justify-content: center;
     }
 
     .hero-visual {
 
-        max-width:500px;
+        max-width: 560px;
 
-        width:100%;
+        width: 100%;
 
-        margin:auto;
+        margin: auto;
+
+        min-height: 500px;
+    }
+
+    .hero-image {
+
+        max-width: 560px;
+
+        height: 500px;
     }
 
     .steps {
 
         grid-template-columns:
-            repeat(2,1fr);
+            repeat(2, 1fr);
     }
 
     .audience-grid {
 
         grid-template-columns:
-            repeat(2,1fr);
+            repeat(2, 1fr);
     }
 
     .business-model {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
 
     .juri-content {
-        text-align:center;
+        text-align: center;
     }
 
     .juri-bubble {
-        text-align:left;
+        text-align: left;
+    }
+
+    .juri-visual {
+        min-height: 480px;
+    }
+
+    .juri-image {
+
+        max-width: 560px;
+
+        height: 480px;
+    }
+
+    .food-loop-image {
+        height: 420px;
     }
 
     .footer-grid {
@@ -1955,52 +1870,57 @@ footer {
         grid-template-columns:
             1fr 1fr;
     }
+
 }
 
 
-@media (max-width:700px) {
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
 
     section {
-        padding:75px 0;
+        padding: 75px 0;
     }
 
     .nav-links {
 
-        position:absolute;
+        position: absolute;
 
-        top:78px;
+        top: 78px;
 
-        left:0;
-        right:0;
+        left: 0;
+        right: 0;
 
-        background:white;
+        background: white;
 
-        padding:20px;
+        padding: 20px;
 
-        flex-direction:column;
+        flex-direction: column;
 
-        align-items:stretch;
+        align-items: stretch;
 
-        gap:5px;
+        gap: 5px;
 
         box-shadow:
             0 15px 30px rgba(0,0,0,.08);
 
-        opacity:0;
+        opacity: 0;
 
-        visibility:hidden;
+        visibility: hidden;
 
         transform:
             translateY(-10px);
 
-        transition:.25s;
+        transition: .25s;
     }
 
     .nav-links.active {
 
-        opacity:1;
+        opacity: 1;
 
-        visibility:visible;
+        visibility: visible;
 
         transform:
             translateY(0);
@@ -2008,67 +1928,74 @@ footer {
 
     .nav-links a {
 
-        display:block;
+        display: block;
 
-        padding:12px;
+        padding: 12px;
     }
 
     .nav-links a.active-link:not(.nav-cta)::after {
-        display:none;
+        display: none;
     }
 
     .menu-btn {
-        display:block;
+        display: block;
     }
 
     .hero h1 {
 
-        font-size:48px;
+        font-size: 48px;
 
-        letter-spacing:-2px;
+        letter-spacing: -2px;
     }
 
     .hero-text {
-        font-size:16px;
+        font-size: 16px;
     }
 
+
+    /* HERO IMAGE */
+
     .hero-visual {
-        min-height:400px;
+
+        min-height: 440px;
     }
 
     .hero-image {
 
-        height:400px;
+        width: 100%;
 
-        max-width:100%;
+        max-width: 100%;
 
-        border-radius:25px;
+        height: 440px;
+
+        border-radius: 26px;
     }
+
 
     .float-one {
 
-        top:25px;
+        top: 25px;
 
-        left:-5px;
+        left: -5px;
     }
 
     .float-two {
 
-        bottom:25px;
+        bottom: 25px;
 
-        right:-5px;
+        right: -5px;
     }
 
     .questions {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
 
     .steps {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
 
     .difference-grid {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
 
     .audience-grid {
@@ -2078,114 +2005,146 @@ footer {
     }
 
     .local-grid {
-        gap:35px;
+        gap: 35px;
     }
 
     .local-section h2 {
-        font-size:38px;
+        font-size: 38px;
     }
 
     .early-box {
-        padding:45px 25px;
+        padding: 45px 25px;
     }
 
     .team-grid {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
 
     .footer-grid {
-        grid-template-columns:1fr;
-        gap:30px;
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
     }
 
 
-    /*
-    MOBILE IMAGE SIZES
-    */
+    /* STEP IMAGES */
 
     .step-image {
-        height:200px;
+        height: 240px;
+    }
+
+
+    /* JURI IMAGE */
+
+    .juri-visual {
+        min-height: 400px;
     }
 
     .juri-image {
 
-        height:360px;
+        width: 100%;
 
-        max-width:100%;
+        max-width: 100%;
+
+        height: 400px;
+
+        border-radius: 26px;
     }
+
+
+    /* FOOD LOOP */
 
     .food-loop-image {
 
-        height:300px;
+        width: 100%;
 
-        border-radius:22px;
+        height: 330px;
+
+        border-radius: 24px;
     }
+
+
+    /* AUDIENCE */
 
     .audience-image {
-        height:200px;
+        height: 230px;
     }
+
 }
 
 
-@media (max-width:430px) {
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
 
     .container {
-        width:90%;
+        width: 90%;
     }
 
     .hero h1 {
-        font-size:42px;
+        font-size: 42px;
     }
 
     .hero-buttons .btn {
-        width:100%;
+        width: 100%;
     }
 
     .hero-visual {
 
-        transform:
-            scale(.95);
+        min-height: 390px;
 
-        margin-left:-2.5%;
+        transform: none;
 
-        width:105%;
+        margin-left: 0;
+
+        width: 100%;
+    }
+
+    .hero-image {
+
+        height: 390px;
+
+        border-radius: 23px;
     }
 
     .audience-grid {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
     }
-
-    .food-loop {
-        gap:8px;
-    }
-
-    .learning-loop {
-        gap:8px;
-    }
-
-    .learn-arrow {
-        display:none;
-    }
-
-    /*
-    Keep images comfortable on very small screens.
-    */
 
     .step-image {
-        height:210px;
-    }
-
-    .audience-image {
-        height:220px;
+        height: 230px;
     }
 
     .juri-image {
-        height:330px;
+        height: 360px;
     }
 
     .food-loop-image {
-        height:250px;
+
+        height: 300px;
+
+        border-radius: 20px;
     }
+
+    .audience-image {
+        height: 220px;
+    }
+
+    .food-loop {
+        gap: 8px;
+    }
+
+    .learning-loop {
+        gap: 8px;
+    }
+
+    .learn-arrow {
+        display: none;
+    }
+
 }
 
 </style>
