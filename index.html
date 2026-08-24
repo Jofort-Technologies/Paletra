@@ -3,2219 +3,2192 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Paletra — Make Your Food Money Go Further</title>
+<title>Paletra — Make Your Food Money Go Further</title>
 
-    <meta name="description"
-        content="Paletra is a smarter way to plan, buy, cook and manage food at home.">
+<meta name="description"
+content="Paletra is a smarter way to plan, buy, cook and manage food at home.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
-        rel="stylesheet">
+<link
+href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+rel="stylesheet">
 
 
-    <style>
+<style>
 
-        /* =========================================================
-           PALETRA
-           LANDING PAGE
-           ========================================================= */
+/* =========================================================
+   PALETRA
+   ========================================================= */
 
-        :root {
+:root {
 
-            --green: #0c6b45;
-            --green-dark: #06452f;
-            --green-light: #e9f6ef;
-            --green-soft: #f3faf6;
+    --green: #0c6b45;
+    --green-dark: #06452f;
+    --green-light: #e9f6ef;
+    --green-soft: #f3faf6;
 
-            --gold: #d9a441;
-            --gold-light: #f8edcf;
+    --gold: #d9a441;
+    --gold-light: #f8edcf;
 
-            --black: #102019;
-            --gray-dark: #405048;
-            --gray: #697770;
-            --gray-light: #e9eeeb;
+    --black: #102019;
+    --gray-dark: #405048;
+    --gray: #697770;
+    --gray-light: #e9eeeb;
 
-            --white: #ffffff;
-            --off-white: #f8faf8;
+    --white: #ffffff;
+    --off-white: #f8faf8;
 
-            --shadow-sm: 0 8px 25px rgba(6, 69, 47, .07);
-            --shadow-lg: 0 25px 70px rgba(6, 69, 47, .13);
+    --shadow-sm: 0 8px 25px rgba(6,69,47,.07);
+    --shadow-lg: 0 25px 70px rgba(6,69,47,.13);
 
-            --radius-sm: 12px;
-            --radius: 20px;
-            --radius-lg: 30px;
+    --radius-sm: 12px;
+    --radius: 20px;
+    --radius-lg: 30px;
 
-            --container: 1180px;
-        }
+    --container: 1180px;
+}
 
 
-        /* =========================================================
-           RESET
-           ========================================================= */
+/* =========================================================
+   RESET
+   ========================================================= */
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        body {
-            font-family: "DM Sans", sans-serif;
-            color: var(--black);
-            background: var(--white);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--black);
+    background: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-        button,
-        input,
-        textarea {
-            font: inherit;
-        }
+button,
+input,
+textarea {
+    font: inherit;
+}
 
-        img {
-            max-width: 100%;
-            display: block;
-        }
+img {
+    max-width: 100%;
+    display: block;
+}
 
-        .container {
-            width: min(92%, var(--container));
-            margin: auto;
-        }
+.container {
+    width: min(92%, var(--container));
+    margin: auto;
+}
 
 
-        /* =========================================================
-           PRELOADER
-           ========================================================= */
+/* =========================================================
+   PRELOADER
+   ========================================================= */
 
-        #preloader {
+#preloader {
 
-            position: fixed;
-            inset: 0;
+    position: fixed;
+    inset: 0;
 
-            z-index: 9999;
+    z-index: 9999;
 
-            background: var(--white);
+    background: var(--white);
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-            transition:
-                opacity .6s ease,
-                visibility .6s ease;
-        }
+    transition:
+        opacity .6s ease,
+        visibility .6s ease;
+}
 
-        #preloader.hide {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
-        }
+#preloader.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
 
-        .loader-content {
-            text-align: center;
-        }
+.loader-content {
+    text-align: center;
+}
 
-        .loader-logo {
+.loader-logo {
 
-            font-family: "Playfair Display", serif;
+    font-family: "Playfair Display", serif;
 
-            font-size: 48px;
+    font-size: 48px;
 
-            color: var(--green);
+    color: var(--green);
 
-            letter-spacing: -2px;
-        }
+    letter-spacing: -2px;
+}
 
-        .loader-tagline {
+.loader-tagline {
 
-            color: var(--gray);
+    color: var(--gray);
 
-            margin-top: 5px;
+    margin-top: 5px;
 
-            font-size: 14px;
-        }
+    font-size: 14px;
+}
 
-        .loader-line {
+.loader-line {
 
-            width: 160px;
-            height: 3px;
+    width: 160px;
+    height: 3px;
 
-            background: var(--gray-light);
+    background: var(--gray-light);
 
-            margin: 25px auto 0;
+    margin: 25px auto 0;
 
-            overflow: hidden;
+    overflow: hidden;
 
-            border-radius: 10px;
-        }
+    border-radius: 10px;
+}
 
-        .loader-line span {
+.loader-line span {
 
-            display: block;
+    display: block;
 
-            width: 45%;
-            height: 100%;
+    width: 45%;
+    height: 100%;
 
-            background: var(--gold);
+    background: var(--gold);
 
-            animation:
-                loading 1.2s infinite ease-in-out;
-        }
+    animation:
+        loading 1.2s infinite ease-in-out;
+}
 
-        @keyframes loading {
+@keyframes loading {
 
-            0% {
-                transform: translateX(-120%);
-            }
+    0% {
+        transform: translateX(-120%);
+    }
 
-            100% {
-                transform: translateX(350%);
-            }
+    100% {
+        transform: translateX(350%);
+    }
+}
 
-        }
 
+/* =========================================================
+   NAVBAR
+   ========================================================= */
 
-        /* =========================================================
-           NAVBAR
-           ========================================================= */
+header {
 
-        header {
+    position: fixed;
 
-            position: fixed;
+    top: 0;
+    left: 0;
 
-            top: 0;
-            left: 0;
+    width: 100%;
 
-            width: 100%;
+    z-index: 1000;
 
-            z-index: 1000;
+    background: rgba(255,255,255,.92);
 
-            background: rgba(255, 255, 255, .92);
+    backdrop-filter: blur(15px);
 
-            backdrop-filter: blur(15px);
+    border-bottom:
+        1px solid rgba(12,107,69,.08);
 
-            border-bottom:
-                1px solid rgba(12, 107, 69, .08);
+    transition:
+        box-shadow .3s ease;
+}
 
-            transition:
-                box-shadow .3s ease;
-        }
+nav {
 
-        nav {
+    min-height: 78px;
 
-            min-height: 78px;
+    display: flex;
 
-            display: flex;
+    align-items: center;
 
-            align-items: center;
+    justify-content: space-between;
+}
 
-            justify-content: space-between;
-        }
+.logo {
 
-        .logo {
+    font-family: "Playfair Display", serif;
 
-            font-family: "Playfair Display", serif;
+    font-size: 30px;
 
-            font-size: 30px;
+    font-weight: 700;
 
-            font-weight: 700;
+    color: var(--green);
 
-            color: var(--green);
+    letter-spacing: -1px;
+}
 
-            letter-spacing: -1px;
-        }
+.logo span {
+    color: var(--gold);
+}
 
-        .logo span {
-            color: var(--gold);
-        }
+.nav-links {
 
-        .nav-links {
+    display: flex;
 
-            display: flex;
+    align-items: center;
 
-            align-items: center;
+    gap: 30px;
 
-            gap: 30px;
+    list-style: none;
+}
 
-            list-style: none;
-        }
+.nav-links a {
 
-        .nav-links a {
+    color: var(--gray-dark);
 
-            color: var(--gray-dark);
+    font-size: 14px;
 
-            font-size: 14px;
+    font-weight: 600;
 
-            font-weight: 600;
+    transition: .25s;
+}
 
-            transition: .25s;
-        }
+.nav-links a:hover,
+.nav-links a.active-link {
+    color: var(--green);
+}
 
-        .nav-links a:hover,
-        .nav-links a.active-link {
-            color: var(--green);
-        }
+.nav-links a.active-link {
+    position: relative;
+}
 
-        .nav-links a.active-link {
-            position: relative;
-        }
+.nav-links a.active-link:not(.nav-cta)::after {
 
-        .nav-links a.active-link:not(.nav-cta)::after {
+    content: "";
 
-            content: "";
+    position: absolute;
 
-            position: absolute;
+    left: 0;
+    right: 0;
 
-            left: 0;
-            right: 0;
+    bottom: -7px;
 
-            bottom: -7px;
+    height: 2px;
 
-            height: 2px;
+    background: var(--gold);
 
-            background: var(--gold);
+    border-radius: 10px;
+}
 
-            border-radius: 10px;
-        }
+.nav-cta {
 
-        .nav-cta {
+    padding: 11px 20px;
 
-            padding: 11px 20px;
+    border-radius: 50px;
 
-            border-radius: 50px;
+    background: var(--green);
 
-            background: var(--green);
+    color: white !important;
+}
 
-            color: white !important;
-        }
+.nav-cta:hover {
+    background: var(--green-dark);
+}
 
-        .nav-cta:hover {
-            background: var(--green-dark);
-        }
+.menu-btn {
 
-        .menu-btn {
+    display: none;
 
-            display: none;
+    border: 0;
 
-            border: 0;
+    background: transparent;
 
-            background: transparent;
+    font-size: 27px;
 
-            font-size: 27px;
+    color: var(--green);
 
-            color: var(--green);
+    cursor: pointer;
+}
 
-            cursor: pointer;
-        }
 
+/* =========================================================
+   BUTTONS
+   ========================================================= */
 
-        /* =========================================================
-           BUTTONS
-           ========================================================= */
+.btn {
 
-        .btn {
+    display: inline-flex;
 
-            display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-            align-items: center;
-            justify-content: center;
+    gap: 9px;
 
-            gap: 9px;
+    padding: 14px 23px;
 
-            padding: 14px 23px;
+    border-radius: 50px;
 
-            border-radius: 50px;
+    border: 1px solid transparent;
 
-            border: 1px solid transparent;
+    font-weight: 700;
 
-            font-weight: 700;
+    font-size: 14px;
 
-            font-size: 14px;
+    cursor: pointer;
 
-            cursor: pointer;
+    transition:
+        transform .25s,
+        box-shadow .25s,
+        background .25s;
+}
 
-            transition:
-                transform .25s,
-                box-shadow .25s,
-                background .25s;
-        }
+.btn:hover {
+    transform: translateY(-2px);
+}
 
-        .btn:hover {
-            transform: translateY(-2px);
-        }
+.btn-primary {
 
-        .btn-primary {
+    background: var(--green);
 
-            background: var(--green);
+    color: white;
 
-            color: white;
+    box-shadow:
+        0 12px 28px rgba(12,107,69,.18);
+}
 
-            box-shadow:
-                0 12px 28px rgba(12, 107, 69, .18);
-        }
+.btn-primary:hover {
+    background: var(--green-dark);
+}
 
-        .btn-primary:hover {
-            background: var(--green-dark);
-        }
+.btn-secondary {
 
-        .btn-secondary {
+    border-color:
+        rgba(12,107,69,.2);
 
-            border-color:
-                rgba(12, 107, 69, .2);
+    color: var(--green);
 
-            color: var(--green);
+    background: white;
+}
 
-            background: white;
-        }
+.btn-secondary:hover {
+    background: var(--green-soft);
+}
 
-        .btn-secondary:hover {
-            background: var(--green-soft);
-        }
 
+/* =========================================================
+   HERO
+   ========================================================= */
 
-        /* =========================================================
-           HERO
-           ========================================================= */
+.hero {
 
-        .hero {
+    padding: 170px 0 100px;
 
-            padding: 170px 0 100px;
+    background:
 
-            background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(217,164,65,.13),
+            transparent 28%
+        ),
 
-                radial-gradient(
-                    circle at 85% 20%,
-                    rgba(217, 164, 65, .13),
-                    transparent 28%
-                ),
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(12,107,69,.08),
+            transparent 32%
+        ),
 
-                radial-gradient(
-                    circle at 10% 80%,
-                    rgba(12, 107, 69, .08),
-                    transparent 32%
-                ),
+        var(--off-white);
 
-                var(--off-white);
+    position: relative;
 
-            position: relative;
+    overflow: hidden;
+}
 
-            overflow: hidden;
-        }
+.hero-grid {
 
-        .hero-grid {
+    display: grid;
 
-            display: grid;
+    grid-template-columns:
+        1.05fr .95fr;
 
-            grid-template-columns:
-                1.05fr .95fr;
+    gap: 70px;
 
-            gap: 70px;
+    align-items: center;
+}
 
-            align-items: center;
-        }
+.eyebrow {
 
-        .eyebrow {
+    display: inline-flex;
 
-            display: inline-flex;
+    align-items: center;
 
-            align-items: center;
+    gap: 8px;
 
-            gap: 8px;
+    background: var(--green-light);
 
-            background: var(--green-light);
+    color: var(--green);
 
-            color: var(--green);
+    padding: 8px 13px;
 
-            padding: 8px 13px;
+    border-radius: 50px;
 
-            border-radius: 50px;
+    font-size: 12px;
 
-            font-size: 12px;
+    font-weight: 700;
 
-            font-weight: 700;
+    margin-bottom: 22px;
+}
 
-            margin-bottom: 22px;
-        }
+.eyebrow-dot {
 
-        .eyebrow-dot {
+    width: 7px;
+    height: 7px;
 
-            width: 7px;
-            height: 7px;
+    border-radius: 50%;
 
-            border-radius: 50%;
+    background: var(--gold);
+}
 
-            background: var(--gold);
-        }
+.hero h1 {
 
-        .hero h1 {
+    font-family: "Playfair Display", serif;
 
-            font-family: "Playfair Display", serif;
+    font-size:
+        clamp(48px,6vw,78px);
 
-            font-size:
-                clamp(48px, 6vw, 78px);
+    line-height: 1.02;
 
-            line-height: 1.02;
+    letter-spacing: -3px;
 
-            letter-spacing: -3px;
+    color: var(--green-dark);
 
-            color: var(--green-dark);
+    max-width: 700px;
+}
 
-            max-width: 700px;
-        }
+.hero h1 span {
+    color: var(--gold);
+}
 
-        .hero h1 span {
-            color: var(--gold);
-        }
+.hero-text {
 
-        .hero-text {
+    max-width: 610px;
 
-            max-width: 610px;
+    margin-top: 25px;
 
-            margin-top: 25px;
+    color: var(--gray-dark);
 
-            color: var(--gray-dark);
+    font-size: 18px;
+}
 
-            font-size: 18px;
-        }
+.hero-buttons {
 
-        .hero-buttons {
+    display: flex;
 
-            display: flex;
+    gap: 12px;
 
-            gap: 12px;
+    flex-wrap: wrap;
 
-            flex-wrap: wrap;
+    margin-top: 32px;
+}
 
-            margin-top: 32px;
-        }
+.hero-note {
 
-        .hero-note {
+    margin-top: 22px;
 
-            margin-top: 22px;
+    font-size: 13px;
 
-            font-size: 13px;
+    color: var(--gray);
+}
 
-            color: var(--gray);
-        }
 
+/* =========================================================
+   UNIVERSAL IMAGE SYSTEM
+   IMPORTANT:
+   ALL WEBSITE IMAGES USE THIS SYSTEM
+   ========================================================= */
 
-        /* =========================================================
-           IMPROVED HERO IMAGE
-           FULL IMAGE VISIBLE
-           ========================================================= */
+.hero-image,
+.step-image,
+.juri-image,
+.food-loop-image,
+.audience-image {
 
-        .hero-visual {
+    background:
+        linear-gradient(
+            135deg,
+            #f3faf6,
+            #eef5f0
+        );
 
-            position: relative;
+    display: flex;
 
-            min-height: 500px;
+    align-items: center;
 
-            display: flex;
+    justify-content: center;
 
-            align-items: center;
+    overflow: hidden;
 
-            justify-content: center;
-        }
+    position: relative;
+}
 
-        .hero-image {
 
-            width: 100%;
+/*
+---------------------------------------------------------
+HERO IMAGE
+---------------------------------------------------------
+*/
 
-            max-width: 520px;
+.hero-visual {
 
-            min-height: 500px;
+    position: relative;
 
-            border-radius: 35px;
+    min-height: 500px;
 
-            overflow: hidden;
+    display: flex;
 
-            position: relative;
+    align-items: center;
 
-            box-shadow: var(--shadow-lg);
+    justify-content: center;
+}
 
-            background: var(--green-light);
+.hero-image {
 
-            display: flex;
+    width: 100%;
 
-            align-items: center;
+    max-width: 520px;
 
-            justify-content: center;
-        }
+    height: 500px;
 
-        .hero-image::after {
+    border-radius: 35px;
 
-            content: "";
+    box-shadow: var(--shadow-lg);
+}
 
-            position: absolute;
 
-            inset: 0;
+/*
+IMPORTANT:
+contain = FULL IMAGE IS VISIBLE
+*/
 
-            background:
-                linear-gradient(
-                    to bottom,
-                    rgba(6, 69, 47, .01),
-                    rgba(6, 69, 47, .08)
-                );
+.hero-image img {
 
-            pointer-events: none;
-        }
+    width: 100%;
 
-        .hero-image img {
+    height: 100%;
 
-            width: 100%;
+    object-fit: contain;
 
-            height: 100%;
+    object-position: center;
 
-            object-fit: contain;
+    padding: 12px;
 
-            object-position: center;
+    display: block;
 
-            display: block;
+    transition:
+        transform .6s ease;
+}
 
-            transition: none;
-        }
+.hero-image:hover img {
+    transform: scale(1.025);
+}
 
 
-        /* =========================================================
-           HERO FLOATING CARDS
-           ========================================================= */
+/* =========================================================
+   FLOATING CARDS
+   ========================================================= */
 
-        .floating-card {
+.floating-card {
 
-            position: absolute;
+    position: absolute;
 
-            background: white;
+    background: white;
 
-            border-radius: 18px;
+    border-radius: 18px;
 
-            padding: 15px 18px;
+    padding: 15px 18px;
 
-            box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-lg);
 
-            border:
-                1px solid rgba(12, 107, 69, .08);
+    border:
+        1px solid rgba(12,107,69,.08);
 
-            font-size: 13px;
+    font-size: 13px;
 
-            font-weight: 600;
+    font-weight: 600;
 
-            z-index: 2;
-        }
+    z-index: 2;
+}
 
-        .float-one {
+.float-one {
 
-            top: 55px;
+    top: 55px;
 
-            left: 0;
-        }
+    left: 0;
+}
 
-        .float-two {
+.float-two {
 
-            bottom: 55px;
+    bottom: 55px;
 
-            right: 0;
-        }
+    right: 0;
+}
 
-        .float-icon {
+.float-icon {
 
-            display: inline-flex;
+    display: inline-flex;
 
-            width: 30px;
-            height: 30px;
+    width: 30px;
+    height: 30px;
 
-            border-radius: 10px;
+    border-radius: 10px;
 
-            align-items: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
 
-            background: var(--green-light);
+    background: var(--green-light);
 
-            color: var(--green);
+    color: var(--green);
 
-            margin-right: 7px;
+    margin-right: 7px;
 
-            font-weight: 800;
-        }
+    font-weight: 800;
+}
 
 
-        /* =========================================================
-           GENERAL SECTION
-           ========================================================= */
+/* =========================================================
+   GENERAL SECTION
+   ========================================================= */
 
-        section {
-            padding: 105px 0;
-        }
+section {
+    padding: 105px 0;
+}
 
-        .section-head {
+.section-head {
 
-            max-width: 720px;
+    max-width: 720px;
 
-            margin-bottom: 55px;
-        }
+    margin-bottom: 55px;
+}
 
-        .section-label {
+.section-label {
 
-            color: var(--gold);
+    color: var(--gold);
 
-            text-transform: uppercase;
+    text-transform: uppercase;
 
-            letter-spacing: 2px;
+    letter-spacing: 2px;
 
-            font-size: 12px;
+    font-size: 12px;
 
-            font-weight: 800;
+    font-weight: 800;
 
-            margin-bottom: 12px;
-        }
+    margin-bottom: 12px;
+}
 
-        .section-head h2 {
+.section-head h2 {
 
-            font-family: "Playfair Display", serif;
+    font-family: "Playfair Display", serif;
 
-            font-size:
-                clamp(34px, 4vw, 53px);
+    font-size:
+        clamp(34px,4vw,53px);
 
-            line-height: 1.1;
+    line-height: 1.1;
 
-            color: var(--green-dark);
+    color: var(--green-dark);
 
-            letter-spacing: -1.5px;
-        }
+    letter-spacing: -1.5px;
+}
 
-        .section-head p {
+.section-head p {
 
-            margin-top: 15px;
+    margin-top: 15px;
 
-            color: var(--gray);
+    color: var(--gray);
 
-            font-size: 16px;
-        }
+    font-size: 16px;
+}
 
 
-        /* =========================================================
-           OPPORTUNITY
-           ========================================================= */
+/* =========================================================
+   OPPORTUNITY
+   ========================================================= */
 
-        .opportunity {
-            background: white;
-        }
+.opportunity {
+    background: white;
+}
 
-        .opportunity-grid {
+.opportunity-grid {
 
-            display: grid;
+    display: grid;
 
-            grid-template-columns:
-                .85fr 1.15fr;
+    grid-template-columns:
+        .85fr 1.15fr;
 
-            gap: 65px;
+    gap: 65px;
 
-            align-items: start;
-        }
+    align-items: start;
+}
 
-        .stats {
+.stats {
 
-            display: grid;
+    display: grid;
 
-            gap: 15px;
-        }
+    gap: 15px;
+}
 
-        .stat {
+.stat {
 
-            padding: 23px;
+    padding: 23px;
 
-            background: var(--green-soft);
+    background: var(--green-soft);
 
-            border-radius: 20px;
+    border-radius: 20px;
 
-            border:
-                1px solid rgba(12, 107, 69, .08);
-        }
+    border:
+        1px solid rgba(12,107,69,.08);
+}
 
-        .stat strong {
+.stat strong {
 
-            display: block;
+    display: block;
 
-            color: var(--green);
+    color: var(--green);
 
-            font-size: 30px;
-        }
+    font-size: 30px;
+}
 
-        .stat span {
+.stat span {
 
-            color: var(--gray);
+    color: var(--gray);
 
-            font-size: 13px;
-        }
+    font-size: 13px;
+}
 
-        .questions {
+.questions {
 
-            display: grid;
+    display: grid;
 
-            grid-template-columns:
-                repeat(2, 1fr);
+    grid-template-columns:
+        repeat(2,1fr);
 
-            gap: 12px;
-        }
+    gap: 12px;
+}
 
-        .question {
+.question {
 
-            padding: 20px;
+    padding: 20px;
 
-            border:
-                1px solid var(--gray-light);
+    border:
+        1px solid var(--gray-light);
 
-            border-radius: 16px;
+    border-radius: 16px;
 
-            background: white;
+    background: white;
 
-            font-weight: 600;
-        }
+    font-weight: 600;
+}
 
-        .question::before {
+.question::before {
 
-            content: "✓";
+    content: "✓";
 
-            display: inline-flex;
+    display: inline-flex;
 
-            align-items: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
 
-            width: 23px;
-            height: 23px;
+    width: 23px;
+    height: 23px;
 
-            border-radius: 50%;
+    border-radius: 50%;
 
-            background: var(--gold-light);
+    background: var(--gold-light);
 
-            color: var(--gold);
+    color: var(--gold);
 
-            margin-right: 9px;
+    margin-right: 9px;
 
-            font-size: 12px;
-        }
+    font-size: 12px;
+}
 
-        .insight {
 
-            margin-top: 25px;
+/* =========================================================
+   HOW IT WORKS
+   ========================================================= */
 
-            padding: 25px;
+.steps {
 
-            background: var(--green);
+    display: grid;
 
-            color: white;
+    grid-template-columns:
+        repeat(4,1fr);
 
-            border-radius: 22px;
-        }
+    gap: 18px;
+}
 
-        .insight strong {
-            color: var(--gold);
-        }
+.step-card {
 
+    padding: 30px 25px;
 
-        /* =========================================================
-           HOW IT WORKS
-           ========================================================= */
+    border:
+        1px solid var(--gray-light);
 
-        .steps {
+    border-radius: 24px;
 
-            display: grid;
+    background: white;
 
-            grid-template-columns:
-                repeat(4, 1fr);
+    transition: .3s;
+}
 
-            gap: 18px;
-        }
+.step-card:hover {
 
-        .step-card {
+    transform: translateY(-7px);
 
-            padding: 30px 25px;
+    box-shadow: var(--shadow-sm);
 
-            border:
-                1px solid var(--gray-light);
+    border-color:
+        rgba(12,107,69,.2);
+}
 
-            border-radius: 24px;
+.step-number {
 
-            background: white;
+    width: 43px;
+    height: 43px;
 
-            transition: .3s;
+    border-radius: 14px;
 
-            overflow: hidden;
-        }
+    display: flex;
 
-        .step-card:hover {
+    align-items: center;
+    justify-content: center;
 
-            transform: translateY(-7px);
+    background: var(--green);
 
-            box-shadow: var(--shadow-sm);
+    color: white;
 
-            border-color:
-                rgba(12, 107, 69, .2);
-        }
+    font-weight: 800;
+}
 
-        .step-number {
+.step-card h3 {
 
-            width: 43px;
-            height: 43px;
+    margin-top: 25px;
 
-            border-radius: 14px;
+    color: var(--green-dark);
 
-            display: flex;
+    font-size: 20px;
+}
 
-            align-items: center;
-            justify-content: center;
+.step-card p {
 
-            background: var(--green);
+    margin-top: 10px;
 
-            color: white;
+    color: var(--gray);
 
-            font-weight: 800;
-        }
+    font-size: 14px;
+}
 
-        .step-card h3 {
 
-            margin-top: 25px;
+/* =========================================================
+   STEP IMAGES
+   ========================================================= */
 
-            color: var(--green-dark);
+/*
+All four step images now have EXACTLY
+the same visual frame.
+*/
 
-            font-size: 20px;
-        }
+.step-image {
 
-        .step-card p {
+    width: 100%;
 
-            margin-top: 10px;
+    height: 190px;
 
-            color: var(--gray);
+    margin-top: 22px;
 
-            font-size: 14px;
-        }
+    border-radius: 16px;
 
+    border: 1px solid rgba(12,107,69,.06);
+}
 
-        /* =========================================================
-           IMPROVED STEP IMAGES
-           FULL IMAGE VISIBLE
-           ========================================================= */
 
-        .step-image {
+/*
+Full image visible.
+No ugly cropping.
+*/
 
-            width: 100%;
+.step-image img {
 
-            height: 220px;
+    width: 100%;
 
-            margin-top: 22px;
+    height: 100%;
 
-            border-radius: 16px;
+    object-fit: contain;
 
-            overflow: hidden;
+    object-position: center;
 
-            background: var(--green-soft);
+    padding: 8px;
 
-            display: flex;
+    display: block;
 
-            align-items: center;
+    transition:
+        transform .5s ease;
+}
 
-            justify-content: center;
-        }
+.step-card:hover .step-image img {
 
-        .step-image img {
+    transform: scale(1.025);
+}
 
-            width: 100%;
 
-            height: 100%;
+/* =========================================================
+   JURI
+   ========================================================= */
 
-            object-fit: contain;
+.juri-section {
 
-            object-position: center;
+    background: var(--green-dark);
 
-            display: block;
+    color: white;
 
-            transition: none;
-        }
+    overflow: hidden;
+}
 
+.juri-grid {
 
-        /* =========================================================
-           JURI
-           ========================================================= */
+    display: grid;
 
-        .juri-section {
+    grid-template-columns:
+        .85fr 1.15fr;
 
-            background: var(--green-dark);
+    gap: 70px;
 
-            color: white;
+    align-items: center;
+}
 
-            overflow: hidden;
-        }
+.juri-section .section-label {
+    color: var(--gold);
+}
 
-        .juri-grid {
+.juri-section h2 {
+    color: white;
+}
 
-            display: grid;
+.juri-intro {
 
-            grid-template-columns:
-                .85fr 1.15fr;
+    color:
+        rgba(255,255,255,.72);
 
-            gap: 70px;
+    margin-top: 18px;
+}
 
-            align-items: center;
-        }
+.juri-bubble {
 
-        .juri-section
-        .section-label {
-            color: var(--gold);
-        }
+    margin-top: 25px;
 
-        .juri-section h2 {
-            color: white;
-        }
+    padding: 22px;
 
-        .juri-intro {
+    border-left:
+        3px solid var(--gold);
 
-            color:
-                rgba(255,255,255,.72);
+    background:
+        rgba(255,255,255,.05);
 
-            margin-top: 18px;
-        }
+    border-radius:
+        0 18px 18px 0;
+}
 
-        .juri-bubble {
+.juri-bubble strong {
 
-            margin-top: 25px;
+    display: block;
 
-            padding: 22px;
+    color: var(--gold);
 
-            border-left:
-                3px solid var(--gold);
+    margin-bottom: 5px;
+}
 
-            background:
-                rgba(255,255,255,.05);
+.juri-visual {
 
-            border-radius:
-                0 18px 18px 0;
-        }
+    position: relative;
 
-        .juri-bubble strong {
+    min-height: 450px;
 
-            display: block;
+    display: flex;
 
-            color: var(--gold);
+    align-items: center;
 
-            margin-bottom: 5px;
-        }
+    justify-content: center;
+}
 
-        .juri-visual {
+.juri-image {
 
-            position: relative;
+    width: 100%;
 
-            min-height: 450px;
+    max-width: 500px;
 
-            display: flex;
+    height: 450px;
 
-            align-items: center;
+    border-radius: 30px;
 
-            justify-content: center;
-        }
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.25);
+}
 
+.juri-image::after {
 
-        /* =========================================================
-           IMPROVED JURI IMAGE
-           FULL IMAGE VISIBLE
-           ========================================================= */
+    content: "";
 
-        .juri-image {
+    position: absolute;
 
-            width: 100%;
+    inset: 0;
 
-            max-width: 500px;
+    background:
+        linear-gradient(
+            to top,
+            rgba(6,69,47,.20),
+            transparent 55%
+        );
 
-            height: 450px;
+    pointer-events: none;
+}
 
-            border-radius: 30px;
+.juri-image img {
 
-            overflow: hidden;
+    width: 100%;
 
-            position: relative;
+    height: 100%;
 
-            box-shadow:
-                0 30px 80px rgba(0, 0, 0, .25);
+    object-fit: contain;
 
-            background: rgba(255,255,255,.05);
+    object-position: center;
 
-            display: flex;
+    padding: 14px;
 
-            align-items: center;
+    display: block;
 
-            justify-content: center;
-        }
+    transition:
+        transform .6s ease;
+}
 
-        .juri-image::after {
+.juri-image:hover img {
+    transform: scale(1.025);
+}
 
-            content: "";
 
-            position: absolute;
+/* =========================================================
+   LEARNING LOOP
+   ========================================================= */
 
-            inset: 0;
+.learning {
+    background: var(--off-white);
+}
 
-            background:
-                linear-gradient(
-                    to top,
-                    rgba(6, 69, 47, .18),
-                    transparent 55%
-                );
+.learning-loop {
 
-            pointer-events: none;
-        }
+    max-width: 900px;
 
-        .juri-image img {
+    margin: auto;
 
-            width: 100%;
+    display: flex;
 
-            height: 100%;
+    justify-content: center;
 
-            object-fit: contain;
+    align-items: center;
 
-            object-position: center;
+    flex-wrap: wrap;
 
-            display: block;
+    gap: 14px;
+}
 
-            transition: none;
-        }
+.learn-item {
 
+    padding: 16px 22px;
 
-        /* =========================================================
-           LEARNING LOOP
-           ========================================================= */
+    background: white;
 
-        .learning {
-            background: var(--off-white);
-        }
+    border-radius: 50px;
 
-        .learning-loop {
+    border:
+        1px solid var(--gray-light);
 
-            max-width: 900px;
+    color: var(--green-dark);
 
-            margin: auto;
+    font-weight: 700;
 
-            display: flex;
+    box-shadow: var(--shadow-sm);
+}
 
-            justify-content: center;
-            align-items: center;
+.learn-arrow {
 
-            flex-wrap: wrap;
+    color: var(--gold);
 
-            gap: 14px;
-        }
+    font-weight: 900;
+}
 
-        .learn-item {
+.learning-text {
 
-            padding: 16px 22px;
+    text-align: center;
 
-            background: white;
+    max-width: 680px;
 
-            border-radius: 50px;
+    margin: 35px auto 0;
 
-            border:
-                1px solid var(--gray-light);
+    color: var(--gray);
+}
 
-            color: var(--green-dark);
 
-            font-weight: 700;
+/* =========================================================
+   DIFFERENCE
+   ========================================================= */
 
-            box-shadow: var(--shadow-sm);
-        }
+.difference-grid {
 
-        .learn-arrow {
+    display: grid;
 
-            color: var(--gold);
+    grid-template-columns:
+        1fr 1fr;
 
-            font-weight: 900;
-        }
+    gap: 30px;
 
-        .learning-text {
+    align-items: stretch;
+}
 
-            text-align: center;
+.difference-card {
 
-            max-width: 680px;
+    padding: 35px;
 
-            margin: 35px auto 0;
+    border:
+        1px solid var(--gray-light);
 
-            color: var(--gray);
-        }
+    border-radius: 25px;
+}
 
+.difference-card h3 {
 
-        /* =========================================================
-           DIFFERENCE
-           ========================================================= */
+    color: var(--gray-dark);
 
-        .difference-grid {
+    margin-bottom: 20px;
+}
 
-            display: grid;
+.fragment {
 
-            grid-template-columns:
-                1fr 1fr;
+    display: flex;
 
-            gap: 30px;
+    justify-content: space-between;
 
-            align-items: stretch;
-        }
+    align-items: center;
 
-        .difference-card {
+    padding: 14px 0;
 
-            padding: 35px;
+    border-bottom:
+        1px solid var(--gray-light);
 
-            border:
-                1px solid var(--gray-light);
+    font-size: 14px;
+}
 
-            border-radius: 25px;
-        }
+.fragment span {
+    color: var(--gray);
+}
 
-        .difference-card h3 {
+.paletra-difference {
 
-            color: var(--gray-dark);
+    padding: 40px;
 
-            margin-bottom: 20px;
-        }
+    background: var(--green);
 
-        .fragment {
+    color: white;
 
-            display: flex;
+    border-radius: 25px;
 
-            justify-content: space-between;
-            align-items: center;
+    display: flex;
 
-            padding: 14px 0;
+    flex-direction: column;
 
-            border-bottom:
-                1px solid var(--gray-light);
+    justify-content: center;
+}
 
-            font-size: 14px;
-        }
+.paletra-difference h3 {
 
-        .fragment span {
-            color: var(--gray);
-        }
+    font-family:
+        "Playfair Display", serif;
 
-        .paletra-difference {
+    color: white;
 
-            padding: 40px;
+    font-size: 38px;
 
-            background: var(--green);
+    line-height: 1.1;
+}
 
-            color: white;
+.paletra-difference p {
 
-            border-radius: 25px;
+    margin-top: 18px;
 
-            display: flex;
+    color:
+        rgba(255,255,255,.75);
+}
 
-            flex-direction: column;
+.difference-tag {
 
-            justify-content: center;
-        }
+    display: inline-block;
 
-        .paletra-difference h3 {
+    margin-top: 25px;
 
-            font-family:
-                "Playfair Display", serif;
+    padding: 9px 14px;
 
-            color: white;
+    border-radius: 50px;
 
-            font-size: 38px;
+    background:
+        rgba(217,164,65,.15);
 
-            line-height: 1.1;
-        }
+    color: var(--gold);
 
-        .paletra-difference p {
+    width: fit-content;
 
-            margin-top: 18px;
+    font-size: 12px;
 
-            color:
-                rgba(255,255,255,.75);
-        }
+    font-weight: 800;
+}
 
-        .difference-tag {
 
-            display: inline-block;
+/* =========================================================
+   FOOD LOOP
+   ========================================================= */
 
-            margin-top: 25px;
+.food-loop-section {
+    background: var(--off-white);
+}
 
-            padding: 9px 14px;
+.food-loop {
 
-            border-radius: 50px;
+    width: 100%;
 
-            background:
-                rgba(217,164,65,.15);
+    display: flex;
 
-            color: var(--gold);
+    justify-content: center;
 
-            width: fit-content;
+    margin-top: 20px;
+}
 
-            font-size: 12px;
+.food-loop-image {
 
-            font-weight: 800;
-        }
+    width: 100%;
 
+    max-width: 1050px;
 
-        /* =========================================================
-           FOOD LOOP
-           ========================================================= */
+    /*
+    Controlled height so it doesn't become enormous.
+    */
 
-        .food-loop-section {
-            background: var(--off-white);
-        }
+    height: 420px;
 
-        .food-loop {
+    border-radius: 30px;
 
-            width: 100%;
+    box-shadow: var(--shadow-lg);
+}
 
-            display: flex;
+.food-loop-image img {
 
-            justify-content: center;
+    width: 100%;
 
-            margin-top: 20px;
-        }
+    height: 100%;
 
+    object-fit: contain;
 
-        /* =========================================================
-           IMPROVED FOOD LOOP IMAGE
-           FULL IMAGE VISIBLE
-           ========================================================= */
+    object-position: center;
 
-        .food-loop-image {
+    padding: 15px;
 
-            width: 100%;
+    display: block;
 
-            max-width: 1050px;
+    transition:
+        transform .6s ease;
+}
 
-            min-height: 420px;
+.food-loop-image:hover img {
+    transform: scale(1.02);
+}
 
-            border-radius: 30px;
+.loop-message {
 
-            overflow: hidden;
+    text-align: center;
 
-            position: relative;
+    max-width: 650px;
 
-            box-shadow: var(--shadow-lg);
+    margin: 45px auto 0;
 
-            background: white;
+    font-family:
+        "Playfair Display", serif;
 
-            display: flex;
+    font-size: 26px;
 
-            align-items: center;
+    color: var(--green-dark);
+}
 
-            justify-content: center;
-        }
 
-        .food-loop-image::after {
+/* =========================================================
+   TARGET AUDIENCE
+   ========================================================= */
 
-            content: "";
+.target {
+    background: var(--green-soft);
+}
 
-            position: absolute;
+.audience-grid {
 
-            inset: 0;
+    display: grid;
 
-            background:
-                linear-gradient(
-                    to bottom,
-                    rgba(6, 69, 47, .01),
-                    rgba(6, 69, 47, .08)
-                );
+    grid-template-columns:
+        repeat(4,1fr);
 
-            pointer-events: none;
-        }
+    gap: 18px;
+}
 
-        .food-loop-image img {
+.audience {
 
-            width: 100%;
+    background: white;
 
-            height: 100%;
+    padding:
+        10px 10px 24px;
 
-            object-fit: contain;
+    border-radius: 22px;
 
-            object-position: center;
+    text-align: left;
 
-            display: block;
+    border:
+        1px solid rgba(12,107,69,.08);
 
-            transition: none;
-        }
+    overflow: hidden;
 
-        .loop-message {
+    transition: .3s ease;
+}
 
-            text-align: center;
+.audience:hover {
 
-            max-width: 650px;
+    transform: translateY(-7px);
 
-            margin: 45px auto 0;
+    box-shadow: var(--shadow-lg);
 
-            font-family:
-                "Playfair Display", serif;
+    border-color:
+        rgba(12,107,69,.18);
+}
 
-            font-size: 26px;
 
-            color: var(--green-dark);
-        }
+/*
+All audience images now have
+the exact same frame.
+*/
 
+.audience-image {
 
-        /* =========================================================
-           TARGET AUDIENCE
-           ========================================================= */
+    width: 100%;
 
-        .target {
-            background: var(--green-soft);
-        }
+    height: 210px;
 
-        .audience-grid {
+    border-radius: 16px;
 
-            display: grid;
+    margin-bottom: 20px;
 
-            grid-template-columns:
-                repeat(4, 1fr);
+    border: 1px solid rgba(12,107,69,.06);
+}
 
-            gap: 18px;
-        }
+.audience-image img {
 
-        .audience {
+    width: 100%;
 
-            background: white;
+    height: 100%;
 
-            padding:
-                10px 10px 24px;
+    object-fit: contain;
 
-            border-radius: 22px;
+    object-position: center;
 
-            text-align: left;
+    padding: 8px;
 
-            border:
-                1px solid rgba(12, 107, 69, .08);
+    display: block;
 
-            overflow: hidden;
+    transition:
+        transform .5s ease;
+}
 
-            transition: .3s ease;
-        }
+.audience:hover .audience-image img {
+    transform: scale(1.025);
+}
 
-        .audience:hover {
+.audience strong {
 
-            transform: translateY(-7px);
+    display: block;
 
-            box-shadow: var(--shadow-lg);
+    color: var(--green-dark);
 
-            border-color:
-                rgba(12, 107, 69, .18);
-        }
+    font-size: 17px;
 
+    padding: 0 10px;
+}
 
-        /* =========================================================
-           IMPROVED AUDIENCE IMAGES
-           FULL IMAGE VISIBLE
-           ========================================================= */
+.audience span {
 
-        .audience-image {
+    display: block;
 
-            width: 100%;
+    font-size: 13px;
 
-            height: 230px;
+    color: var(--gray);
 
-            overflow: hidden;
+    margin-top: 5px;
 
-            border-radius: 16px;
+    padding: 0 10px;
+}
 
-            margin-bottom: 20px;
 
-            background: var(--green-light);
+/* =========================================================
+   BUSINESS MODEL
+   ========================================================= */
 
-            display: flex;
+.business-model {
 
-            align-items: center;
+    display: grid;
 
-            justify-content: center;
-        }
+    grid-template-columns:
+        repeat(3,1fr);
 
-        .audience-image img {
+    gap: 18px;
+}
 
-            width: 100%;
+.business-card {
 
-            height: 100%;
+    padding: 30px;
 
-            object-fit: contain;
+    border-radius: 23px;
 
-            object-position: center;
+    border:
+        1px solid var(--gray-light);
 
-            display: block;
+    background: white;
+}
 
-            transition: none;
-        }
+.business-card.featured {
 
-        .audience strong {
+    border:
+        2px solid var(--gold);
 
-            display: block;
+    box-shadow: var(--shadow-sm);
+}
 
-            color: var(--green-dark);
+.business-card .plan {
 
-            font-size: 17px;
+    color: var(--gold);
 
-            padding: 0 10px;
-        }
+    font-weight: 800;
 
-        .audience span {
+    text-transform: uppercase;
 
-            display: block;
+    letter-spacing: 1px;
 
-            font-size: 13px;
+    font-size: 12px;
+}
 
-            color: var(--gray);
+.business-card h3 {
 
-            margin-top: 5px;
+    margin-top: 12px;
 
-            padding: 0 10px;
-        }
+    color: var(--green-dark);
 
+    font-size: 25px;
+}
 
-        /* =========================================================
-           BUSINESS MODEL
-           ========================================================= */
+.price {
 
-        .business-model {
+    margin-top: 12px;
 
-            display: grid;
+    font-size: 28px;
 
-            grid-template-columns:
-                repeat(3, 1fr);
+    font-weight: 800;
 
-            gap: 18px;
-        }
+    color: var(--green);
+}
 
-        .business-card {
+.business-card p {
 
-            padding: 30px;
+    color: var(--gray);
 
-            border-radius: 23px;
+    margin-top: 15px;
 
-            border:
-                1px solid var(--gray-light);
+    font-size: 14px;
+}
 
-            background: white;
-        }
+.business-card ul {
 
-        .business-card.featured {
+    list-style: none;
 
-            border:
-                2px solid var(--gold);
+    margin-top: 18px;
+}
 
-            box-shadow: var(--shadow-sm);
-        }
+.business-card li {
 
-        .business-card .plan {
+    font-size: 13px;
 
-            color: var(--gold);
+    margin: 9px 0;
 
-            font-weight: 800;
+    color: var(--gray-dark);
+}
 
-            text-transform: uppercase;
+.business-card li::before {
 
-            letter-spacing: 1px;
+    content: "✓";
 
-            font-size: 12px;
-        }
+    color: var(--green);
 
-        .business-card h3 {
+    font-weight: 800;
 
-            margin-top: 12px;
+    margin-right: 8px;
+}
 
-            color: var(--green-dark);
+.hypothesis-note {
 
-            font-size: 25px;
-        }
+    margin-top: 22px;
 
-        .price {
+    color: var(--gray);
 
-            margin-top: 12px;
+    font-size: 12px;
 
-            font-size: 28px;
+    text-align: center;
+}
 
-            font-weight: 800;
 
-            color: var(--green);
-        }
+/* =========================================================
+   NIGERIA
+   ========================================================= */
 
-        .business-card p {
+.local-section {
 
-            color: var(--gray);
+    background:
+        linear-gradient(
+            rgba(6,69,47,.94),
+            rgba(6,69,47,.94)
+        ),
+        var(--green-dark);
 
-            margin-top: 15px;
+    color: white;
+}
 
-            font-size: 14px;
-        }
+.local-grid {
 
-        .business-card ul {
+    display: grid;
 
-            list-style: none;
+    grid-template-columns:
+        1fr 1fr;
 
-            margin-top: 18px;
-        }
+    gap: 60px;
 
-        .business-card li {
+    align-items: center;
+}
 
-            font-size: 13px;
+.local-section h2 {
 
-            margin: 9px 0;
+    font-family:
+        "Playfair Display", serif;
 
-            color: var(--gray-dark);
-        }
+    font-size: 50px;
 
-        .business-card li::before {
+    line-height: 1.05;
+}
 
-            content: "✓";
+.local-section p {
 
-            color: var(--green);
+    margin-top: 18px;
 
-            font-weight: 800;
+    color:
+        rgba(255,255,255,.72);
+}
 
-            margin-right: 8px;
-        }
+.local-list {
 
-        .hypothesis-note {
+    display: grid;
 
-            margin-top: 22px;
+    gap: 12px;
+}
 
-            color: var(--gray);
+.local-item {
 
-            font-size: 12px;
+    padding: 18px;
 
-            text-align: center;
-        }
+    background:
+        rgba(255,255,255,.06);
 
+    border:
+        1px solid rgba(255,255,255,.1);
 
-        /* =========================================================
-           NIGERIA
-           ========================================================= */
+    border-radius: 16px;
+}
 
-        .local-section {
+.local-item strong {
+    color: var(--gold);
+}
 
-            background:
-                linear-gradient(
-                    rgba(6,69,47,.94),
-                    rgba(6,69,47,.94)
-                ),
-                var(--green-dark);
 
-            color: white;
-        }
+/* =========================================================
+   EARLY ACCESS
+   ========================================================= */
 
-        .local-grid {
+.early-access {
+    padding: 110px 0;
+}
 
-            display: grid;
+.early-box {
 
-            grid-template-columns:
-                1fr 1fr;
+    background: var(--green);
 
-            gap: 60px;
+    color: white;
 
-            align-items: center;
-        }
+    padding: 65px;
 
-        .local-section h2 {
+    border-radius: 35px;
 
-            font-family:
-                "Playfair Display", serif;
+    text-align: center;
 
-            font-size: 50px;
+    position: relative;
 
-            line-height: 1.05;
-        }
+    overflow: hidden;
+}
 
-        .local-section p {
+.early-box::before {
 
-            margin-top: 18px;
+    content: "";
 
-            color:
-                rgba(255,255,255,.72);
-        }
+    width: 300px;
+    height: 300px;
 
-        .local-list {
+    border:
+        1px solid rgba(255,255,255,.12);
 
-            display: grid;
+    border-radius: 50%;
 
-            gap: 12px;
-        }
+    position: absolute;
 
-        .local-item {
+    left: -120px;
+    top: -120px;
+}
 
-            padding: 18px;
+.early-box h2 {
 
-            background:
-                rgba(255,255,255,.06);
+    position: relative;
 
-            border:
-                1px solid rgba(255,255,255,.1);
+    font-family:
+        "Playfair Display", serif;
 
-            border-radius: 16px;
-        }
+    font-size:
+        clamp(35px,4vw,55px);
 
-        .local-item strong {
-            color: var(--gold);
-        }
+    line-height: 1.1;
+}
 
+.early-box p {
 
-        /* =========================================================
-           EARLY ACCESS
-           ========================================================= */
+    position: relative;
 
-        .early-access {
-            padding: 110px 0;
-        }
+    max-width: 620px;
 
-        .early-box {
+    margin: 18px auto 28px;
 
-            background: var(--green);
+    color:
+        rgba(255,255,255,.75);
+}
 
-            color: white;
+.early-box .btn {
 
-            padding: 65px;
+    position: relative;
 
-            border-radius: 35px;
+    background: var(--gold);
 
-            text-align: center;
+    color: var(--green-dark);
+}
 
-            position: relative;
 
-            overflow: hidden;
-        }
+/* =========================================================
+   TEAM
+   ========================================================= */
 
-        .early-box::before {
+.team-grid {
 
-            content: "";
+    display: grid;
 
-            width: 300px;
-            height: 300px;
+    grid-template-columns:
+        repeat(2,1fr);
 
-            border:
-                1px solid rgba(255,255,255,.12);
+    gap: 18px;
+}
 
-            border-radius: 50%;
+.team-card {
 
-            position: absolute;
+    padding: 30px;
 
-            left: -120px;
-            top: -120px;
-        }
+    border:
+        1px solid var(--gray-light);
 
-        .early-box h2 {
+    border-radius: 22px;
+}
 
-            position: relative;
+.team-role {
 
-            font-family:
-                "Playfair Display", serif;
+    color: var(--gold);
 
-            font-size:
-                clamp(35px, 4vw, 55px);
+    font-size: 12px;
 
-            line-height: 1.1;
-        }
+    font-weight: 800;
 
-        .early-box p {
+    text-transform: uppercase;
 
-            position: relative;
+    letter-spacing: 1px;
+}
 
-            max-width: 620px;
+.team-card h3 {
 
-            margin: 18px auto 28px;
+    margin-top: 8px;
 
-            color:
-                rgba(255,255,255,.75);
-        }
+    color: var(--green-dark);
+}
 
-        .early-box .btn {
+.team-card p {
 
-            position: relative;
+    margin-top: 8px;
 
-            background: var(--gold);
+    color: var(--gray);
 
-            color: var(--green-dark);
-        }
+    font-size: 13px;
+}
 
 
-        /* =========================================================
-           TEAM
-           ========================================================= */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
-        .team-grid {
+footer {
 
-            display: grid;
+    background: #052d20;
 
-            grid-template-columns:
-                repeat(2, 1fr);
+    color: white;
 
-            gap: 18px;
-        }
+    padding: 65px 0 25px;
+}
 
-        .team-card {
+.footer-grid {
 
-            padding: 30px;
+    display: grid;
 
-            border:
-                1px solid var(--gray-light);
+    grid-template-columns:
+        1.3fr .7fr .7fr;
 
-            border-radius: 22px;
-        }
+    gap: 50px;
+}
 
-        .team-role {
+.footer-logo {
 
-            color: var(--gold);
+    font-family:
+        "Playfair Display", serif;
 
-            font-size: 12px;
+    font-size: 34px;
 
-            font-weight: 800;
+    color: white;
+}
 
-            text-transform: uppercase;
+.footer-logo span {
+    color: var(--gold);
+}
 
-            letter-spacing: 1px;
-        }
+.footer-about {
 
-        .team-card h3 {
+    margin-top: 13px;
 
-            margin-top: 8px;
+    color:
+        rgba(255,255,255,.55);
 
-            color: var(--green-dark);
-        }
+    max-width: 400px;
 
-        .team-card p {
+    font-size: 14px;
+}
 
-            margin-top: 8px;
+.footer-column h4 {
 
-            color: var(--gray);
+    color: var(--gold);
 
-            font-size: 13px;
-        }
+    font-size: 13px;
 
+    margin-bottom: 15px;
+}
 
-        /* =========================================================
-           FOOTER
-           ========================================================= */
+.footer-column a {
 
-        footer {
+    display: block;
 
-            background: #052d20;
+    color:
+        rgba(255,255,255,.65);
 
-            color: white;
+    font-size: 13px;
 
-            padding: 65px 0 25px;
-        }
+    margin: 9px 0;
+}
 
-        .footer-grid {
+.footer-column a:hover {
+    color: white;
+}
 
-            display: grid;
+.copyright {
 
-            grid-template-columns:
-                1.3fr .7fr .7fr;
+    border-top:
+        1px solid rgba(255,255,255,.08);
 
-            gap: 50px;
-        }
+    margin-top: 45px;
 
-        .footer-logo {
+    padding-top: 22px;
 
-            font-family:
-                "Playfair Display", serif;
+    color:
+        rgba(255,255,255,.4);
 
-            font-size: 34px;
+    font-size: 12px;
 
-            color: white;
-        }
+    text-align: center;
+}
 
-        .footer-logo span {
-            color: var(--gold);
-        }
 
-        .footer-about {
+/* =========================================================
+   SCROLL ANIMATION
+   ========================================================= */
 
-            margin-top: 13px;
+.reveal {
 
-            color:
-                rgba(255,255,255,.55);
+    opacity: 0;
 
-            max-width: 400px;
+    transform:
+        translateY(25px);
 
-            font-size: 14px;
-        }
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
 
-        .footer-column h4 {
+.reveal.show {
 
-            color: var(--gold);
+    opacity: 1;
 
-            font-size: 13px;
+    transform:
+        translateY(0);
+}
 
-            margin-bottom: 15px;
-        }
 
-        .footer-column a {
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
-            display: block;
+@media (max-width:1000px) {
 
-            color:
-                rgba(255,255,255,.65);
+    .hero-grid,
+    .opportunity-grid,
+    .juri-grid,
+    .local-grid {
 
-            font-size: 13px;
+        grid-template-columns:1fr;
+    }
 
-            margin: 9px 0;
-        }
+    .hero {
+        padding-top:140px;
+    }
 
-        .footer-column a:hover {
-            color: white;
-        }
+    .hero-content {
+        text-align:center;
+    }
 
-        .copyright {
+    .hero-text {
 
-            border-top:
-                1px solid rgba(255,255,255,.08);
+        margin-left:auto;
 
-            margin-top: 45px;
+        margin-right:auto;
+    }
 
-            padding-top: 22px;
+    .hero-buttons {
+        justify-content:center;
+    }
 
-            color:
-                rgba(255,255,255,.4);
+    .hero-visual {
 
-            font-size: 12px;
+        max-width:500px;
 
-            text-align: center;
-        }
+        width:100%;
 
+        margin:auto;
+    }
 
-        /* =========================================================
-           SCROLL ANIMATION
-           ========================================================= */
+    .steps {
 
-        .reveal {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
 
-            opacity: 0;
+    .audience-grid {
 
-            transform:
-                translateY(25px);
+        grid-template-columns:
+            repeat(2,1fr);
+    }
 
-            transition:
-                opacity .7s ease,
-                transform .7s ease;
-        }
+    .business-model {
+        grid-template-columns:1fr;
+    }
 
-        .reveal.show {
+    .juri-content {
+        text-align:center;
+    }
 
-            opacity: 1;
+    .juri-bubble {
+        text-align:left;
+    }
 
-            transform:
-                translateY(0);
-        }
+    .footer-grid {
 
+        grid-template-columns:
+            1fr 1fr;
+    }
+}
 
-        /* =========================================================
-           RESPONSIVE
-           ========================================================= */
 
-        @media (max-width: 1000px) {
+@media (max-width:700px) {
 
-            .hero-grid,
-            .opportunity-grid,
-            .juri-grid,
-            .local-grid {
+    section {
+        padding:75px 0;
+    }
 
-                grid-template-columns: 1fr;
-            }
+    .nav-links {
 
-            .hero {
-                padding-top: 140px;
-            }
+        position:absolute;
 
-            .hero-content {
-                text-align: center;
-            }
+        top:78px;
 
-            .hero-text {
+        left:0;
+        right:0;
 
-                margin-left: auto;
+        background:white;
 
-                margin-right: auto;
-            }
+        padding:20px;
 
-            .hero-buttons {
-                justify-content: center;
-            }
+        flex-direction:column;
 
-            .hero-visual {
+        align-items:stretch;
 
-                max-width: 500px;
+        gap:5px;
 
-                width: 100%;
+        box-shadow:
+            0 15px 30px rgba(0,0,0,.08);
 
-                margin: auto;
-            }
+        opacity:0;
 
-            .steps {
+        visibility:hidden;
 
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
+        transform:
+            translateY(-10px);
 
-            .audience-grid {
+        transition:.25s;
+    }
 
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
+    .nav-links.active {
 
-            .business-model {
-                grid-template-columns: 1fr;
-            }
+        opacity:1;
 
-            .juri-content {
-                text-align: center;
-            }
+        visibility:visible;
 
-            .juri-bubble {
-                text-align: left;
-            }
+        transform:
+            translateY(0);
+    }
 
-            .footer-grid {
+    .nav-links a {
 
-                grid-template-columns:
-                    1fr 1fr;
-            }
+        display:block;
 
-        }
+        padding:12px;
+    }
 
+    .nav-links a.active-link:not(.nav-cta)::after {
+        display:none;
+    }
 
-        @media (max-width: 700px) {
+    .menu-btn {
+        display:block;
+    }
 
-            section {
-                padding: 75px 0;
-            }
+    .hero h1 {
 
-            .nav-links {
+        font-size:48px;
 
-                position: absolute;
+        letter-spacing:-2px;
+    }
 
-                top: 78px;
+    .hero-text {
+        font-size:16px;
+    }
 
-                left: 0;
-                right: 0;
+    .hero-visual {
+        min-height:400px;
+    }
 
-                background: white;
+    .hero-image {
 
-                padding: 20px;
+        height:400px;
 
-                flex-direction: column;
+        max-width:100%;
 
-                align-items: stretch;
+        border-radius:25px;
+    }
 
-                gap: 5px;
+    .float-one {
 
-                box-shadow:
-                    0 15px 30px rgba(0,0,0,.08);
+        top:25px;
 
-                opacity: 0;
+        left:-5px;
+    }
 
-                visibility: hidden;
+    .float-two {
 
-                transform:
-                    translateY(-10px);
+        bottom:25px;
 
-                transition: .25s;
-            }
+        right:-5px;
+    }
 
-            .nav-links.active {
+    .questions {
+        grid-template-columns:1fr;
+    }
 
-                opacity: 1;
+    .steps {
+        grid-template-columns:1fr;
+    }
 
-                visibility: visible;
+    .difference-grid {
+        grid-template-columns:1fr;
+    }
 
-                transform:
-                    translateY(0);
-            }
+    .audience-grid {
 
-            .nav-links a {
+        grid-template-columns:
+            1fr 1fr;
+    }
 
-                display: block;
+    .local-grid {
+        gap:35px;
+    }
 
-                padding: 12px;
-            }
+    .local-section h2 {
+        font-size:38px;
+    }
 
-            .nav-links a.active-link:not(.nav-cta)::after {
-                display: none;
-            }
+    .early-box {
+        padding:45px 25px;
+    }
 
-            .menu-btn {
-                display: block;
-            }
+    .team-grid {
+        grid-template-columns:1fr;
+    }
 
-            .hero h1 {
+    .footer-grid {
+        grid-template-columns:1fr;
+        gap:30px;
+    }
 
-                font-size: 48px;
 
-                letter-spacing: -2px;
-            }
+    /*
+    MOBILE IMAGE SIZES
+    */
 
-            .hero-text {
-                font-size: 16px;
-            }
+    .step-image {
+        height:200px;
+    }
 
-            .hero-visual {
-                min-height: 400px;
-            }
+    .juri-image {
 
-            .hero-image {
+        height:360px;
 
-                height: 400px;
+        max-width:100%;
+    }
 
-                min-height: 400px;
+    .food-loop-image {
 
-                max-width: 100%;
+        height:300px;
 
-                border-radius: 25px;
-            }
+        border-radius:22px;
+    }
 
-            .float-one {
+    .audience-image {
+        height:200px;
+    }
+}
 
-                top: 25px;
 
-                left: -5px;
-            }
+@media (max-width:430px) {
 
-            .float-two {
+    .container {
+        width:90%;
+    }
 
-                bottom: 25px;
+    .hero h1 {
+        font-size:42px;
+    }
 
-                right: -5px;
-            }
+    .hero-buttons .btn {
+        width:100%;
+    }
 
-            .questions {
-                grid-template-columns: 1fr;
-            }
+    .hero-visual {
 
-            .steps {
-                grid-template-columns: 1fr;
-            }
+        transform:
+            scale(.95);
 
-            .difference-grid {
-                grid-template-columns: 1fr;
-            }
+        margin-left:-2.5%;
 
-            .audience-grid {
+        width:105%;
+    }
 
-                grid-template-columns:
-                    1fr 1fr;
-            }
+    .audience-grid {
+        grid-template-columns:1fr;
+    }
 
-            .local-grid {
-                gap: 35px;
-            }
+    .food-loop {
+        gap:8px;
+    }
 
-            .local-section h2 {
-                font-size: 38px;
-            }
+    .learning-loop {
+        gap:8px;
+    }
 
-            .early-box {
-                padding: 45px 25px;
-            }
+    .learn-arrow {
+        display:none;
+    }
 
-            .team-grid {
-                grid-template-columns: 1fr;
-            }
+    /*
+    Keep images comfortable on very small screens.
+    */
 
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
+    .step-image {
+        height:210px;
+    }
 
-            .step-image {
-                height: 220px;
-            }
+    .audience-image {
+        height:220px;
+    }
 
-            .juri-image {
+    .juri-image {
+        height:330px;
+    }
 
-                height: 350px;
+    .food-loop-image {
+        height:250px;
+    }
+}
 
-                max-width: 100%;
-            }
-
-            .food-loop-image {
-
-                min-height: 280px;
-
-                height: 280px;
-
-                border-radius: 22px;
-            }
-
-            .audience-image {
-                height: 220px;
-            }
-
-        }
-
-
-        @media (max-width: 430px) {
-
-            .container {
-                width: 90%;
-            }
-
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            .hero-buttons .btn {
-                width: 100%;
-            }
-
-            .hero-visual {
-
-                transform:
-                    scale(.92);
-
-                margin-left: -3%;
-
-                width: 106%;
-            }
-
-            .audience-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .food-loop {
-                gap: 8px;
-            }
-
-            .learning-loop {
-                gap: 8px;
-            }
-
-            .learn-arrow {
-                display: none;
-            }
-
-            .hero-image {
-                height: 350px;
-                min-height: 350px;
-            }
-
-            .step-image {
-                height: 230px;
-            }
-
-            .audience-image {
-                height: 240px;
-            }
-
-        }
-
-    </style>
+</style>
 
 </head>
 
@@ -2223,1414 +2196,1465 @@
 <body>
 
 
-    <!-- =========================================================
-         PRELOADER
-         ========================================================= -->
+<!-- =========================================================
+     PRELOADER
+     ========================================================= -->
 
-    <div id="preloader">
+<div id="preloader">
 
-        <div class="loader-content">
+    <div class="loader-content">
 
-            <div class="loader-logo">
-                Paletra
-            </div>
+        <div class="loader-logo">
+            Paletra
+        </div>
 
-            <div class="loader-tagline">
-                Make your food money go further.
-            </div>
+        <div class="loader-tagline">
+            Make your food money go further.
+        </div>
 
-            <div class="loader-line">
-                <span></span>
-            </div>
-
+        <div class="loader-line">
+            <span></span>
         </div>
 
     </div>
 
+</div>
 
-    <!-- =========================================================
-         NAVIGATION
-         ========================================================= -->
 
-    <header>
+<!-- =========================================================
+     NAVIGATION
+     ========================================================= -->
 
-        <div class="container">
+<header>
 
-            <nav>
+<div class="container">
 
-                <a href="#home" class="logo">
-                    Paletra<span>.</span>
-                </a>
+<nav>
 
-                <button
-                    class="menu-btn"
-                    id="menuBtn"
-                    aria-label="Open menu"
-                    aria-expanded="false"
-                    type="button">
+<a href="#home" class="logo">
+Paletra<span>.</span>
+</a>
 
-                    ☰
+<button
+class="menu-btn"
+id="menuBtn"
+aria-label="Open menu"
+aria-expanded="false"
+type="button">
 
-                </button>
+☰
 
-                <ul class="nav-links" id="navLinks">
+</button>
 
-                    <li>
-                        <a href="#how">
-                            How It Works
-                        </a>
-                    </li>
+<ul class="nav-links" id="navLinks">
 
-                    <li>
-                        <a href="#juri">
-                            Juri
-                        </a>
-                    </li>
+<li>
+<a href="#how">
+How It Works
+</a>
+</li>
 
-                    <li>
-                        <a href="#difference">
-                            Why Paletra
-                        </a>
-                    </li>
+<li>
+<a href="#juri">
+Juri
+</a>
+</li>
 
-                    <li>
-                        <a
-                            href="#early-access"
-                            class="nav-cta">
+<li>
+<a href="#difference">
+Why Paletra
+</a>
+</li>
 
-                            Join Early Access
+<li>
+<a
+href="#early-access"
+class="nav-cta">
 
-                        </a>
-                    </li>
+Join Early Access
 
-                </ul>
+</a>
+</li>
 
-            </nav>
+</ul>
 
-        </div>
+</nav>
 
-    </header>
+</div>
 
+</header>
 
-    <!-- =========================================================
-         MAIN
-         ========================================================= -->
 
-    <main>
+<!-- =========================================================
+     MAIN
+     ========================================================= -->
 
+<main>
 
-        <!-- =====================================================
-             HERO
-             ===================================================== -->
 
-        <section
-            class="hero"
-            id="home">
+<!-- =====================================================
+     HERO
+     ===================================================== -->
 
-            <div class="container">
+<section
+class="hero"
+id="home">
 
-                <div class="hero-grid">
+<div class="container">
 
+<div class="hero-grid">
 
-                    <div class="hero-content reveal">
 
-                        <div class="eyebrow">
+<div class="hero-content reveal">
 
-                            <span class="eyebrow-dot"></span>
+<div class="eyebrow">
 
-                            Household Food Management
+<span class="eyebrow-dot"></span>
 
-                        </div>
+Household Food Management
 
+</div>
 
-                        <h1>
+<h1>
 
-                            Make your food money
-                            <span>go further.</span>
+Make your food money
+<span>go further.</span>
 
-                        </h1>
+</h1>
 
+<p class="hero-text">
 
-                        <p class="hero-text">
+Your budget. Your pantry. Your meals.
+One smarter food plan.
 
-                            Your budget. Your pantry. Your meals.
-                            One smarter food plan.
+Tell Paletra what you have,
+what you can spend, and who you're feeding.
 
-                            Tell Paletra what you have,
-                            what you can spend, and who you're feeding.
+Paletra helps you decide what to cook,
+what to buy, and how to use what you already have.
 
-                            Paletra helps you decide what to cook,
-                            what to buy, and how to use what you already have.
+</p>
 
-                        </p>
+<div class="hero-buttons">
 
+<a
+href="#early-access"
+class="btn btn-primary">
 
-                        <div class="hero-buttons">
+Join Early Access →
 
-                            <a
-                                href="#early-access"
-                                class="btn btn-primary">
+</a>
 
-                                Join Early Access →
+<a
+href="#how"
+class="btn btn-secondary">
 
-                            </a>
+See How It Works
 
+</a>
 
-                            <a
-                                href="#how"
-                                class="btn btn-secondary">
+</div>
 
-                                See How It Works
+<p class="hero-note">
 
-                            </a>
+Built for budget-conscious Nigerian households.
 
-                        </div>
+</p>
 
+</div>
 
-                        <p class="hero-note">
 
-                            Built for budget-conscious Nigerian households.
+<!-- HERO IMAGE -->
 
-                        </p>
+<div class="hero-visual reveal">
 
-                    </div>
+<div class="hero-image">
 
+<img
+src="e.png"
+alt="Fresh food ingredients prepared for a meal"
+fetchpriority="high"
+>
 
-                    <!-- HERO IMAGE -->
+</div>
 
-                    <div class="hero-visual reveal">
 
-                        <div class="hero-image">
+<div class="floating-card float-one">
 
-                            <img
-                                src="e.png"
-                                alt="Fresh food ingredients prepared for a meal"
-                                fetchpriority="high"
-                            >
+<span class="float-icon">
+₦
+</span>
 
-                        </div>
+Budget first
 
+</div>
 
-                        
 
+<div class="floating-card float-two">
 
-                    </div>
+<span class="float-icon">
+✓
+</span>
 
-                </div>
+Cook what you already have
 
-            </div>
+</div>
 
-        </section>
+</div>
 
+</div>
 
-        <!-- =====================================================
-             OPPORTUNITY
-             ===================================================== -->
+</div>
 
-        <section class="opportunity">
+</section>
 
-            <div class="container">
 
-                <div class="section-head reveal">
+<!-- =====================================================
+     OPPORTUNITY
+     ===================================================== -->
 
-                    <div class="section-label">
-                        The Opportunity
-                    </div>
+<section class="opportunity">
 
-                    <h2>
+<div class="container">
 
-                        Food is expensive.
-                        Making the most of it is harder than it should be.
+<div class="section-head reveal">
 
-                    </h2>
+<div class="section-label">
+The Opportunity
+</div>
 
-                </div>
+<h2>
 
+Food is expensive.
+Making the most of it is harder than it should be.
 
-                <div class="opportunity-grid">
+</h2>
 
-                    <div class="stats reveal">
+</div>
 
-                        <div class="stat">
 
-                            <strong>
-                                17.52%
-                            </strong>
+<div class="opportunity-grid">
 
-                            <span>
-                                Nigeria food inflation — June 2026
-                            </span>
+<div class="stats reveal">
 
-                        </div>
+<div class="stat">
 
+<strong>
+17.52%
+</strong>
 
-                        <div class="stat">
+<span>
+Nigeria food inflation — June 2026
+</span>
 
-                            <strong>
-                                Up to 70%
-                            </strong>
+</div>
 
-                            <span>
-                                Food share of consumption for the
-                                bottom 10% of Nigerian households
-                            </span>
 
-                        </div>
+<div class="stat">
 
-                    </div>
+<strong>
+Up to 70%
+</strong>
 
+<span>
+Food share of consumption for the
+bottom 10% of Nigerian households
+</span>
 
-                    <div class="reveal">
+</div>
 
-                        <div class="questions">
+</div>
 
-                            <div class="question">
-                                What can we afford?
-                            </div>
 
-                            <div class="question">
-                                What do we already have?
-                            </div>
+<div class="reveal">
 
-                            <div class="question">
-                                What should we cook?
-                            </div>
+<div class="questions">
 
-                        </div>
+<div class="question">
+What can we afford?
+</div>
 
-                    </div>
+<div class="question">
+What do we already have?
+</div>
 
-                </div>
+<div class="question">
+What should we cook?
+</div>
 
-            </div>
+</div>
 
-        </section>
+</div>
 
+</div>
 
-        <!-- =====================================================
-             HOW IT WORKS
-             ===================================================== -->
+</div>
 
-        <section id="how">
+</section>
 
-            <div class="container">
 
-                <div class="section-head reveal">
+<!-- =====================================================
+     HOW IT WORKS
+     ===================================================== -->
 
-                    <div class="section-label">
-                        The Product
-                    </div>
+<section id="how">
 
-                    <h2>
-                        How Paletra Works
-                    </h2>
+<div class="container">
 
-                    <p>
-                        From what your household has to what it should
-                        buy, cook and learn.
-                    </p>
+<div class="section-head reveal">
 
-                </div>
+<div class="section-label">
+The Product
+</div>
 
+<h2>
+How Paletra Works
+</h2>
 
-                <div class="steps">
+<p>
+From what your household has to what it should
+buy, cook and learn.
+</p>
 
+</div>
 
-                    <!-- STEP 01 -->
 
-                    <div class="step-card reveal">
+<div class="steps">
 
-                        <div class="step-number">
-                            01
-                        </div>
 
-                        <h3>
-                            Tell Paletra About Your Household
-                        </h3>
+<!-- STEP 01 -->
 
-                        <p>
-                            Set your budget, household size, preferences
-                            and what you already have at home.
-                        </p>
+<div class="step-card reveal">
 
-                        <div class="step-image">
+<div class="step-number">
+01
+</div>
 
-                            <img
-                                src="a.jpg"
-                                alt="People discussing and planning together"
-                                loading="lazy"
-                            >
+<h3>
+Tell Paletra About Your Household
+</h3>
 
-                        </div>
+<p>
+Set your budget, household size, preferences
+and what you already have at home.
+</p>
 
-                    </div>
+<div class="step-image">
 
+<img
+src="a.jpg"
+alt="People discussing and planning together"
+loading="lazy"
+>
 
-                    <!-- STEP 02 -->
+</div>
 
-                    <div class="step-card reveal">
+</div>
 
-                        <div class="step-number">
-                            02
-                        </div>
 
-                        <h3>
-                            Know What You Actually Need
-                        </h3>
+<!-- STEP 02 -->
 
-                        <p>
-                            Paletra combines your budget and pantry
-                            to help you decide what to buy—and what
-                            you can use first.
-                        </p>
+<div class="step-card reveal">
 
-                        <div class="step-image">
+<div class="step-number">
+02
+</div>
 
-                            <img
-                                src="b.jpg"
-                                alt="Fresh groceries and food items"
-                                loading="lazy"
-                            >
+<h3>
+Know What You Actually Need
+</h3>
 
-                        </div>
+<p>
+Paletra combines your budget and pantry
+to help you decide what to buy—and what
+you can use first.
+</p>
 
-                    </div>
+<div class="step-image">
 
+<img
+src="b.jpg"
+alt="Fresh groceries and food items"
+loading="lazy"
+>
 
-                    <!-- STEP 03 -->
+</div>
 
-                    <div class="step-card reveal">
+</div>
 
-                        <div class="step-number">
-                            03
-                        </div>
 
-                        <h3>
-                            Get Your Food Plan
-                        </h3>
+<!-- STEP 03 -->
 
-                        <p>
-                            Turn your ingredients and budget into meals,
-                            a shopping list and a practical plan for the week.
-                        </p>
+<div class="step-card reveal">
 
-                        <div class="step-image">
+<div class="step-number">
+03
+</div>
 
-                            <img
-                                src="c.jpg"
-                                alt="Healthy meal prepared for a food plan"
-                                loading="lazy"
-                            >
+<h3>
+Get Your Food Plan
+</h3>
 
-                        </div>
+<p>
+Turn your ingredients and budget into meals,
+a shopping list and a practical plan for the week.
+</p>
 
-                    </div>
+<div class="step-image">
 
+<img
+src="c.jpg"
+alt="Healthy meal prepared for a food plan"
+loading="lazy"
+>
 
-                    <!-- STEP 04 -->
+</div>
 
-                    <div class="step-card reveal">
+</div>
 
-                        <div class="step-number">
-                            04
-                        </div>
 
-                        <h3>
-                            Cook With Juri
-                        </h3>
+<!-- STEP 04 -->
 
-                        <p>
-                            Juri guides you through cooking, answers
-                            questions along the way and learns what works
-                            for your household.
-                        </p>
+<div class="step-card reveal">
 
-                        <div class="step-image">
+<div class="step-number">
+04
+</div>
 
-                            <img
-                                src="d.jpg"
-                                alt="Person cooking in a kitchen"
-                                loading="lazy"
-                            >
+<h3>
+Cook With Juri
+</h3>
 
-                        </div>
+<p>
+Juri guides you through cooking, answers
+questions along the way and learns what works
+for your household.
+</p>
 
-                    </div>
+<div class="step-image">
 
-                </div>
+<img
+src="d.jpg"
+alt="Person cooking in a kitchen"
+loading="lazy"
+>
 
-            </div>
+</div>
 
-        </section>
+</div>
 
+</div>
 
-        <!-- =====================================================
-             JURI
-             ===================================================== -->
+</div>
 
-        <section
-            class="juri-section"
-            id="juri">
+</section>
 
-            <div class="container">
 
-                <div class="juri-grid">
+<!-- =====================================================
+     JURI
+     ===================================================== -->
 
+<section
+class="juri-section"
+id="juri">
 
-                    <div class="juri-content reveal">
+<div class="container">
 
-                        <div class="section-label">
-                            Juri Inside Paletra
-                        </div>
+<div class="juri-grid">
 
 
-                        <div
-                            class="section-head"
-                            style="margin-bottom:0;">
+<div class="juri-content reveal">
 
-                            <h2>
-                                The assistant that helps
-                                the household act on the plan.
-                            </h2>
+<div class="section-label">
+Juri Inside Paletra
+</div>
 
+<div
+class="section-head"
+style="margin-bottom:0;">
 
-                            <p class="juri-intro">
+<h2>
+The assistant that helps
+the household act on the plan.
+</h2>
 
-                                Paletra is the product.
+<p class="juri-intro">
 
-                                <strong style="color:white;">
-                                    Juri
-                                </strong>
+Paletra is the product.
 
-                                is the conversational intelligence
-                                users interact with.
+<strong style="color:white;">
+Juri
+</strong>
 
-                            </p>
+is the conversational intelligence
+users interact with.
 
-                        </div>
+</p>
 
+</div>
 
-                        <div class="juri-bubble">
 
-                            <strong>
-                                Juri Can Recommend
-                            </strong>
+<div class="juri-bubble">
 
-                            “Given your budget and pantry,
-                            these meals make the most sense this week.”
+<strong>
+Juri Can Recommend
+</strong>
 
-                        </div>
+“Given your budget and pantry,
+these meals make the most sense this week.”
 
+</div>
 
-                        <div class="juri-bubble">
 
-                            <strong>
-                                Juri Can Teach
-                            </strong>
+<div class="juri-bubble">
 
-                            “Here is how to prepare the meal step by step.
-                            Ask me questions while you cook.”
+<strong>
+Juri Can Teach
+</strong>
 
-                        </div>
+“Here is how to prepare the meal step by step.
+Ask me questions while you cook.”
 
+</div>
 
-                        <div class="juri-bubble">
 
-                            <strong>
-                                Juri Can Learn
-                            </strong>
+<div class="juri-bubble">
 
-                            “I noticed your household usually runs low
-                            on tomatoes mid-week.”
+<strong>
+Juri Can Learn
+</strong>
 
-                        </div>
+“I noticed your household usually runs low
+on tomatoes mid-week.”
 
-                    </div>
+</div>
 
+</div>
 
-                    <div class="juri-visual reveal">
 
-                        <div class="juri-image">
+<div class="juri-visual reveal">
 
-                            <img
-                                src="j.jpg"
-                                alt="AI assistant and technology"
-                                loading="lazy"
-                            >
+<div class="juri-image">
 
-                        </div>
+<img
+src="j.jpg"
+alt="AI assistant and technology"
+loading="lazy"
+>
 
-                    </div>
+</div>
 
-                </div>
+</div>
 
-            </div>
+</div>
 
-        </section>
+</div>
 
+</section>
 
-        <!-- =====================================================
-             WHY PALETRA
-             ===================================================== -->
 
-        <section id="difference">
+<!-- =====================================================
+     WHY PALETRA
+     ===================================================== -->
 
-            <div class="container">
+<section id="difference">
 
-                <div class="section-head reveal">
+<div class="container">
 
-                    <div class="section-label">
-                        Why Paletra Is Different
-                    </div>
+<div class="section-head reveal">
 
-                    <h2>
+<div class="section-label">
+Why Paletra Is Different
+</div>
 
-                        Today's tools solve pieces.
-                        Paletra connects the decisions.
+<h2>
 
-                    </h2>
+Today's tools solve pieces.
+Paletra connects the decisions.
 
-                </div>
+</h2>
 
+</div>
 
-                <div class="reveal">
 
-                    <div class="questions">
+<div class="reveal">
 
-                        <div class="question">
-                            Recipes tell you what to cook
-                        </div>
+<div class="questions">
 
-                        <div class="question">
-                            Budgeting apps tell you what you spent
-                        </div>
+<div class="question">
+Recipes tell you what to cook
+</div>
 
-                        <div class="question">
-                            Grocery apps tell you what to buy
-                        </div>
+<div class="question">
+Budgeting apps tell you what you spent
+</div>
 
-                        <div class="question">
-                            Paletra connects the decisions
-                        </div>
+<div class="question">
+Grocery apps tell you what to buy
+</div>
 
-                    </div>
+<div class="question">
+Paletra connects the decisions
+</div>
 
-                </div>
+</div>
 
-            </div>
+</div>
 
-        </section>
+</div>
 
+</section>
 
-        <!-- =====================================================
-             FOOD LOOP
-             ===================================================== -->
 
-        <section class="food-loop-section">
+<!-- =====================================================
+     FOOD LOOP
+     ===================================================== -->
 
-            <div class="container">
+<section class="food-loop-section">
 
-                <div class="section-head reveal">
+<div class="container">
 
-                    <div class="section-label">
-                        The Paletra Food Learning Loop
-                    </div>
+<div class="section-head reveal">
 
-                    <h2>
-                        One connected food cycle.
-                    </h2>
+<div class="section-label">
+The Paletra Food Learning Loop
+</div>
 
-                    <p>
+<h2>
+One connected food cycle.
+</h2>
 
-                        Paletra treats the household's food decisions
-                        as one connected problem instead of separate tasks.
+<p>
 
-                    </p>
+Paletra treats the household's food decisions
+as one connected problem instead of separate tasks.
 
-                </div>
+</p>
 
+</div>
 
-                <div class="food-loop reveal">
 
-                    <div class="food-loop-image">
+<div class="food-loop reveal">
 
-                        <img
-                            src="ChatGPT Image Aug 20, 2026, 08_39_58 AM.png"
-                            alt="Food ingredients and meal preparation"
-                            loading="lazy"
-                        >
+<div class="food-loop-image">
 
-                    </div>
+<img
+src="ChatGPT Image Aug 20, 2026, 08_39_58 AM.png"
+alt="Food ingredients and meal preparation"
+loading="lazy"
+>
 
-                </div>
+</div>
 
+</div>
 
-                <div class="loop-message reveal">
 
-                    Better decisions at one stage lead to
-                    better decisions at the next.
+<div class="loop-message reveal">
 
-                </div>
+Better decisions at one stage lead to
+better decisions at the next.
 
-            </div>
+</div>
 
-        </section>
+</div>
 
+</section>
 
-        <!-- =====================================================
-             TARGET AUDIENCE
-             ===================================================== -->
 
-        <section class="target">
+<!-- =====================================================
+     TARGET AUDIENCE
+     ===================================================== -->
 
-            <div class="container">
+<section class="target">
 
-                <div class="section-head reveal">
+<div class="container">
 
-                    <div class="section-label">
-                        Who We Start With
-                    </div>
+<div class="section-head reveal">
 
-                    <h2>
+<div class="section-label">
+Who We Start With
+</div>
 
-                        Built for households that
-                        want to make their food money count.
+<h2>
 
-                    </h2>
+Built for households that
+want to make their food money count.
 
-                    <p>
+</h2>
 
-                        Our initial focus is budget-conscious Nigerian
-                        households that regularly buy and prepare
-                        their own food.
+<p>
 
-                    </p>
+Our initial focus is budget-conscious Nigerian
+households that regularly buy and prepare
+their own food.
 
-                </div>
+</p>
 
+</div>
 
-                <div class="audience-grid">
 
+<div class="audience-grid">
 
-                    <!-- STUDENTS -->
 
-                    <div class="audience reveal">
+<!-- STUDENTS -->
 
-                        <div class="audience-image">
+<div class="audience reveal">
 
-                            <img
-                                src="https://images.pexels.com/photos/5940840/pexels-photo-5940840.jpeg?auto=compress&cs=tinysrgb&w=800"
-                                alt="African university student studying"
-                                loading="lazy"
-                            >
+<div class="audience-image">
 
-                        </div>
+<img
+src="https://images.pexels.com/photos/5940840/pexels-photo-5940840.jpeg?auto=compress&cs=tinysrgb&w=800"
+alt="African university student studying"
+loading="lazy"
+>
 
-                        <strong>
-                            Students
-                        </strong>
+</div>
 
-                        <span>
-                            Managing limited food budgets
-                        </span>
+<strong>
+Students
+</strong>
 
-                    </div>
+<span>
+Managing limited food budgets
+</span>
 
+</div>
 
-                    <!-- YOUNG PROFESSIONALS -->
 
-                    <div class="audience reveal">
+<!-- YOUNG PROFESSIONALS -->
 
-                        <div class="audience-image">
+<div class="audience reveal">
 
-                            <img
-                                src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=800"
-                                alt="Young professional preparing food"
-                                loading="lazy"
-                            >
+<div class="audience-image">
 
-                        </div>
+<img
+src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=800"
+alt="Young professional preparing food"
+loading="lazy"
+>
 
-                        <strong>
-                            Young Professionals
-                        </strong>
+</div>
 
-                        <span>
-                            Planning meals around busy lives
-                        </span>
+<strong>
+Young Professionals
+</strong>
 
-                    </div>
+<span>
+Planning meals around busy lives
+</span>
 
+</div>
 
-                    <!-- YOUNG COUPLES -->
 
-                    <div class="audience reveal">
+<!-- YOUNG COUPLES -->
 
-                        <div class="audience-image">
+<div class="audience reveal">
 
-                            <img
-                                src="https://images.pexels.com/photos/4252136/pexels-photo-4252136.jpeg?auto=compress&cs=tinysrgb&w=800"
-                                alt="Young couple cooking together"
-                                loading="lazy"
-                            >
+<div class="audience-image">
 
-                        </div>
+<img
+src="https://images.pexels.com/photos/4252136/pexels-photo-4252136.jpeg?auto=compress&cs=tinysrgb&w=800"
+alt="Young couple cooking together"
+loading="lazy"
+>
 
-                        <strong>
-                            Young Couples
-                        </strong>
+</div>
 
-                        <span>
-                            Managing a shared household
-                        </span>
+<strong>
+Young Couples
+</strong>
 
-                    </div>
+<span>
+Managing a shared household
+</span>
 
+</div>
 
-                    <!-- FAMILIES -->
 
-                    <div class="audience reveal">
+<!-- FAMILIES -->
 
-                        <div class="audience-image">
+<div class="audience reveal">
 
-                            <img
-                                src="https://media.easy-peasy.ai/d334f8fd-7eae-4187-af12-9977913b75ef/948e9552-f45d-46e7-b45f-ec525737d3ef_thumb.webp"
-                                alt="African family cooking together"
-                                loading="lazy"
-                            >
+<div class="audience-image">
 
-                        </div>
+<img
+src="https://media.easy-peasy.ai/d334f8fd-7eae-4187-af12-9977913b75ef/948e9552-f45d-46e7-b45f-ec525737d3ef_thumb.webp"
+alt="African family cooking together"
+loading="lazy"
+>
 
-                        <strong>
-                            Families
-                        </strong>
+</div>
 
-                        <span>
-                            Planning food for the household
-                        </span>
+<strong>
+Families
+</strong>
 
-                    </div>
+<span>
+Planning food for the household
+</span>
 
+</div>
 
-                </div>
+</div>
 
-            </div>
+</div>
 
-        </section>
+</section>
 
 
-        <!-- =====================================================
-             NIGERIAN LOCALIZATION
-             ===================================================== -->
+<!-- =====================================================
+     NIGERIAN LOCALIZATION
+     ===================================================== -->
 
-        <section class="local-section">
+<section class="local-section">
 
-            <div class="container">
+<div class="container">
 
-                <div class="local-grid">
+<div class="local-grid">
 
-                    <div class="reveal">
 
-                        <div class="section-label">
-                            Built For Nigeria
-                        </div>
+<div class="reveal">
 
-                        <h2>
+<div class="section-label">
+Built For Nigeria
+</div>
 
-                            Not just a food app.
-                            A local food experience.
+<h2>
 
-                        </h2>
+Not just a food app.
+A local food experience.
 
-                        <p>
+</h2>
 
-                            Paletra is designed to understand
-                            the realities of Nigerian households
-                            and the decisions they make around food.
+<p>
 
-                        </p>
+Paletra is designed to understand
+the realities of Nigerian households
+and the decisions they make around food.
 
-                    </div>
+</p>
 
+</div>
 
-                    <div class="local-list reveal">
 
-                        <div class="local-item">
+<div class="local-list reveal">
 
-                            <strong>
-                                Nigerian Food
-                            </strong>
+<div class="local-item">
 
-                            <br>
+<strong>
+Nigerian Food
+</strong>
 
-                            Food people actually eat.
+<br>
 
-                        </div>
+Food people actually eat.
 
+</div>
 
-                        <div class="local-item">
 
-                            <strong>
-                                Local Ingredients
-                            </strong>
+<div class="local-item">
 
-                            <br>
+<strong>
+Local Ingredients
+</strong>
 
-                            Ingredients available in the Nigerian market.
+<br>
 
-                        </div>
+Ingredients available in the Nigerian market.
 
+</div>
 
-                        <div class="local-item">
 
-                            <strong>
-                                Portions
-                            </strong>
+<div class="local-item">
 
-                            <br>
+<strong>
+Portions
+</strong>
 
-                            Planning around realistic household portions.
+<br>
 
-                        </div>
+Planning around realistic household portions.
 
+</div>
 
-                        <div class="local-item">
 
-                            <strong>
-                                Cooking Context
-                            </strong>
+<div class="local-item">
 
-                            <br>
+<strong>
+Cooking Context
+</strong>
 
-                            Designed around local cooking realities.
+<br>
 
-                        </div>
+Designed around local cooking realities.
 
+</div>
 
-                        <div class="local-item">
 
-                            <strong>
-                                Local Prices
-                            </strong>
+<div class="local-item">
 
-                            <br>
+<strong>
+Local Prices
+</strong>
 
-                            Working toward useful local price information.
+<br>
 
-                        </div>
+Working toward useful local price information.
 
-                    </div>
+</div>
 
-                </div>
+</div>
 
-            </div>
+</div>
 
-        </section>
+</div>
 
+</section>
 
-        <!-- =====================================================
-             EARLY ACCESS
-             ===================================================== -->
 
-        <section
-            class="early-access"
-            id="early-access">
+<!-- =====================================================
+     EARLY ACCESS
+     ===================================================== -->
 
-            <div class="container">
+<section
+class="early-access"
+id="early-access">
 
-                <div class="early-box reveal">
+<div class="container">
 
-                    <h2>
+<div class="early-box reveal">
 
-                        Be one of the first
-                        100 Paletra households.
+<h2>
 
-                    </h2>
+Be one of the first
+100 Paletra households.
 
+</h2>
 
-                    <p>
+<p>
 
-                        We're testing Paletra with Nigerian households
-                        and using their feedback to build the product.
+We're testing Paletra with Nigerian households
+and using their feedback to build the product.
 
-                    </p>
+</p>
 
+<a
+href="#"
+class="btn"
+id="joinBtn">
 
-                    <a
-                        href="#"
-                        class="btn"
-                        id="joinBtn">
+Join the Pilot →
 
-                        Join the Pilot →
+</a>
 
-                    </a>
+</div>
 
-                </div>
+</div>
 
-            </div>
+</section>
 
-        </section>
 
+<!-- =====================================================
+     FOUNDING TEAM
+     ===================================================== -->
 
-        <!-- =====================================================
-             FOUNDING TEAM
-             ===================================================== -->
+<section>
 
-        <section>
+<div class="container">
 
-            <div class="container">
+<div class="section-head reveal">
 
-                <div class="section-head reveal">
+<div class="section-label">
+Founding Team
+</div>
 
-                    <div class="section-label">
-                        Founding Team
-                    </div>
+<h2>
 
-                    <h2>
+Built by a Nigerian
+student-led product team.
 
-                        Built by a Nigerian
-                        student-led product team.
+</h2>
 
-                    </h2>
+</div>
 
-                </div>
 
+<div class="team-grid">
 
-                <div class="team-grid">
 
-                    <div class="team-card reveal">
+<div class="team-card reveal">
 
-                        <div class="team-role">
-                            Founder/CEO
-                        </div>
+<div class="team-role">
+Founder/CEO
+</div>
 
-                        <h3>
-                            Akinde Fiyinfoluwa Joseph
-                        </h3>
+<h3>
+Akinde Fiyinfoluwa Joseph
+</h3>
 
-                    </div>
+</div>
 
 
-                    <div class="team-card reveal">
+<div class="team-card reveal">
 
-                        <div class="team-role">
-                            Co-founder/CTO
-                        </div>
+<div class="team-role">
+Co-founder/CTO
+</div>
 
-                        <h3>
-                            Ihesiulo Akunna
-                        </h3>
+<h3>
+Ihesiulo Akunna
+</h3>
 
-                    </div>
+</div>
 
-                </div>
+</div>
 
-            </div>
+</div>
 
-        </section>
+</section>
 
+</main>
 
-    </main>
 
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
 
-    <!-- =========================================================
-         FOOTER
-         ========================================================= -->
+<footer>
 
-    <footer>
+<div class="container">
 
-        <div class="container">
+<div class="footer-grid">
 
-            <div class="footer-grid">
+<div>
 
-                <div>
+<div class="footer-logo">
+Paletra<span>.</span>
+</div>
 
-                    <div class="footer-logo">
-                        Paletra<span>.</span>
-                    </div>
+<p class="footer-about">
 
-                    <p class="footer-about">
+Make your food money go further.
 
-                        Make your food money go further.
+A smarter way to plan, buy, cook
+and manage food at home.
 
-                        A smarter way to plan, buy, cook
-                        and manage food at home.
+</p>
 
-                    </p>
+</div>
 
-                </div>
 
+<div class="footer-column">
 
-                <div class="footer-column">
+<h4>
+Explore
+</h4>
 
-                    <h4>
-                        Explore
-                    </h4>
+<a href="#how">
+How It Works
+</a>
 
-                    <a href="#how">
-                        How It Works
-                    </a>
+<a href="#juri">
+Juri
+</a>
 
-                    <a href="#juri">
-                        Juri
-                    </a>
+<a href="#difference">
+Why Paletra
+</a>
 
-                    <a href="#difference">
-                        Why Paletra
-                    </a>
+</div>
 
-                </div>
 
+<div class="footer-column">
 
-                <div class="footer-column">
+<h4>
+Get Involved
+</h4>
 
-                    <h4>
-                        Get Involved
-                    </h4>
+<a href="#early-access">
+Early Access
+</a>
 
-                    <a href="#early-access">
-                        Early Access
-                    </a>
+<a href="#home">
+Back to top
+</a>
 
-                    <a href="#home">
-                        Back to top
-                    </a>
+</div>
 
-                </div>
+</div>
 
-            </div>
 
+<div class="copyright">
 
-            <div class="copyright">
+©
+<span id="year"></span>
+Paletra. All rights reserved.
 
-                ©
-                <span id="year"></span>
-                Paletra. All rights reserved.
+</div>
 
-            </div>
+</div>
 
-        </div>
+</footer>
 
-    </footer>
 
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
 
-    <!-- =========================================================
-         JAVASCRIPT
-         ========================================================= -->
+<script>
 
-    <script>
 
-        /* PRELOADER */
+/* =========================================================
+   PRELOADER
+   ========================================================= */
 
-        window.addEventListener("load", function () {
+window.addEventListener("load", function () {
 
-            const preloader =
-                document.getElementById("preloader");
+    const preloader =
+        document.getElementById("preloader");
 
-            if (!preloader) return;
+    if (!preloader) return;
 
-            setTimeout(function () {
+    setTimeout(function () {
 
-                preloader.classList.add("hide");
+        preloader.classList.add("hide");
 
-            }, 600);
+    }, 600);
 
-        });
+});
 
 
-        /* MOBILE NAVIGATION */
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
 
-        const menuBtn =
-            document.getElementById("menuBtn");
+const menuBtn =
+    document.getElementById("menuBtn");
 
-        const navLinks =
-            document.getElementById("navLinks");
+const navLinks =
+    document.getElementById("navLinks");
 
 
-        if (menuBtn && navLinks) {
+if (menuBtn && navLinks) {
 
-            menuBtn.addEventListener(
+    menuBtn.addEventListener(
+        "click",
+        function () {
+
+            const isActive =
+                navLinks.classList.toggle("active");
+
+            menuBtn.setAttribute(
+                "aria-expanded",
+                isActive ? "true" : "false"
+            );
+
+            menuBtn.setAttribute(
+                "aria-label",
+                isActive
+                    ? "Close menu"
+                    : "Open menu"
+            );
+
+            menuBtn.innerHTML =
+                isActive ? "✕" : "☰";
+
+        }
+    );
+
+
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(function (link) {
+
+            link.addEventListener(
                 "click",
                 function () {
 
-                    const isActive =
-                        navLinks.classList.toggle("active");
+                    navLinks
+                        .classList
+                        .remove("active");
+
+                    menuBtn.innerHTML = "☰";
 
                     menuBtn.setAttribute(
                         "aria-expanded",
-                        isActive ? "true" : "false"
+                        "false"
                     );
 
                     menuBtn.setAttribute(
                         "aria-label",
-                        isActive
-                            ? "Close menu"
-                            : "Open menu"
+                        "Open menu"
                     );
-
-                    menuBtn.innerHTML =
-                        isActive ? "✕" : "☰";
 
                 }
             );
 
+        });
 
-            document
-                .querySelectorAll(".nav-links a")
-                .forEach(function (link) {
+}
 
-                    link.addEventListener(
-                        "click",
-                        function () {
 
-                            navLinks
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+if ("IntersectionObserver" in window) {
+
+    const revealObserver =
+        new IntersectionObserver(
+
+            function (entries) {
+
+                entries.forEach(
+                    function (entry) {
+
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+                            entry.target
                                 .classList
-                                .remove("active");
+                                .add("show");
 
-                            menuBtn.innerHTML = "☰";
-
-                            menuBtn.setAttribute(
-                                "aria-expanded",
-                                "false"
-                            );
-
-                            menuBtn.setAttribute(
-                                "aria-label",
-                                "Open menu"
-                            );
+                            revealObserver
+                                .unobserve(
+                                    entry.target
+                                );
 
                         }
-                    );
 
-                });
-
-        }
-
-
-        /* SCROLL REVEAL */
-
-        const revealElements =
-            document.querySelectorAll(".reveal");
-
-
-        if ("IntersectionObserver" in window) {
-
-            const revealObserver =
-                new IntersectionObserver(
-
-                    function (entries) {
-
-                        entries.forEach(
-                            function (entry) {
-
-                                if (
-                                    entry.isIntersecting
-                                ) {
-
-                                    entry.target
-                                        .classList
-                                        .add("show");
-
-                                    revealObserver
-                                        .unobserve(
-                                            entry.target
-                                        );
-
-                                }
-
-                            }
-                        );
-
-                    },
-
-                    {
-                        threshold: 0.12
                     }
-
                 );
 
+            },
 
-            revealElements.forEach(
-                function (element) {
-
-                    revealObserver.observe(element);
-
-                }
-            );
-
-        } else {
-
-            revealElements.forEach(
-                function (element) {
-
-                    element.classList.add("show");
-
-                }
-            );
-
-        }
-
-
-        /* CURRENT YEAR */
-
-        const yearElement =
-            document.getElementById("year");
-
-        if (yearElement) {
-
-            yearElement.textContent =
-                new Date().getFullYear();
-
-        }
-
-
-        /* EARLY ACCESS BUTTON */
-
-        const joinBtn =
-            document.getElementById("joinBtn");
-
-
-        if (joinBtn) {
-
-            joinBtn.addEventListener(
-                "click",
-                function (event) {
-
-                    event.preventDefault();
-
-                    alert(
-                        "Paletra Early Access is opening soon. " +
-                        "Replace this button with your Google Form link."
-                    );
-
-                }
-            );
-
-        }
-
-
-        /* NAVBAR SHADOW */
-
-        const header =
-            document.querySelector("header");
-
-
-        function updateHeaderShadow() {
-
-            if (!header) return;
-
-            if (window.scrollY > 20) {
-
-                header.style.boxShadow =
-                    "0 8px 30px rgba(6,69,47,.07)";
-
-            } else {
-
-                header.style.boxShadow =
-                    "none";
-
-            }
-
-        }
-
-
-        window.addEventListener(
-            "scroll",
-            updateHeaderShadow,
             {
-                passive: true
+                threshold: 0.12
             }
+
         );
 
 
-        updateHeaderShadow();
+    revealElements.forEach(
+        function (element) {
+
+            revealObserver.observe(element);
+
+        }
+    );
+
+} else {
+
+    revealElements.forEach(
+        function (element) {
+
+            element.classList.add("show");
+
+        }
+    );
+
+}
 
 
-        /* ACTIVE NAVIGATION */
+/* =========================================================
+   CURRENT YEAR
+   ========================================================= */
 
-        const sections =
-            document.querySelectorAll(
-                "main section[id]"
-            );
+const yearElement =
+    document.getElementById("year");
 
-        const navItems =
-            document.querySelectorAll(
-                ".nav-links a"
-            );
+if (yearElement) {
 
+    yearElement.textContent =
+        new Date().getFullYear();
 
-        function updateActiveNavigation() {
-
-            let current = "";
+}
 
 
-            sections.forEach(
-                function (section) {
+/* =========================================================
+   EARLY ACCESS BUTTON
+   ========================================================= */
 
-                    const sectionTop =
-                        section.offsetTop - 150;
-
-                    const sectionBottom =
-                        sectionTop +
-                        section.offsetHeight;
+const joinBtn =
+    document.getElementById("joinBtn");
 
 
-                    if (
-                        window.scrollY >= sectionTop &&
-                        window.scrollY < sectionBottom
-                    ) {
+if (joinBtn) {
 
-                        current =
-                            section.getAttribute("id");
+    joinBtn.addEventListener(
+        "click",
+        function (event) {
 
-                    }
+            event.preventDefault();
 
-                }
-            );
-
-
-            navItems.forEach(
-                function (link) {
-
-                    link.classList.remove(
-                        "active-link"
-                    );
-
-
-                    const href =
-                        link.getAttribute("href");
-
-
-                    if (
-                        href === "#" + current
-                    ) {
-
-                        link.classList.add(
-                            "active-link"
-                        );
-
-                    }
-
-                }
+            alert(
+                "Paletra Early Access is opening soon. " +
+                "Replace this button with your Google Form link."
             );
 
         }
+    );
+
+}
 
 
-        window.addEventListener(
-            "scroll",
-            updateActiveNavigation,
-            {
-                passive: true
+/* =========================================================
+   NAVBAR SHADOW
+   ========================================================= */
+
+const header =
+    document.querySelector("header");
+
+
+function updateHeaderShadow() {
+
+    if (!header) return;
+
+    if (window.scrollY > 20) {
+
+        header.style.boxShadow =
+            "0 8px 30px rgba(6,69,47,.07)";
+
+    } else {
+
+        header.style.boxShadow =
+            "none";
+
+    }
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    updateHeaderShadow,
+    {
+        passive:true
+    }
+);
+
+updateHeaderShadow();
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+   ========================================================= */
+
+const sections =
+    document.querySelectorAll(
+        "main section[id]"
+    );
+
+const navItems =
+    document.querySelectorAll(
+        ".nav-links a"
+    );
+
+
+function updateActiveNavigation() {
+
+    let current = "";
+
+    sections.forEach(
+        function (section) {
+
+            const sectionTop =
+                section.offsetTop - 150;
+
+            const sectionBottom =
+                sectionTop +
+                section.offsetHeight;
+
+            if (
+                window.scrollY >= sectionTop &&
+                window.scrollY < sectionBottom
+            ) {
+
+                current =
+                    section.getAttribute("id");
+
             }
-        );
+
+        }
+    );
 
 
-        updateActiveNavigation();
+    navItems.forEach(
+        function (link) {
 
-    </script>
+            link.classList.remove(
+                "active-link"
+            );
+
+            const href =
+                link.getAttribute("href");
+
+            if (
+                href === "#" + current
+            ) {
+
+                link.classList.add(
+                    "active-link"
+                );
+
+            }
+
+        }
+    );
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    updateActiveNavigation,
+    {
+        passive:true
+    }
+);
+
+updateActiveNavigation();
+
+
+/* =========================================================
+   IMAGE ERROR HANDLING
+   =========================================================
+   If an image URL/file is unavailable,
+   the image won't break the card layout.
+   ========================================================= */
+
+document
+.querySelectorAll("img")
+.forEach(function(img) {
+
+    img.addEventListener(
+        "error",
+        function() {
+
+            this.style.display = "none";
+
+            const parent =
+                this.parentElement;
+
+            if (parent) {
+
+                parent.classList.add(
+                    "image-missing"
+                );
+
+            }
+
+        }
+    );
+
+});
+
+</script>
 
 
 </body>
-
 </html>
